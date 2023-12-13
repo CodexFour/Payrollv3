@@ -1,0 +1,144 @@
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #077076 #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #077076;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('Roboto-Regular.woff') format('woff');
+}
+.uni-card {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: var(--card);
+  -webkit-box-shadow: 2px 2px 13px -1px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 2px 2px 13px -1px rgba(0, 0, 0, 0.44);
+  box-shadow: 2px 2px 13px -1px rgba(0, 0, 0, 0.44);
+}
+.uni-card-lite {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: var(--card);
+  -webkit-box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.44);
+  box-shadow: 2px 2px 10px -3px rgba(0, 0, 0, 0.44);
+}
+
+.txt {
+  color: var(--text);
+}
+.txt-lite {
+  color: var(--text-lite);
+}
+.txt-left{
+  text-align: left;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-right {
+  text-align: right;
+}
+.font-white {
+  color: white;
+}
+.font-s {
+  font-size: 1.5rem;
+}
+.font-m {
+  font-size: 2rem;
+}
+.font-l {
+  font-size: 3rem;
+}
+.font-b {
+  font-weight: bold;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  flex-direction: row;
+}
+.space-a {
+  justify-content: space-between;
+}
+.space-b {
+  justify-content: space-between;
+}
+.space-e {
+  justify-content: space-evenly;
+}
+.gap1 {
+  gap: 10px;
+}
+.p1 {
+  padding: 10px !important;
+}
+.p2 {
+  padding: 15px !important;
+}
+.p-x2{
+  padding: 0 15px !important;
+}
+.no-border{
+  border: 0 !important;
+}
+h1,h2,h3,h4,h5 {
+  margin: 0;
+}
+.f-width {
+  width: 100%;
+}
+.f-heigth {
+  height: 100%;
+}
+input {
+  border-width:2px;
+  border-color:#cccccc;
+  padding:10px; 
+  border-style:solid;
+  border-radius:10px;
+  height: fit-content;
+}
+input:focus { 
+  outline:none; 
+  border-color: var(--text);
+}
+button {
+  font-weight: bold;
+  border-width:2px;
+  border: 0;
+  color: white;
+  background-color: var(--accent);
+  padding:10px 15px; 
+  border-style:solid;
+  border-radius:10px;
+  height: fit-content;
+}
+button:hover{
+  filter: brightness(50%);
+}

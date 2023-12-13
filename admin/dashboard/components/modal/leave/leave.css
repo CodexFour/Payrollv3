@@ -1,0 +1,229 @@
+@import "badges-color.css";
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.card-file {
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary);
+    box-shadow: none;
+    height: 125px;
+    width: 215px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea-field {
+    padding: 5px;
+    height: 130px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #707070;
+}
+
+.form-fields {
+    margin-top: 5px;
+    width: 215px;
+}
+
+.file-icon {
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.file-input-container {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.text-content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.file-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.form-content-area {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'comment-area' 'attachment-area';
+}
+
+.comment-area {
+    grid-area: comment-area;
+    height: 100%;
+}
+
+.employee {
+    display: flex;
+    gap: 20px;
+}
+
+#add-leave {
+    width: fit-content;
+    align-self: flex-end;
+}
+
+
+.employee-pic {
+    position: relative;
+}
+
+.age-badge {
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    background-color: var(--tertiary);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.employee-name {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-badge {
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 15px;
+    border-radius: 15px;
+}
+
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.employee_job-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.department-badge {
+    background-color: #FFD980;
+    padding: 3px 20px;
+    border-radius: 5px;
+}
+
+.vertical-line {
+    border: 1px dashed var(--border-color);
+    width: 100%;
+}
+
+.leave-details {
+    position: relative;
+    width: 100%;
+}
+.view-leave-status{
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.leave-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.leave-details-card {
+    margin-top: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 10px 0 var(--shadow);
+    border-radius: 20px;
+    width: 300px;
+
+}
+
+.leave-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.info-head {
+    padding: 10px 12px;
+}
+
+.comment-body {
+    height: 120px;
+
+}
+
+.message {
+    margin: 5px 10px;
+    padding-right: 5px;
+    width: fit-content;
+    text-align: justify;
+    height: 90px;
+    overflow-y: auto;
+
+}
+
+.leave-other-info{
+    display: grid;
+    grid-template-rows: 170px auto;
+    grid-template-areas: "comment" "attachment";
+}
+
+.comment{
+    grid-area: comment;
+}
+.attachment{
+    grid-area: attachment;
+}
+
+
+.attachment-details-container {
+    margin: 0 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 100px;
+    width: fit-content;
+    justify-content: center;
+}
+
+.attachment-details {
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.3s ease;
+}
+.attachment-details:hover {
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+.view-attachment{
+    overflow-y: auto;
+    max-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.employee-attachment{
+    border-radius: 10px;
+}
+
+

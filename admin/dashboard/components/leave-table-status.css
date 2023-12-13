@@ -1,0 +1,19 @@
+.leave-status {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 18px;
+    border-radius: 10px;
+    color: var(--tertiary);
+}
+
+.leave-status-inactive {
+    background-color: var(--status-inactive);
+}
+
+.leave-status-active {
+    background-color: var(--status-active);
+}
+
+.leave-status-overlap {
+    background-color: var(--status-overlap);
+}

@@ -1,0 +1,56 @@
+.table-wrapper {
+  overflow: auto;
+}
+table.uni-table {
+  /* border: 2px solid #aaaaaa; */
+  background-color: #ffffff;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.uni-table td,
+table.uni-table th {
+  border: 0px solid #aaaaaa; /* Divider */
+  padding: 3px 2px;
+}
+table.uni-table tbody td {
+  font-size: 16px;
+  height: 50px;
+}
+table.uni-table tr:nth-child(even) {
+  background: #ececec;
+}
+table.uni-table thead {
+  background: var(--accent);
+  height: 45px;
+  position: sticky;
+  top: 0;
+}
+table.uni-table thead th {
+  color: #ffffff;
+  text-align: center;
+}
+table.uni-table tbody tr:hover{
+  background-color: rgba(0, 121, 55, 0.466) !important;
+}
+
+/* Custom style */
+.col-pfp{
+    width: 10%;
+}
+.col-name{
+    width: auto;
+}
+.col-dept{
+    width: 10%;
+}
+.col-unit{
+    width: 10%;
+}
+.col-stat{
+    width: 10%;
+}
+.col-act{
+    width: 120px;
+}

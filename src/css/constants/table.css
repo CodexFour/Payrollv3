@@ -1,0 +1,135 @@
+@import "colors.css";
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.table-column > th{
+    padding: 10px;
+}
+
+thead tr th:after {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    content: url("../../assets/icons/svg/sort.svg");
+    visibility: hidden;
+}
+thead tr th:hover:after {
+    visibility: visible;
+}
+
+thead tr th:hover {
+    cursor: pointer;
+}
+
+
+
+tbody tr td {
+    padding: 10px;
+}
+
+
+.table-head{
+    background-color: var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table-body {
+    background-color: var(--primary);
+    text-align: center;
+}
+
+.table-body > tr > td:nth-child(2) {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.table-body > tr:nth-child(even) {
+    background-color: var(--table-background-color);
+}
+
+.table-body > tr:hover {
+    background-color: rgba(2, 166, 98, 0.54);
+    cursor: pointer;
+}
+
+
+.leave-status {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 18px;
+    border-radius: 10px;
+    color: var(--tertiary);
+}
+
+.leave-status-inactive {
+    background-color: var(--status-inactive);
+}
+
+.leave-status-active {
+    background-color: var(--status-active);
+}
+
+.leave-status-overlap {
+    background-color: var(--status-overlap);
+}
+
+
+/*new class for payments and deduction*/
+.tablepay-container {
+
+    overflow-y: auto;
+    margin-top: 10px;
+    height: 300px;
+    width: auto;
+}
+
+.paymentstable-header {
+    background-color: var(--accent);
+    text-align: left;
+
+}
+
+.paymentstable-body tr td {
+    color: black;
+    padding: 10px 0 10px 10px;
+
+}
+
+.paymentstable-body tr td a {
+    margin-right: 10px;
+}
+
+.paymentstable-body {
+    
+    background-color: var(--primary);
+    text-align: left;
+
+
+}
+
+.paymentstable-body > tr > td:nth-child(2) {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.paymentstable-body > tr:nth-child(even) {
+    background-color: var(--table-background-color);
+}
+
+.paymentstable-body > tr:hover,
+.paymentstable-body > tr:nth-child(even):hover {
+    background-color: var(--navbar-color);
+    cursor: pointer;
+}
+
+
+/*.table-row{*/
+/*    height: fit-content;*/
+/*}*/
+/**/

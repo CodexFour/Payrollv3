@@ -1,0 +1,65 @@
+@import "sizes.css";
+
+.icon-teen {
+    width: var(--teen);
+    height: var(--teen);
+}
+.icon-xxs{
+    width: var(--xxs);
+    height: var(--xxs);
+}
+
+.icon-xs {
+    width: var(--xs);
+    height: var(--xs);
+}
+
+.icon-s {
+    width: var(--small);
+    height: var(--small);
+}
+
+.icon-m {
+    width: var(--medium);
+    height: var(--medium);
+}
+.icon-l {
+    width: var(--large);
+    height: var(--large);
+}
+.icon-xl {
+    width: var(--xl);
+    height: var(--xl);
+}
+.icon-xxl {
+    width: var(--xxl);
+    height: var(--xxl);
+}
+.icon-xxxl {
+    width: var(--xxxl);
+    height: var(--xxxl);
+}
+
+.icon-round {
+    border-radius: 50%;
+    /*object-fit: cover;*/
+}
+
+.icon-soft-edge{
+    border-radius: 20%;
+}
+
+.icon-employee{
+    border-radius: 10%;
+}
+
+.icon-cover{
+    object-fit: cover;
+}
+
+.icon-border{
+    border: 2px solid var(--primary);
+}
+
+
+

@@ -1,0 +1,150 @@
+.employee-content-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3.75fr;
+    grid-template-areas:
+    "employee-content-total-employees employee-content-employees-table"
+    "employee-content-employees-department-chart employee-content-employees-table";
+    grid-gap: 20px;
+    margin: 15px;
+
+}
+
+.employee-content-total-employees {
+    grid-area: employee-content-total-employees;
+    height: min-content;
+}
+
+.employee-content-employees-table {
+    grid-area: employee-content-employees-table;
+    width: 100%;
+    height: 92%;
+}
+
+.department-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.department-head{
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-content-employees-department-chart {
+    grid-area: employee-content-employees-department-chart;
+    width: 100%;
+    height: 90%;
+
+}
+
+.employee-content-total-employees-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.line {
+    border-left: 4px solid var(--accent);
+    height: 125px;
+    border-radius: 10px;
+    margin: 0 55px;
+}
+
+/*.employee-department-summary {*/
+/*    display: grid;*/
+/*    grid-template-columns: 1fr 1fr 1fr;*/
+/*    grid-template-rows: 1fr 1fr 1fr;*/
+/*    grid-template-areas:*/
+/*    "SOE SET SOC"*/
+/*    "SHT SOB IBE"*/
+/*    ". STAFF .";*/
+/*    grid-gap: 20px;*/
+/*    margin-top: 10px;*/
+/*    margin-bottom: 24px;*/
+/*    !*margin-left: 30px;*!*/
+/*}*/
+
+.employee-department-summary{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 430px;
+    overflow-y: auto;
+    margin-right: 5px;
+}
+.SOE {
+    grid-area: SOE;
+
+}
+
+.SET {
+    grid-area: SET;
+
+}
+
+.SOC {
+    grid-area: SOC;
+
+}
+
+.SHT {
+    grid-area: SHT;
+
+}
+
+.SOB {
+    grid-area: SOB;
+
+}
+
+.IBE {
+    grid-area: IBE;
+
+}
+
+.STAFF {
+    grid-area: STAFF;
+}
+
+.department-card {
+    margin-top: 10px;
+
+}
+
+.department-chart {
+    display: grid;
+    place-items: center;
+    margin: 10px;
+}
+
+#department-donut-chart{
+    display: grid;
+    place-items: center;
+    width: 500px;
+}
+.department-name {
+    width: 100%;
+}
+
+.employee-filter-fields {
+    gap: 10px;
+    flex-direction: column;
+}
+
+.filter-fields{
+    display: flex;
+    gap: 10px;
+}
+
+.employee-add {
+    margin-left: 15rem;
+}
+
+.employee_table-container {
+    margin: 5px 16px 24px;
+    height: 52rem;
+    overflow-y: auto;
+}

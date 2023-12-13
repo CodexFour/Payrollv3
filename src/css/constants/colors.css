@@ -1,0 +1,102 @@
+:root {
+    /*colors for the app*/
+    --primary: rgb(240, 240, 240);
+    --secondary: #FCFCFC;
+    --tertiary: #4E4E4E;
+    --navbar-color: #02A662;
+    --accent: #077076;
+    --line-color: #D4BD12;
+    --border-color: #707070;
+    --shadow: #00000029;
+    --card-color-primary: #FBFBFB;
+    --color_body: #efefef;
+    --color_hover: #818181;
+
+    /*notification colors*/
+    --success: #80FFB6;
+    --error: rgba(255, 105, 105, 0.82);
+    --success-secondary: #78D0D0;
+    --increase: #8CD96B;
+    --decrease: #D96B6B;
+    --stable: #d9a96b;
+
+
+    /*colors for the text*/
+    --text-parent-heading: var(--primary);
+    --text-sub-heading: var(--secondary);
+    --text-child-heading-tertiary: var(--tertiary);
+    --text-highlight: var(--status-early);
+
+    /*color for LEAVE STATUS*/
+    --status-early: #56C1FF;
+    --status-inactive: #D3D3D3;
+    --status-active: var(--success);
+    --status-overlap: var(--error);
+
+    /*color for salary status*/
+    --salary-paid: #4BC0C0;
+    --salary-unpaid: #FF6384;
+    --salary-pending: #FFCD56;
+    --salary-payslip: #02A662;
+
+    /*color for attendance status*/
+    --attendance-on-leave: #56FF9E;
+    --attendance-late: #FFD980;
+    --attendance-on-time: #4BC0C0;
+    --attendance-absent: var(--salary-unpaid);
+
+    /*color for the calendar*/
+    --calendar-current-date: var(--STAFF);
+    --calendar-holiday-date: #FFA763;
+
+    /*color for the actions*/
+    --action-edit: #80D0FF;
+    --action-delete: #FF8AA3;
+
+    /*color for the privilege*/
+    --previlege: var(--success-secondary);
+
+    /* colors for departments */
+    --SHT: #F4BF33;
+    --SOE: #38ACEB;
+    --SET: #ff853c;
+    --SOB: var(--error);
+    --SOC: var(--navbar-color);
+    --IBE: var(--accent);
+    --STAFF: #AD84FF;
+
+    /*color for gender*/
+    --male: var(--status-early);
+    --female: var(--error);
+
+    /*color for disable*/
+    --disable: var(--tertiary);
+
+    /*table*/
+    --table-background-color: #E6E6E6;
+
+    --badge-color: #5E5E5E;
+}
+
+.primary-color{
+    color: var(--primary);
+}
+.secondary-color{
+    color: var(--secondary);
+}
+
+.tertiary-color{
+    color: var(--tertiary);
+}
+
+.increase-color{
+    color: var(--navbar-color);
+}
+
+.decrease-color{
+    color: var(--decrease);
+}
+
+.stable-color{
+    color: var(--stable);
+}

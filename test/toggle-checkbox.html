@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @import "../admin/admin.css";
+        tr > td .btn-cover {
+            position: relative;
+            height: 100px;
+            margin: 20px;
+        }
+
+        td .btn-cover,
+        .knobs,
+        .layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .button {
+            position: relative;
+            top: 50%;
+            width: 100px;
+            height: 36px;
+            margin: -20px auto 0 auto;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .checkbox-advance {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .knobs {
+            z-index: 2;
+        }
+
+        .layer {
+            border-radius: 5px;
+            width: 140px;
+            background-color: #d6fddb;
+            transition: 0.3s ease all;
+            z-index: 1;
+        }
+
+        /* Button 11 */
+        .toggle-btn {
+            overflow: visible;
+        }
+
+        .toggle-btn .knobs {
+            perspective: 100px;
+        }
+
+        .toggle-btn .knobs:before,
+        .toggle-btn .knobs:after,
+        .toggle-btn .knobs span {
+            position: absolute;
+            top: 4px;
+            border-radius: 2px;
+        }
+
+        .toggle-btn .knobs:before,
+        .toggle-btn .knobs:after {
+            color: #4e4e4e;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1;
+            padding: 9px 4px;
+        }
+
+        .toggle-btn .knobs:before {
+            content: "Active";
+            left: 15px;
+            width: fit-content;
+        }
+
+        .toggle-btn .knobs:after {
+            content: "Inactive";
+            right: -20px;
+            width: fit-content;
+        }
+
+        .toggle-btn .knobs span {
+            right: -35%;
+            width: 65px;
+            height: 28px;
+            background-color: #80FFB6FF;
+            transform: rotateY(0);
+            transform-origin: 0 50%;
+            transition: 0.6s ease all;
+            z-index: 1;
+        }
+
+        .toggle-btn .checkbox-advance:checked + .knobs span {
+            transform: rotateY(-180deg);
+            background-color: #D3D3D3;
+        }
+
+        .toggle-btn .checkbox-advance:checked ~ .layer {
+            background-color: #e8e8e8;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <thead class="table-head">
+    <tr class="table-column">
+        <th class="text-bold txt-xxs primary-color">STATUS</th>
+    </tr>
+    </thead>
+    <tbody class="table-body">
+    <tr>
+        <td>
+            <div class="btn-cover">
+                <div class="button toggle-btn">
+                    <input type="checkbox" checked class="checkbox-advance" onclick="status()"/>
+                    <div class="knobs">
+                        <span></span>
+                    </div>
+                    <div class="layer"></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        status();
+    });
+
+    function status() {
+        let checkbox = document.querySelector('.toggle-btn .checkbox-advance');
+
+        let activeLabel = checkbox.checked ? "Inactive" : "Active";
+        console.log('Active Label:', activeLabel);
+    }
+
+</script>
+
+</body>
+</html>

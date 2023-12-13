@@ -1,0 +1,85 @@
+@import "sizes.css";
+@import "colors.css";
+
+.nav-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    max-width: 100%;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-header-color {
+    background-color: var(--navbar-color);
+    box-shadow: 5px 5px 10px 0 var(--shadow);
+}
+
+.nav-text-color {
+    color: var(--tertiary);
+}
+
+
+.nav-container-left {
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container-right {
+    gap: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-notification {
+    width: var(--small);
+    height: var(--small);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.nav-employee-info {
+    gap: 15px;
+    display: flex;
+}
+
+.nav-employee-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rounded-employee-avatar {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-btn-switch {
+    background-color: transparent;
+    border-style: none;
+    font-family: "Roboto Bold", serif;
+    font-size: 1.5rem;
+}
+
+.nav-employee-name {
+    font-family: 'Roboto Bold', serif;
+    font-size: 2rem;
+}
+
+.nav-employee-role {
+    font-family: 'Roboto Regular', serif;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        @import "../src/css/constants/default.css";
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 2fr 1fr;
+            grid-template-areas:
+            "content1 content2 content3 content4 content5 content5"
+            "content6 content6 content6 content6 content6 content7";
+            margin: 10px;
+            gap: 5px;
+        }
+        html{
+            font-size: 62.5%;
+        }
+
+        .container > div {
+            font-size: 2rem;
+        }
+
+        .content1 {
+            grid-area: content1;
+            background-color: #077076;
+        }
+
+        .content2 {
+            grid-area: content2;
+            background-color: #02A662;
+        }
+
+        .content3 {
+            grid-area: content3;
+            background-color: #56C1FF;
+        }
+
+        .content4 {
+            grid-area: content4;
+            background-color: #FFCC00;
+        }
+
+        .content5 {
+            grid-area: content5;
+            background-color: #FF0000;
+        }
+
+        .content6 {
+            grid-area: content6;
+            background-color: #FFA763;
+
+        }
+
+        .content7 {
+            grid-area: content7;
+            background-color: #f59a8e;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content1">Employee</div>
+    <div class="content2">Salaries</div>
+    <div class="content3">Leaves</div>
+    <div class="content4">Absences</div>
+    <div class="content5">Chart</div>
+    <div class="content6">Leave Table</div>
+    <div class="content7">Cardsjhjhjksjjasjajkjskajhhhjhdjshdjh</div>
+</div>
+<script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+.salary-content-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.6fr;
+    grid-template-areas:
+            "salary-content-head"
+            "salary-content-body";
+    grid-gap: 20px;
+    margin: 15px;
+}
+
+.salary-content-head {
+    grid-area: salary-content-head;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)  2fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+            "salary-total_employee salary-total_working_hrs salary-total_absences salary-distribution-chart"
+    "salary-total_salaries salary-total_net_salaries salary-total_deduction salary-distribution-chart";
+    gap: 15px;
+}
+
+.salary-total_employee {
+    grid-area: salary-total_employee;
+}
+
+.salary-total_working_hrs {
+    grid-area: salary-total_working_hrs;
+}
+
+.salary-total_absences {
+    grid-area: salary-total_absences;
+}
+
+
+.salary-distribution-chart {
+    grid-area: salary-distribution-chart;
+    width: 100%;
+}
+
+.salary-total_salaries {
+    grid-area: salary-total_salaries;
+}
+
+.salary-total_net_salaries {
+    grid-area: salary-total_net_salaries;
+}
+
+.salary-total_deductions {
+    grid-area: salary-total_deductions;
+}
+
+.salary-content-body {
+    grid-area: salary-content-body;
+    width: 100%;
+}
+#salary-distribution-chart{
+    height: 260px;
+}
+.salary-content {
+    width: 100%;
+    padding: 5px 15px;
+}
+
+.card-salary-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.salary-monitoring {
+    display: flex;
+    flex-direction: column;
+}
+
+.salary-monitoring-description {
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.payroll-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.salary_table-container {
+    margin-top: 5px;
+    max-height: 26rem;
+    overflow-y: auto;
+}
+
+.table{
+
+}
+
+.filter-employee {
+    margin-left: unset;
+    margin-right: unset;
+    margin-top: 15px;
+}
+
+.employee-table-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.employee-search-control {
+    display: flex;
+    gap: 10px
+}
+

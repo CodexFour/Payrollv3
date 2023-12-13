@@ -1,0 +1,7 @@
+.round{
+    border-radius: 10px;
+}
+
+.drop-shadow{
+    filter: drop-shadow(var(--shadow));
+}

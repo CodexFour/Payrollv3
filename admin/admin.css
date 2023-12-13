@@ -1,0 +1,148 @@
+@import "../src/css/constants/normalize.css";
+@import "../src/css/constants/default.css";
+@import "../src/css/constants/font-sizes.css";
+@import "../src/css/constants/colors.css";
+@import "../src/css/constants/icon-sizes.css";
+@import "../src/css/constants/cards.css";
+@import "../src/css/constants/texts.css";
+@import "../src/css/constants/btn.css";
+@import "../src/css/constants/table.css";
+@import "../src/css/constants/text-position.css";
+<<<<<<< HEAD
+=======
+@import "../src/css/constants/modals.css";
+>>>>>>> parent of 05f71d7 (updated)
+@import "dashboard/dashboard.css";
+@import "employee/employee.css";
+@import "salary/salary.css";
+@import "attendance/attendance.css";
+@import "payments_deduction/payments_deduction.css";
+@import "summary/summary.css";
+
+
+body {
+    overflow-y: hidden;
+}
+
+.nav-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.nav-header-color {
+    background-color: var(--navbar-color);
+    box-shadow: 5px 5px 10px 0 var(--shadow);
+}
+
+
+
+.nav-button {
+    background: transparent;
+}
+
+
+.nav-container-left {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container-right {
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-notification {
+    width: var(--small);
+    height: var(--small);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.nav-employee-info {
+    gap: 15px;
+    display: flex;
+}
+
+.nav-employee-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-container {
+    top: 70px;
+    box-shadow: 5px 5px 10px 0 var(--shadow);
+    width: fit-content;
+    background-color: var(--secondary);
+    height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+}
+
+
+.menu-content {
+    padding: 1rem;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    flex-direction: inherit;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-content::after {
+    bottom: 0;
+    content: "";
+    width: 5px;
+    top: 50%;
+    left: 94%;
+    position: absolute;
+    background: var(--accent) none repeat scroll 0 0;
+    border-radius: 50px;
+    transition: height 0.3s ease 0s, top 0.3s ease 0s;
+    height: 0;
+
+}
+
+.menu-content:hover::after {
+    height: 100%;
+    top: 0;
+}
+
+.payments {
+    width: 73px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+}
+
+.admin-content {
+    width: 100vw;
+    height: fit-content;
+    overflow-x: auto;
+}
+
+aside a.link_active:after {
+    height: 100%;
+    top: 0;
+}
+.search-icon {
+    background: #FFFFFF url("../src/assets/icons/svg/search.svg") no-repeat 270px 7px;
+    background-size: 24px;
+}

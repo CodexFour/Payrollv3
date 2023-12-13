@@ -1,0 +1,862 @@
+@import "constants/cards.css";
+@import "constants/colors.css";
+@import "constants/font.css";
+@import "constants/texts.css";
+@import "constants/font-sizes.css";
+@import "constants/icon-sizes.css";
+@import "constants/table.css";
+/*@import "constants/navigation.css";*/
+/*@import "constants/btn.css";*/
+/*@import "constants/notification.css";*/
+/*@import "constants/progress.css";*/
+/*@import "constants/input.css";*/
+/*@import "constants/modal.css";*/
+
+:root {
+    --progress-indicator: 300px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+* {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--primary);
+
+}
+
+a {
+    text-decoration: none;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    /*display: none;*/
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--tertiary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--border-color);
+}
+
+
+th, td {
+    padding: 15px;
+}
+
+input[type=date] {
+    text-align: center;
+}
+
+::placeholder {
+    opacity: 0.45;
+
+}
+
+.required {
+    display: inline;
+    color: var(--error);
+}
+
+button {
+    cursor: pointer;
+}
+
+.outline {
+    outline: 1px solid var(--error);
+    outline-offset: -1px;
+}
+
+
+.main {
+    display: flex;
+
+}
+
+.section-container {
+    width: 125px;
+    height: 91vh;
+    display: flex;
+    box-shadow: 5px 5px 10px 0 var(--shadow);
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+
+
+}
+
+.menu-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.menu-content {
+    width: 85%;
+    display: inherit;
+    align-items: inherit;
+    flex-direction: inherit;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-content::after {
+    bottom: 0;
+    content: "";
+    width: 5px;
+    top: 50%;
+    left: 110%;
+    position: absolute;
+    background: var(--accent) none repeat scroll 0 0;
+    border-radius: 50px;
+    transition: height 0.3s ease 0s, top 0.3s ease 0s;
+    height: 0;
+}
+
+.menu-content:hover::after {
+    height: 100%;
+    top: 0;
+}
+
+/*.onClick:active{*/
+/*    color: var(--error);*/
+/*}*/
+
+
+.menu-image {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.sub-title {
+    font-family: "Roboto Bold", serif;
+    color: var(--tertiary);
+    text-align: center;
+}
+
+.employee-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main-heading-container {
+    width: 100%;
+    height: fit-content;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.information {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 30px;
+}
+
+.content-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-footer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.side-btn {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.side-btn-selection {
+    height: 100%;
+    width: 100%;
+}
+
+.btn-selection {
+    cursor: pointer;
+    height: 50%;
+    width: 100%;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-content-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-content-body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.actions-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.fields {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding-left: 10px;
+}
+
+.search-icon {
+    background: #FFFFFF url("../assets/icons/svg/search.svg") no-repeat 270px 7px;
+    background-size: 24px;
+}
+
+
+.btn-square {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.btn-add {
+    justify-content: space-between;
+    height: 40px;
+    width: 100px;
+    padding: 10px;
+}
+
+.btn-back {
+    justify-content: space-between;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.btn-deploy {
+    padding: 10px 45px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.dashboard-actions {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.employee-avatar {
+    margin-top: 5px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/**/
+.form-header {
+    padding-top: 10px;
+}
+
+.form-content-container {
+    margin: 0 40px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-self: center;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    margin: 10px
+}
+
+.form-fields {
+    margin-top: 5px;
+    width: 215px;
+}
+
+.form {
+    /*margin-top: 20px;*/
+    display: flex;
+    flex-direction: column;
+    /*gap: 35px;*/
+}
+
+.form-group {
+    display: flex;
+}
+
+.label-required {
+    display: flex;
+}
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.textarea-field {
+    padding: 5px;
+    height: 130px;
+    resize: none;
+}
+
+.file-field {
+    height: 130px;
+}
+
+.file-icon {
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.file-input-container {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.file-input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.footer-btn {
+    display: flex;
+    align-self: flex-end;
+    background-color: #FFD980;
+}
+
+
+
+.btn-save {
+    padding: 7px 27px;
+}
+
+.glasspane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glasspane-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.employee-leave-information {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge {
+    width: fit-content;
+    height: fit-content;
+}
+
+.department-badge {
+    border-radius: 10px;
+    padding: 5px 25px;
+}
+
+.sht-department {
+    background-color: var(--SHT);
+}
+
+
+.avatar-badge {
+    background-color: var(--badge-color);
+    border-radius: 50%;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary);
+    z-index: 1;
+    position: absolute;
+    top: 6%;
+    left: 20%;
+}
+
+.male-badge {
+
+    background-color: var(--male);
+}
+
+.female-badge {
+    background-color: var(--female);
+}
+
+.male-badge, .female-badge {
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+.employee-details {
+    width: 625px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    gap: 50px;
+}
+
+.employee-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.employee-name, .employee-job-status {
+    display: flex;
+    flex-direction: row;
+}
+
+.employee-name {
+    align-self: flex-start;
+    gap: 10px;
+}
+
+.employee-name > span {
+    margin-bottom: 10px;
+}
+
+.employee-job-status {
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+}
+
+.line-break {
+    width: 650px;
+    border: 2px dashed var(--border-color);
+}
+
+.leave-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leave-body {
+    display: flex;
+    gap: 20px;
+}
+
+
+.leave-details {
+    margin-top: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px 10px 0 var(--shadow);
+    border-radius: 20px;
+    width: 300px;
+}
+
+.leave-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 12px;
+}
+
+
+.comment-container {
+    height: 160px;
+}
+
+.content-spacing {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 8px;
+    gap: 5px;
+}
+
+.comment-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-info > strong {
+    display: flex;
+    align-self: center;
+    height: fit-content;
+}
+
+.comment-body {
+    overflow-y: auto;
+    height: 100px;
+}
+
+.message {
+    margin: 5px 10px;
+    height: 90px;
+    width: fit-content;
+    text-align: justify;
+}
+
+.attachment-container {
+    height: 125px;
+}
+
+.attachment-details-container {
+    margin-top: 5px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    height: 70px;
+    width: fit-content;
+}
+
+.attachment-details {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    width: 85px;
+}
+
+.attachment-selection {
+    width: fit-content;
+    display: flex;
+    justify-items: center;
+    margin: 5px 10px;
+}
+
+.modal-actions {
+    width: 625px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-edit {
+    background-color: var(--status-early);
+}
+
+
+.progress {
+    width: 500px;
+    background-color: var(--border-color);
+    border-radius: 5px;
+}
+
+.progress-card {
+    margin: 0 8px;
+    width: 380px;
+}
+
+.progress-details {
+    opacity: 0.7;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-percentage-modal {
+    margin-left: 10%;
+}
+
+.progress-bar {
+    position: relative;
+    width: var(--progress-indicator);
+    height: 5px;
+    background-color: var(--status-active);
+    border-radius: 5px;
+}
+
+.progress-indicator {
+    position: absolute;
+    top: -5px;
+    left: calc(var(--progress-indicator) - 2px);
+    background-color: var(--success-secondary);
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+}
+
+.btn-view-summary {
+    padding: 8px;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.btn-view-summary-card {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flip-card {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    perspective: 1000px;
+}
+
+.flip-card .card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.flip-card .card-container .front,
+.flip-card .card-container .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flip-card .card-container .back {
+    transform: rotateY(180deg);
+}
+
+.flip .card-container {
+    transform: rotateY(180deg);
+}
+
+.deploy-payroll-header-container {
+    display: flex;
+    /*justify-content: center;*/
+}
+
+.generate-payroll {
+    margin-top: -30px;
+    align-self: center;
+    width: fit-content;
+}
+
+.btn-deploy-summary {
+    align-self: flex-end;
+    background-color: transparent;
+    width: fit-content;
+}
+
+.summary-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 12px 18px;
+}
+
+.summary-card {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.success {
+    color: var(--success-secondary);
+}
+
+.error {
+    color: var(--error);
+}
+
+.percentage-transferred {
+    margin-top: 20px;
+}
+
+.summary-transferred-container {
+    flex-direction: column;
+}
+
+.primary-card {
+    border-radius: 10px;
+    background-color: var(--primary);
+}
+
+.summary-department {
+    padding: 10px 12px;
+}
+
+.notification {
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: visibility 0s linear 0.25s, opacity 0.5s 0s, transform 0.25s;
+}
+
+.notification-modal-content {
+    background-color: #e1e1e1;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 15px;
+    position: absolute;
+    top: 70px;
+    left: 1070px;
+}
+
+.notification-content {
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+    transition: transform 0.5s ease-out;
+    cursor: default;
+}
+
+.notification-content:hover {
+    transform: scale(1.05);
+}
+
+
+.notification-show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.5s 0s, transform 0.25s;
+    z-index: 1;
+}
+
+.notification-message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-clear {
+    background-color: transparent;
+    align-self: flex-end;
+}
+
+.notification-content-container {
+    margin-top: 10px;
+    display: flex;
+    width: 430px;
+    height: 500px;
+    flex-direction: column;
+    overflow-y: auto;
+
+}
+
+
+.notification-message {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.notification-message-header {
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.notification-message-error {
+    background-color: var(--error);
+}
+
+.notification-message-success {
+    background-color: var(--success);
+}
+
+.notification-message-info {
+    background-color: var(--status-early);
+}
+
+.notification-message-warning {
+    background-color: var(--stable);
+}
+
+.notification-message-body {
+    width: 250px;
+    text-align: justify;
+}
+
+.notification-message-time {
+    padding-left: 10px;
+    font-size: 10px;
+    opacity: 0.75;
+    align-self: flex-end;
+}
+

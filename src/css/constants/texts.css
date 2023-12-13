@@ -1,0 +1,50 @@
+@import "colors.css";
+@import "font.css";
+
+.text-title{
+    color: var(--tertiary);
+    font-family: "Roboto Bold", serif;
+}
+
+.text-regular{
+    color: var(--tertiary);
+    font-family: "Roboto Regular", serif;
+}
+
+.text-subtitle{
+    color: var(--tertiary);
+    font-family: "Roboto Bold", serif;
+    opacity: 0.45;
+}
+
+.text-bold{
+    color: var(--tertiary);
+    font-family: "Roboto Bold", serif;
+}
+
+.text-black{
+    color: var(--tertiary);
+    font-family: "Roboto Black", serif;
+}
+
+.btn-name{
+    color: var(--primary);
+    font-family: "Roboto Bold", serif;
+}
+
+.table-header-text-color > th{
+    color: var(--primary);
+}
+
+.table-body > tr > td{
+    color: var(--tertiary);
+}
+
+.highlight{
+    color: var(--status-early);
+}
+.attachment-label{
+    text-align: left;
+    padding: 5px;
+    /*margin-bottom: 10px;*/
+}

@@ -1,0 +1,33 @@
+@import "sizes.css";
+
+.txt-teen {
+    font-size: var(--teen);
+}
+
+.txt-xxs {
+    font-size: var(--xxs);
+}
+
+.txt-xs {
+    font-size: var(--xs);
+}
+
+.txt-s {
+    font-size: var(--small);
+}
+
+.txt-m {
+    font-size: var(--medium);
+}
+
+.txt-l {
+    font-size: var(--large);
+}
+
+.txt-xl {
+    font-size: var(--xl);
+}
+
+.txt-xxl {
+    font-size: var(--xxl);
+}
