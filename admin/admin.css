@@ -8,10 +8,7 @@
 @import "../src/css/constants/btn.css";
 @import "../src/css/constants/table.css";
 @import "../src/css/constants/text-position.css";
-<<<<<<< HEAD
-=======
 @import "../src/css/constants/modals.css";
->>>>>>> parent of 05f71d7 (updated)
 @import "dashboard/dashboard.css";
 @import "employee/employee.css";
 @import "salary/salary.css";

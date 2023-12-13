@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-=======
+
 @import "components/leave-table-status.css";
 @import "components/modal/leave/leave.css";
->>>>>>> parent of 05f71d7 (updated)
 .dashboard-content-container {
     display: grid;
     grid-template-columns: 1fr;
