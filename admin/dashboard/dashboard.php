@@ -5,7 +5,7 @@
                 <div>
                     <h2 class="text-title txt-xxs">TOTAL EMPLOYEES</h2>
                     <h3 class="text-subtitle txt-teen">Total Number of Employees</h3>
-                    <strong class="text-bold txt-m" id="salary">300</strong>
+                    <strong class="text-bold txt-m">300</strong>
                     <p class="text-subtitle txt-xxs">Employees</p>
                 </div>
             </div>

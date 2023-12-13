@@ -1,0 +1,7 @@
+.male{
+    background-color: var(--status-early);
+}
+
+.female{
+    background-color: var(--error);
+}

@@ -21,7 +21,7 @@
 
 .textarea-field {
     padding: 5px;
-    height: 130px;
+    height: 120px;
     resize: none;
     border-radius: 5px;
     border: 1px solid #707070;
@@ -69,11 +69,6 @@
 .employee {
     display: flex;
     gap: 20px;
-}
-
-#add-leave {
-    width: fit-content;
-    align-self: flex-end;
 }
 
 
@@ -216,10 +211,11 @@
     transform: scale(1.05);
 }
 .view-attachment{
-    overflow-y: auto;
     max-height: 500px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .employee-attachment{

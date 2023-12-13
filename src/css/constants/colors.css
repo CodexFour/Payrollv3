@@ -86,17 +86,6 @@
 }
 
 .tertiary-color{
-    color: var(--tertiary);
+    color: var(--tertiary)!important;
 }
 
-.increase-color{
-    color: var(--navbar-color);
-}
-
-.decrease-color{
-    color: var(--decrease);
-}
-
-.stable-color{
-    color: var(--stable);
-}

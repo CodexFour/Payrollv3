@@ -1,3 +1,4 @@
+<!--<link rel="stylesheet" href="../admin.css">-->
 <article id="employee" class="employee-content-container">
     <div class="employee-content-total-employees">
         <div class="card employee-content-total-employees-head">
@@ -32,210 +33,11 @@
                         </select>
                     </label>
                 </div>
-                <button class="btn text-bold txt-xxs employee-add">ADD</button>
+                <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-employee')">ADD</button>
             </div>
         </div>
         <div class="employee_table-container">
-            <table>
-                <thead class="table-head">
-                <tr class="table-column">
-                    <th class="text-bold txt-xxs primary-color">No.</th>
-                    <th class="text-bold txt-xxs primary-color">NAME</th>
-                    <th class="text-bold txt-xxs primary-color">DEPT</th>
-                    <th class="text-bold txt-xxs primary-color">UNITS CARRIED</th>
-                    <th class="text-bold txt-xxs primary-color">STATUS</th>
-                    <th class="text-bold txt-xxs primary-color">ACTION</th>
-                </tr>
-                </thead>
-                <tbody class="table-body">
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="text-regular txt-xxs">1</td>
-                    <td class="text-regular txt-xxs">John Doe</td>
-                    <td class="text-regular txt-xxs">10-20-2023</td>
-                    <td class="text-regular txt-xxs">10-30-2023</td>
-                    <td class="text-regular txt-xxs">10</td>
-                    <td>
-                        <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+            <?php include_once 'components/employee-table.php'?>
         </div>
     </div>
     <div class="employee-content-employees-department-chart card">
@@ -246,7 +48,7 @@
                         <strong class="text-title txt-xs">Total Number of Employees</strong>
                         <span class="text-subtitle txt-xxs">Exploring the Total Workforce Size</span>
                     </div>
-                    <button class="btn btn-add">
+                    <button class="btn btn-add" onclick="openModal('.modal-department')">
                     </button>
                 </div>
                 <div class="chart department-card">
@@ -257,3 +59,7 @@
         </div>
     </div>
 </article>
+
+<!--Modals-->
+<dialog class="modal modal-department"> <?php include_once 'components/modal/add-department.php' ?> </dialog>
+<dialog class="modal modal-employee"> <?php include_once 'components/modal/add-employee.php' ?> </dialog>

@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="src/modal/login/login.css">
 <link rel="shortcut icon" href="src/assets/icons/logo.png" type="image/png">
 <title>Login</title>
-<section class="container login_container modal-content">
-    <div class="card">
+<section class="container login_container modal-content card">
+    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-login')">
+    </button>
+<!--    <div class="">-->
         <div class="login_content">
             <div class="login_header">
                 <img
@@ -58,7 +60,7 @@
                         Remember Me
                     </label>
                     <!-- TEMPORARY HIDE -->
-                    <button style="opacity: 0;" class="btn btn-transparent login-forgot" type="button" onclick="switchModal('.modal-forgot')"><span class="text-regular txt-xxs highlight">Forgot Password?</span></button>
+                    <button class="btn btn-transparent login-forgot" type="button" onclick="switchModal('.modal-forgot')"><span class="text-regular txt-xxs highlight">Forgot Password?</span></button>
 <!--                    <a href="#" class="text-regular txt-xxs highlight">Forgot Password?</a>-->
                 </div>
                 <button class="btn login_btn text-title txt-xs" type="submit" id="submit"
@@ -76,7 +78,7 @@
             </form>
             </div>
         </div>
-    </div>
+<!--    </div>-->
 </section>
 <script>
     <?php //include 'src/modal/login/login.js' ?>

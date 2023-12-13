@@ -1,116 +1,82 @@
 <table>
     <thead class="table-head">
     <tr class="table-column">
-        <th class="text-bold txt-xxs primary-color">No.</th>
-        <th class="text-bold txt-xxs primary-color">NAME</th>
-        <th class="text-bold txt-xxs primary-color">START DATE</th>
-        <th class="text-bold txt-xxs primary-color">DUE DATE</th>
-        <th class="text-bold txt-xxs primary-color">REMAINING</th>
-        <th class="text-bold txt-xxs primary-color">OVERLAP</th>
-        <th class="text-bold txt-xxs primary-color">STATUS</th>
+        <th>
+            <span class="text-bold txt-xxs primary-color">No.</span>
+        </th>
+        <th>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">NAME</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
+        </th>
+        <th>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">START DATE</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
+        </th>
+        <th>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">DUE DATE</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
+        </th>
+        <th>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">REMAINING</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
+        </th>
+        <th>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">OVERLAP</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
+        </th>
+        <th>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">STATUS</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
+        </th>
     </tr>
     </thead>
     <tbody class="table-body">
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-<<<<<<< HEAD
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+    <tr onclick="openModal('.modal-view-leave')">
+        <td class="table-content-default">
+            <img
+                    src="../../../src/assets/img/img.png"
+                    alt="image"
+                    class="icon-m icon-soft-edge"
+            />
         </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
         <td class="text-regular txt-xxs">John Doe</td>
         <td class="text-regular txt-xxs">10-20-2023</td>
         <td class="text-regular txt-xxs">10-30-2023</td>
         <td class="text-regular txt-xxs">10</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-        </td>
-    </tr>
-
-    <tr>
-        <td class="text-regular txt-xxs">1</td>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
-=======
-            <span class="text-regular txt-xxs leave-status leave-status-inactive">Inactive</span>
->>>>>>> parent of 05f71d7 (updated)
+            <span class="text-regular txt-xxs status inactive"></span>
         </td>
     </tr>
 
 
     </tbody>
 </table>
+
+<!--Modal-->
+<dialog class="modal modal-view-leave"> <?php include_once 'modal/leave/view-leave.php' ?> </dialog>
+<dialog class="modal modal-view-attachment"> <?php include_once 'modal/attachment/view-attachment.php' ?> </dialog>

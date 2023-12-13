@@ -1,3 +1,4 @@
+@import "components/modal/add-employee.css";
 .employee-content-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -147,4 +148,22 @@
     margin: 5px 16px 24px;
     height: 52rem;
     overflow-y: auto;
+}
+
+.modal-header-department{
+    width: fit-content;
+    height: fit-content;
+}
+.department-form{
+    display: flex;
+    gap:10px;
+    margin-bottom: 1rem;
+}
+
+.adding-department-fields{
+    margin-bottom: unset;
+}
+
+.department-initial-field{
+    width: 100px;
 }

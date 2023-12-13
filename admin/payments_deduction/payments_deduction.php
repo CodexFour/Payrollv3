@@ -54,7 +54,7 @@
                                id="searching_employee_earnings"
                                placeholder="Search Earnings"/>
                     </label>
-                    <button class="btn text-bold txt-xxs employee-add">ADD</button>
+                    <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-earnings')">ADD</button>
                 </div>
             </div>
             <div class="payments_deduction_table-container">
@@ -73,7 +73,7 @@
                                id="searching_deductions"
                                placeholder="Search Deductions"/>
                     </label>
-                    <button class="btn text-bold txt-xxs employee-add">ADD</button>
+                    <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-deduction')">ADD</button>
                 </div>
             </div>
             <div class="payments_deduction_table-container">
@@ -83,3 +83,5 @@
     </div>
 
 </article>
+<dialog class="modal modal-earnings"> <?php include_once 'components/modal/add-earnings.php' ?> </dialog>
+<dialog class="modal modal-deduction"> <?php include_once 'components/modal/add-deduction.php' ?> </dialog>

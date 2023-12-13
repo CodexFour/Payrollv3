@@ -7,10 +7,10 @@
         <div class="events card">
             <div class="events-header">
                 <div class="events-info">
-                    <h2 class="text-title txt-xs">ANNOUNCEMENTS</h2>
+                    <h2 class="text-title txt-xs">HOLIDAYS</h2>
                     <span class="text-subtitle txt-teen"><span>10/01/2023</span> - <span>10/15/2023</span></span>
                 </div>
-                <button class="btn btn-add">
+                <button class="btn btn-add" onclick="openModal('.modal-holiday')">
                 </button>
             </div>
             <div class="events-body">
@@ -24,15 +24,9 @@
         </div>
         <div class="calendar card">
             <div class="header">
-<<<<<<< HEAD
-                <button class="btn-calendar btn-cal chevron-left" id="btn-left"></button>
+                <button class="btn-chevron btn-cal chevron-left" id="btn-left"></button>
                 <h2 class="text-bold txt-xs" id="date-header"></h2>
-                <button class="btn-calendar btn-cal chevron-right" id="btn-right"></button>
-=======
-                <button class="btn-chevron chevron-left" id="btn-left"></button>
-                <h2 class="text-bold txt-xs" id="date-header"></h2>
-                <button class="btn-chevron chevron-right" id="btn-right"></button>
->>>>>>> parent of 05f71d7 (updated)
+                <button class="btn-chevron btn-cal chevron-right" id="btn-right"></button>
             </div>
             <div class="weeks">
                 <p class="txt-teen text-bold">SUN</p>
@@ -57,7 +51,13 @@
                                id="searching_employee"
                                placeholder="Search Employee"/>
                     </label>
-                    <button class="btn text-bold txt-xxs">ADD</button>
+                    <button class="btn text-bold txt-xxs" onclick="openModal('.modal-attendance')">ADD</button>
+                    <div class="toggle-container">
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span></span>
+                        </label>
+                    </div>
                 </div>
                 <div class="employee-attendance-filter-control">
                     <label>
@@ -81,3 +81,7 @@
         </div>
     </div>
 </article>
+
+<!--Modal-->
+<dialog class="modal modal-attendance"> <?php include_once 'components/modal/add-attendance.php' ?> </dialog>
+<dialog class="modal modal-holiday"> <?php include_once 'components/modal/add-holiday.php' ?> </dialog>

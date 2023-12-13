@@ -356,7 +356,7 @@ button {
 
 .textarea-field {
     padding: 5px;
-    height: 130px;
+    height: 100px;
     resize: none;
 }
 
@@ -592,9 +592,7 @@ button {
     align-items: center;
 }
 
-.btn-edit {
-    background-color: var(--status-early);
-}
+
 
 
 .progress {

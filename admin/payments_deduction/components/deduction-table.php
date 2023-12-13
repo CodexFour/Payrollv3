@@ -24,7 +24,18 @@
             </div>
         </td>
         <td class="text-regular txt-xxs">Mandatory</td>
-        <td class="text-regular txt-xxs">ACTIONS</td>
+        <td>
+            <div class="action-container">
+                <div class="action">
+                    <div class="action-icon edit-icon">
+                        <img src="../../../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs">
+                    </div>
+                    <div class="action-icon delete-icon">
+                        <img src="../../../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
+                    </div>
+                </div>
+            </div>
+        </td>
     </tr>
 
     </tbody>

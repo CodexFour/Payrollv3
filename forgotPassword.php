@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" href="src/assets/icons/logo.png" type="image/png">
 <title>Forgot Password</title>
-<section class="container login_container modal-content">
-    <div class="card">
+<section class="container login_container modal-content card">
+    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeAllModal()">
+    </button>
         <div class="login_content">
             <div class="login_header">
                 <img
@@ -66,5 +67,4 @@
                 <button class="btn forgot_btn text-title txt-xs" onclick="switchModal('resetpassword.php')">SEND</button>
             </form>
         </div>
-    </div>
 </section>

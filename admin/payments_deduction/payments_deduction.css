@@ -25,7 +25,7 @@
     gap: 20px;
 }
 
-.earnings {
+.earnings{
     grid-area: earnings;
     width: 100%;
 }
@@ -34,7 +34,6 @@
     grid-area: deductions;
     width: 100%;
 }
-
 .payments_deduction_table-container {
     margin: 5px 16px 24px;
     height: 29rem;
@@ -44,50 +43,48 @@
 .table-body > tr > td:nth-child(2) {
     text-align: center;
 }
-
-.payments_checkbox {
+.payments_checkbox{
     display: unset;
 
 }
 
-.checkbox-status {
+.checkbox-status{
     border: unset;
     width: fit-content;
     padding: 5px;
 }
 
-.status {
+.status{
     position: relative;
 }
 
-.payments-form {
+.payments-form{
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px
 }
 
-.affected-employee {
+.affected-employee{
     position: relative;
     display: flex;
 }
 
-.affected-employee-content {
+.affected-employee-content{
     display: flex;
     align-items: center;
 }
 
-.employee-on-queue {
+.employee-on-queue{
     position: absolute;
     left: 20px;
 }
-
-.employee-on-queue-2 {
+.employee-on-queue-2{
     position: absolute;
     left: 40px;
 }
 
-.employee-on-queue-3 {
+.employee-on-queue-3{
     position: absolute;
     left: 70px;
     border-radius: 50%;
@@ -95,113 +92,26 @@
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
 }
-
-.employee-on-queue-3:hover {
+.employee-on-queue-3:hover{
     background-color: rgba(190, 190, 190, 0.438);
 }
 
 
-.payments-form-footer {
+.payments-form-footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.deduction-fields {
+.deduction-fields{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap:5px;
     width: fit-content;
 }
 
-.push-to-start {
+.push-to-start{
     position: absolute;
     left: 40px;
 }
-
-.modal-header-calculator {
-    display: flex;
-    justify-content: center;
-}
-
-.calculator-keypads {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "box7 box8 box9"
-        "box4 box5 box6"
-        "box3 box2 box1"
-        "paran-left box0 paran-right";
-    gap: 10px;
-}
-
-.box {
-    width: 40px;
-    height: 40px;
-}
-
-.paran-left{
-    grid-area: paran-left;
-    background-color: #80a8ff;
-}
-
-.paran-right{
-    grid-area: paran-right;
-    background-color: rgba(255, 105, 105, 0.82);
-}
-
-.box1 {
-    grid-area: box1;
-    background-color: #FFD980;
-}
-
-.box2 {
-    grid-area: box2;
-    background-color: #e8ae24;
-}
-
-.box3 {
-    grid-area: box3;
-    background-color: #80e8ff;
-}
-
-.box4 {
-    grid-area: box4;
-    background-color: #c2ff80;
-}
-
-.box5 {
-    grid-area: box5;
-    background-color: #a69d88;
-}
-
-.box6 {
-    grid-area: box6;
-    background-color: #523c08;
-}
-
-.box7 {
-    grid-area: box7;
-    background-color: #80caff;
-}
-
-.box8 {
-    grid-area: box8;
-    background-color: #ff8093;
-}
-
-.box9 {
-    grid-area: box9;
-    background-color: #c280ff;
-}
-
-.box0 {
-    grid-area: box0;
-    background-color: #70654b;
-}
-
-/*.calculator-input{*/
-
-/*}*/

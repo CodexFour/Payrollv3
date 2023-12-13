@@ -1,29 +1,38 @@
 @import "colors.css";
-
+/**{*/
+/*    outline: 2px solid var(--badge-color);*/
+/*}*/
 table {
     border-collapse: collapse;
     width: 100%;
 
+
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .table-column > th{
-    padding: 10px;
+    padding: 10px 0;
 }
 
-thead tr th:after {
-    position: relative;
-    top: 2px;
-    left: 10px;
-    content: url("../../assets/icons/svg/sort.svg");
-    visibility: hidden;
-}
-thead tr th:hover:after {
-    visibility: visible;
-}
+/*thead tr th:after {*/
+/*    position: relative;*/
+/*    top: 2px;*/
+/*    left: 10px;*/
+/*    content: url("../../assets/icons/svg/sort.svg");*/
+/*    display: none;*/
+/*}*/
+/*thead tr th:hover:after {*/
+/*    display: inline;*/
+/*}*/
 
-thead tr th:hover {
-    cursor: pointer;
-}
+/*thead tr th:hover {*/
+/*    cursor: pointer;*/
+/*}*/
 
 
 
@@ -58,26 +67,13 @@ tbody tr td {
     cursor: pointer;
 }
 
-
-.leave-status {
-    width: fit-content;
-    height: fit-content;
-    padding: 5px 18px;
-    border-radius: 10px;
-    color: var(--tertiary);
+.table-content-default {
+    padding: 5px;
+    display: grid;
+    place-items: center;
 }
 
-.leave-status-inactive {
-    background-color: var(--status-inactive);
-}
 
-.leave-status-active {
-    background-color: var(--status-active);
-}
-
-.leave-status-overlap {
-    background-color: var(--status-overlap);
-}
 
 
 /*new class for payments and deduction*/

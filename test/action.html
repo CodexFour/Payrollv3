@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    @import "../admin/admin.css";
+    
+    .action-container{
+        display: grid;
+        place-items: center;
+    }
+
+    .action{
+        width: fit-content;
+        display: flex;
+        gap: 2px;
+
+    }
+
+
+    .action-icon{
+        padding: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    .action-icon:hover{
+        opacity: 0.75;
+        transform: scale(1.1);
+
+    }
+
+    .edit-icon{
+        border-radius: 3px 0 0 3px;
+        background-color: rgb(83, 144, 224);
+    }
+
+    .delete-icon{
+        border-radius: 0 3px 3px 0;
+        background-color: rgb(224, 83, 83);
+    }
+
+
+</style>
+<body>
+
+<div class="action-container">
+    <div class="action">
+        <div class="action-icon edit-icon">
+            <img src="../src/assets/icons/svg/edit.svg" alt="" class="icon-s">
+        </div>
+        <div class="action-icon delete-icon">
+            <img src="../src/assets/icons/svg/deleterow.svg" alt="" class="icon-s">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

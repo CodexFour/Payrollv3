@@ -33,7 +33,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -56,7 +56,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -79,7 +79,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -102,7 +102,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -125,7 +125,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -148,7 +148,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -171,7 +171,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -194,7 +194,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -217,7 +217,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -240,7 +240,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -263,7 +263,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -286,7 +286,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -309,7 +309,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -332,7 +332,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -355,7 +355,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -378,7 +378,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -401,7 +401,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -424,7 +424,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -447,7 +447,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -470,7 +470,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -493,7 +493,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -516,7 +516,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -539,7 +539,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -562,7 +562,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -585,7 +585,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -608,7 +608,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -631,7 +631,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -654,7 +654,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -677,7 +677,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -700,7 +700,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -723,7 +723,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -746,7 +746,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -769,7 +769,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -792,7 +792,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -815,7 +815,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -838,7 +838,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -861,7 +861,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -884,7 +884,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -907,7 +907,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -930,7 +930,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -953,7 +953,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
@@ -976,7 +976,7 @@
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs leave-status leave-status-active">Active</span>
+            <span class="text-regular txt-xxs status active">Active</span>
         </td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>

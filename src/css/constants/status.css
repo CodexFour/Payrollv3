@@ -1,0 +1,106 @@
+.status {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 18px;
+    border-radius: 10px;
+    color: var(--tertiary);
+}
+
+.inactive {
+    background-color: var(--status-inactive);
+}
+
+.inactive:before {
+    content: 'Inactive';
+}
+
+.active {
+    background-color: var(--status-active);
+}
+
+.active:before {
+    content: 'Active';
+}
+
+.overlap {
+    background-color: var(--status-overlap);
+}
+
+.overlap:before {
+    content: 'Overlap';
+}
+
+.regular{
+    background-color: var(--status-inactive);
+}
+.regular:before{
+    content: 'Regular';
+}
+
+.probationary{
+    background-color: var(--status-active);
+}
+
+.probationary:before{
+    content: 'Probationary';
+}
+
+.on-time{
+    background-color: var(--attendance-on-time);
+}
+
+.on-time:before{
+    content: 'On-time';
+}
+
+.late{
+    background-color: var(--attendance-late);
+}
+
+.late:before{
+    content: 'Late';
+}
+
+.absent{
+    background-color: var(--attendance-absent);
+}
+
+.absent:before{
+    content: 'Absent';
+}
+
+.under-time{
+    background-color: var(--status-early);
+}
+
+.on-leave{
+    background-color: var(--attendance-on-time);
+}
+
+.on-leave:after{
+    content: 'On Leave';
+}
+
+.paid{
+    background-color: var(--salary-paid);
+}
+
+.paid:after{
+    content: 'Paid';
+}
+
+.unpaid{
+    background-color: var(--salary-unpaid);
+}
+
+.unpaid:after{
+    content: 'Unpaid';
+}
+
+.pending{
+    background-color: var(--salary-pending);
+}
+
+.pending:after{
+    content: 'Pending';
+}

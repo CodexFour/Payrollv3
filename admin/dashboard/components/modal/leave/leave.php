@@ -4,15 +4,15 @@
     </button>
     <header class="modal-header">
         <div class="card-name">
-            <strong class="text-title txt-s">APPLICATION FOR LEAVE</strong>
-            <span class="text-subtitle txt-xs">Time to Recharge: Submitting Your Leave
+            <strong class="text-title txt-xs">APPLICATION FOR LEAVE</strong>
+            <span class="text-subtitle txt-xxs">Time to Recharge: Submitting Your Leave
                 Application</span>
         </div>
 
     </header>
 
     <main class="modal-body">
-        <strong class="text-bold txt-xs text-center">LEAVE APPLICATION FORM</strong>
+        <strong class="text-bold txt-xxs text-center">LEAVE APPLICATION FORM</strong>
         <form id="leave-form">
             <div class="column-2">
                 <div>
@@ -58,22 +58,22 @@
                     <div class="text-title txt-xxs text input-label attachment-area">
                         Attachment
                         <span class="card-file textarea-field form-fields">
-                    <img class="icon-m file-icon"
-                         src="../../../../../src/assets/icons/svg/clip.svg"
-                         alt="">
+                            <img class="icon-m file-icon"
+                                 src="../../../../../src/assets/icons/svg/clip.svg"
+                                 alt="">
 
-                    <label class="file-input-container">
-                        <span class="text-content">
-                            <input type="file"
-                                   class="file-input"/>
-                            <span class="text-card-title txt-xxs highlight">Upload a file</span>
-                            <span class="text-card-subtitle txt-teen">doc, pdf, png, and jpg up to 10MB</span>
+                            <label class="file-input-container">
+                                <span class="text-content">
+                                <input type="file"
+                                       class="file-input"/>
+                                <span class="text-card-title txt-xxs highlight">Upload a file</span>
+                                <span class="text-card-subtitle txt-teen">doc, pdf, png, and jpg up to 10MB</span>
+                            </label>
                         </span>
-                    </label>
                     </div>
                 </div>
             </div>
-            <button class="btn text-bold txt-xxs" id="add-leave">SAVE</button>
+            <button class="btn text-bold txt-xxs btn-save" id="add-leave">SAVE</button>
         </form>
     </main>
 

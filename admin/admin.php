@@ -97,7 +97,6 @@
             console.log(tab_selector.innerHTML);
             if (tab_selector.innerHTML === 'DASHBOARD') {
                 await fetchDashboard();
-                changeSalary();
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
                 await fetch('.admin-content', 'employee/employee[cuello].php');
                 department_chart();
@@ -116,17 +115,9 @@
         });
     });
 
-    function changeSalary(){
-        let element = document.querySelector('#salary');
-        console.log(element);
-        element.innerHTML = "800";
-
-    }
-
     async function fetchDashboard() {
         await fetch('.admin-content', 'dashboard/dashboard.php');
         dashboard_chart();
-        changeSalary();
     }
 
     async function fetch(classes, filepath) {

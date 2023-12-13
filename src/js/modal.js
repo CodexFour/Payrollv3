@@ -1,7 +1,7 @@
-function closeModal(removeModalSelector) {
-    const modal = document.querySelector(removeModalSelector);
-    modal.classList.remove("show-modal");
-}
+// function closeModal(removeModalSelector) {
+//     const modal = document.querySelector(removeModalSelector);
+//     modal.classList.remove("show-modal");
+// }
 
 function toggle(modal) {
     const openModal = document.querySelector(modal);

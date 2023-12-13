@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Edit</title>
+    <style>
+        .edit {
+            position: relative;
+            background-color: transparent;
+            border-radius: 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .edit:hover {
+            background-color: rgba(0, 0, 0, 0.397);
+        }
+
+        /*.edit:hover::before {*/
+        /*    content: url("../src/assets/icons/svg/edit.svg");*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    transform: translate(-50%, -50%);*/
+        /*    cursor: pointer;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+
+<div class="edit" id="editButton">
+    HELLO
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var element = document.querySelector('.edit');
+
+        element.addEventListener('mouseover', function () {
+            // Create the image element
+            var imgElement = document.createElement('span');
+            let editIcon = imgElement.className = "edit-icon";
+            editIcon.cla
+
+            // imgElement.src = "../src/assets/icons/svg/edit.svg";
+
+            // Append the image element to the parent element
+            element.appendChild(imgElement);
+            // Add click event listener to the newly created image element
+            imgElement.addEventListener('click', function () {
+                alert('clicked');
+            });
+
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

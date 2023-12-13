@@ -22,23 +22,18 @@
                 </div>
             </div>
         </td>
-        <td class="text-regular txt-xxs">ACTIONS</td>
-    </tr>
-    <tr>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10</td>
         <td>
-            <div class="btn-cover">
-                <div class="button toggle-btn">
-                    <input type="checkbox" class="checkbox" onclick="status()"/>
-                    <div class="knobs txt-teen text-bold">
-                        <span></span>
+            <div class="action-container">
+                <div class="action">
+                    <div class="action-icon edit-icon">
+                        <img src="../../../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs">
                     </div>
-                    <div class="layer"></div>
+                    <div class="action-icon delete-icon">
+                        <img src="../../../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
+                    </div>
                 </div>
             </div>
         </td>
-        <td class="text-regular txt-xxs">ACTIONS</td>
     </tr>
     </tbody>
 </table>

@@ -1,0 +1,169 @@
+
+#employee-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    grid-template-areas:
+    "personal-information personal-information"
+    "employee-profile ."
+    "employee-rfid  employee-id"
+    "firstname lastname"
+    "middlename suffix"
+    "birthdate gender-age"
+    "email phone"
+     "address-information address-information"
+    "street barangay"
+    "city province"
+    "job-information job-information"
+    "employee-department job-title"
+    "work-type hired-date"
+    ;
+    gap: 20px;
+    margin-top: unset;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.employee-header h2{
+    border-bottom:2px solid var(--border-color);
+    font-weight:500;
+    margin: unset;
+}
+
+
+.employee-field-regular{
+    width: 200px;
+}
+.employee-field-haft{
+    width: 90px;
+}
+
+.personal-information{
+    grid-area: personal-information;
+}
+
+.address-information{
+    grid-area: address-information;
+}
+
+.job-information{
+    grid-area: job-information;
+}
+
+.employee-profile-container {
+    grid-area: employee-profile;
+    display: flex;
+    gap:5px;
+    align-items: center;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*margin-bottom: 20px;*/
+}
+
+.employee-department {
+    grid-area: employee-department;
+}
+
+.employee-field-group{
+    display: flex;
+    gap: 20px;
+}
+
+.employee-rfid{
+    grid-area: employee-rfid;
+}
+
+.employee-id{
+    grid-area: employee-id;
+}
+
+.employee-firstname{
+    grid-area: firstname;
+}
+
+.employee-lastname{
+    grid-area: lastname;
+}
+.employee-middlename{
+    grid-area: middlename;
+}
+
+.employee-suffix{
+    grid-area: suffix;
+}
+/*.middle-name_suffix{*/
+/*    grid-area: middle-name_suffix;*/
+/*}*/
+
+.gender-age{
+    grid-area: gender-age;
+}
+
+.employee-birthdate{
+    grid-area: birthdate;
+}
+
+.employee-birth-place{
+    grid-area: birthplace;
+}
+
+.employee-email{
+    grid-area: email;
+}
+
+.employee-phone{
+    grid-area: phone;
+}
+
+.employee-telephone{
+    grid-area: telephone;
+}
+
+.employee-street{
+    grid-area: street;
+}
+
+.employee-barangay{
+    grid-area: barangay;
+}
+
+.employee-zip-code{
+    grid-area: zip-code;
+}
+
+.employee-city{
+    grid-area: city;
+}
+
+.employee-province{
+    grid-area: province;
+}
+
+.employee-region{
+    grid-area: region;
+}
+
+.employee-job-title{
+    grid-area: job-title;
+}
+
+.employee-working-type{
+    grid-area: work-type;
+}
+
+.employee-hired-date{
+    grid-area: hired-date;
+}
+
+.instruction{
+    font-style:italic;
+    margin-top:3px;
+}
+
+
+
+
+
+
+

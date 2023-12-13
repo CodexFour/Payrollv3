@@ -1,0 +1,27 @@
+
+.notification{
+    display: none;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.success{
+    color: var(--success);
+}
+
+.error{
+    color: var(--error);
+}
+
+.error:before{
+    content: url("../../assets/icons/svg/error.svg");
+}
+
+.warning{
+    color: var(--stable);
+}
+
+.warning:before{
+    content: url("../../assets/icons/svg/warning.svg");
+}

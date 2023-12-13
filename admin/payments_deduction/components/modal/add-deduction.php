@@ -35,7 +35,7 @@
                         <span class="txt-teen text-regular notification error">ERROR MSG</span>
                     </label>
                     <label for="deduction-amount" class="fields-group margin-unset">
-                        <span class="text-title txt-xxs form-required">Calculation</span>
+                        <span class="text-title txt-xxs form-required">Amount</span>
                         <input class="fields employee-field-regular text-regular txt-xxs"
                                id="deduction-amount"
                                name="deduction-amount"
