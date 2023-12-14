@@ -38,7 +38,7 @@ function handleDashboard(responseObject) {
       let rem = leave.rem -1;
       rows += '<tr>';
       rows += '<td class="table-content-default">'+
-              '<img src="../../../src/assets/img/img.png" '+
+              '<img src="../src/assets/img/img.png" '+
               'alt="image" class="icon-m icon-soft-edge"/></td>';
       rows += `<td class="text-regular txt-xxs">${leave.fn} ${leave.ln}</td>`;
       rows += `<td class="text-regular txt-xxs">${leave.sd}</td>`;
