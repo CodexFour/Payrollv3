@@ -75,9 +75,12 @@
 <script src="../lib/code/highcharts.js"></script>
 <script src="../src/js/modal.js"></script>
 <script src="../lib/code/modules/variable-pie.js"></script>
+<script src="data.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         fetchDashboard();
+        requestDashboardData();
         // attendance_timesheet_chart();
         // calendar();
     });
@@ -95,6 +98,7 @@
             console.log(tab_selector.innerHTML);
             if (tab_selector.innerHTML === 'DASHBOARD') {
                 await fetchDashboard();
+                requestDashboardData();
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
                 await fetch('.admin-content', 'employee/employee.php');
                 department_chart();

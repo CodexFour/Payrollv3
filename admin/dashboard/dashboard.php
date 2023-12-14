@@ -5,7 +5,7 @@
                 <div>
                     <h2 class="text-title txt-xxs">TOTAL EMPLOYEES</h2>
                     <h3 class="text-subtitle txt-teen">Total Number of Employees</h3>
-                    <strong class="text-bold txt-m">300</strong>
+                    <strong class="text-bold txt-m" id="db_total_emp">---</strong>
                     <p class="text-subtitle txt-xxs">Employees</p>
                 </div>
             </div>
@@ -15,7 +15,7 @@
                 <div>
                     <h2 class="text-title txt-xxs">TOTAL SALARY</h2>
                     <h3 class="text-subtitle txt-teen">Current Salaries Per Month</h3>
-                    <strong class="text-bold txt-m">300</strong>
+                    <strong class="text-bold txt-m" id="db_total_salary">---</strong>
                     <p class="text-subtitle txt-xxs">PHP</p></div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <div>
                     <h2 class="text-title txt-xxs">TOTAL LEAVES</h2>
                     <h3 class="text-subtitle txt-teen">Leave Summary</h3>
-                    <strong class="text-bold txt-m">300</strong>
+                    <strong class="text-bold txt-m" id="db_total_leave">---</strong>
                     <p class="text-subtitle txt-xxs">Leaves</p></div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <div>
                     <h2 class="text-title txt-xxs">TOTAL ABSENCES</h2>
                     <h3 class="text-subtitle txt-teen">TOTAL ABSENCES</h3>
-                    <strong class="text-bold txt-m">300</strong>
+                    <strong class="text-bold txt-m" id="db_total_abs">---</strong>
                     <p class="text-subtitle txt-xxs">Absences</p></div>
             </div>
         </div>
