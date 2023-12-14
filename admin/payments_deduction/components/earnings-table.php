@@ -12,15 +12,7 @@
         <td class="text-regular txt-xxs">John Doe</td>
         <td class="text-regular txt-xxs">10</td>
         <td>
-            <div class="btn-cover">
-                <div class="button toggle-btn">
-                    <input type="checkbox" class="checkbox-advance" onclick="status()"/>
-                    <div class="knobs txt-teen text-bold">
-                        <span></span>
-                    </div>
-                    <div class="layer"></div>
-                </div>
-            </div>
+            <span class="text-regular txt-xxs status inactive"></span>
         </td>
         <td>
             <div class="action-container">
