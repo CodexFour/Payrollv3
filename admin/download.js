@@ -33,19 +33,21 @@ function handleDashboard(responseObject) {
   prDate.forEach(e => e.innerHTML = responseObject.nextPayDate);
 
   let rows = "";
-  responseObject.leaveRows.forEach(function(employee) {
+  for (const key in responseObject.leaves) {
+    const leave = responseObject.leaves[key]
+      let rem = leave.rem -1;
       rows += '<tr>';
       rows += '<td class="table-content-default">'+
               '<img src="../../../src/assets/img/img.png" '+
               'alt="image" class="icon-m icon-soft-edge"/></td>';
-      rows += '<td class="text-regular txt-xxs">Nizam</td>';
-      rows += '<td class="text-regular txt-xxs">11-12-2023</td>';
-      rows += '<td class="text-regular txt-xxs">12-13-2023</td>';
-      rows += '<td class="text-regular txt-xxs">05</td>';
-      rows += '<td class="text-regular txt-xxs">-</td>';
-      rows += '<td><span class="text-regular txt-xxs status inactive"></span></td>';
+      rows += `<td class="text-regular txt-xxs">${leave.fn} ${leave.ln}</td>`;
+      rows += `<td class="text-regular txt-xxs">${leave.sd}</td>`;
+      rows += `<td class="text-regular txt-xxs">${leave.ed}</td>`;
+      rows += `<td class="text-regular txt-xxs">${rem >= 0? rem:0} day(s)</td>`;
+      rows += `<td class="text-regular txt-xxs">${rem <= 0? Math.abs(rem):0} day(s)</td>`;
+      rows += `<td><span class="text-regular txt-xxs status inactive">${leave.st}</span></td>`;
       rows += '</tr>'
-  });
+  };
   document.getElementById("db_leave_tbl").innerHTML = rows;
 }
 

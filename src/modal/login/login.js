@@ -4,7 +4,7 @@ let form = {
   submit: document.getElementById("submit"),
   loader: document.getElementById("login-load"),
   loginText: document.getElementById("login-text"),
-  chkbox: document.getElementById("remember_me")
+  chkbox: document.getElementById("remember_me"),
 };
 form.submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -23,7 +23,7 @@ form.submit.addEventListener("click", (e) => {
     if (responseObject) {
       handleResponse(responseObject);
     }
-    loginWait(false)
+    loginWait(false);
   };
 
   const requestData = `username=${form.ueInput.value}&password=${form.pwInput.value}&remember=${form.chkbox.checked}`;
@@ -32,14 +32,14 @@ form.submit.addEventListener("click", (e) => {
   request.send(requestData);
 });
 
-function loginWait(wait){
-    if(wait){
-        form.loginText.style.display = 'none';
-        form.loader.style.display = 'inline-block';
-    } else {
-        form.loginText.style.display = 'inline-block';
-        form.loader.style.display = 'none';
-    }
+function loginWait(wait) {
+  if (wait) {
+    form.loginText.style.display = "none";
+    form.loader.style.display = "inline-block";
+  } else {
+    form.loginText.style.display = "inline-block";
+    form.loader.style.display = "none";
+  }
 }
 function loginError(active, msg, icon) {
   if (active) {
@@ -94,7 +94,11 @@ function handleResponse(responseObject) {
           // user and password is confirmed...
           // move on to next page
           // location.href = "admin/admin.php";
-          location.href = "../../../Payroll/admin/admin.php";
+          if(responseObject.isAdmin){
+            location.href = "admin/admin.php";
+          } else {
+            location.href = "employeeUi/dashboard.php";
+          }
         }
       }
     }

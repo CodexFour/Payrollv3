@@ -12,6 +12,7 @@ $password = isset($_POST['password']) ? $_POST['password'] : '';
 $remember = isset($_POST['remember']) ? $_POST['remember'] : '';
 $usernameWarning = false;
 $passwordWarning = false;
+$isAdmin = -1;
 
 if (!isset($username) || empty($username)) {
     $usernameWarning = true;
@@ -64,6 +65,12 @@ if (!empty($password)) {
             setcookie('username','', time() - 7000000,"/"); // remove 30 days
             setcookie('password','', time() - 7000000,"/");
         }
+        $isAdmin = ($con->query(
+            "SELECT employees.employee_id 
+            FROM payroll_db.privilege 
+            JOIN employees 
+            ON privilege.employee_id = employees.employee_id
+            WHERE privilege.employee_id = (SELECT employee_id FROM accounts WHERE username = '".$username."')"))->num_rows;
     } else {
         $passExist = false;
     }
@@ -75,6 +82,7 @@ echo json_encode(
         'passwordWarning' => $passwordWarning,
         'userExist' => $userExist,
         'passExist' => $passExist,
-        'remember' => $remember
+        'remember' => $remember,
+        'isAdmin' => $isAdmin > 0
     )
 );

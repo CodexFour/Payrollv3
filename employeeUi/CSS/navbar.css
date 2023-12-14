@@ -1,0 +1,37 @@
+@import url(default.css);
+@import url(normalize.css);
+@import url(colors.css);
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #02a662;
+  padding: 0 20px;
+  z-index: 1000;
+  /* box-shadow: 0px -30px 5px 30px #000000; */
+  -moz-box-shadow:0 5px 5px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+  box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+}
+nav #nav-bell {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+nav #nav-switch {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+}
+nav #nav-pfp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+}

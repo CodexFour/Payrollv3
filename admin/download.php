@@ -16,9 +16,14 @@ if (isset($_POST['page'])) {
             AND YEAR(payroll_date_period) = YEAR((SELECT MAX(payroll_date_period) FROM payroll_db.payroll));'
         );
         $leave = $con->query(
-            "SELECT * FROM payroll_db.leave
-            WHERE not status = 'DENIED' 
-            or not status = 'COMPLISHED';"
+            'SELECT leave_id AS "li", 
+                employees.first_name AS "fn",
+                employees.last_name AS "ln",
+                start_date AS "sd",
+                end_date AS "ed",
+                DATEDIFF(end_date, CURDATE()) AS "rem",
+                payroll_db.leave.status AS "st" FROM payroll_db.leave
+                JOIN employees ON employees.employee_id = payroll_db.leave.employee_id'
         );
         $absent = $con->query(
             "SELECT DISTINCT employee_id
@@ -41,23 +46,25 @@ if (isset($_POST['page'])) {
         
         // COUNTS
         $empCount = $employees->num_rows;
-        $totalSalary = array_sum(array_column($payroll->fetch_all(MYSQLI_ASSOC), 'amount'));
+        $totalSalary = array_sum(array_column($payroll->fetch_all(MYSQLI_ASSOC), 'net_salary'));
         $leaveCount = $leave->num_rows;
         $absentCount = $absent->num_rows;
         $currPayDate = date('m/d/Y', strtotime($currPay->fetch_assoc()['Result']));
         $nextPayDate = date('m/d/Y', strtotime($nextPay->fetch_assoc()['Result']));
-        
-        $tableRows = [1,2,3,4,5];
+        $leaveRows = array();
+        while($row = $leave->fetch_assoc()){
+            $leaveRows[$row['li']] = $row;
+        }
 
         echo json_encode(
             array(
                 'empCount' => $empCount,
-                'totalSalary' => $totalSalary,
+                'totalSalary' => $totalSalary >= 1000? sprintf("%.1fk", $totalSalary / 1000) : $totalSalary,
                 'leaveCount' => $leaveCount,
                 'absentCount' => $absentCount,
                 'currPayDate' => $currPayDate,
                 'nextPayDate' => $nextPayDate,
-                'leaveRows' => $tableRows
+                'leaves' => $leaveRows
             )
         );
 

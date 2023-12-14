@@ -1,0 +1,20 @@
+#hero{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+   "h2 b"
+   "p b";
+}
+#main{
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+  "gsc tdc"
+  "sbc dbc"
+  "nsc nsc";
+}
+#main .salary-list{
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5rem;
+}

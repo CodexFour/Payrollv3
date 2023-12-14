@@ -63,7 +63,7 @@
                     <button class="btn btn-transparent login-forgot" type="button" onclick="switchModal('.modal-forgot')"><span class="text-regular txt-xxs highlight">Forgot Password?</span></button>
 <!--                    <a href="#" class="text-regular txt-xxs highlight">Forgot Password?</a>-->
                 </div>
-                <button class="btn login_btn text-title txt-xs" type="submit" id="submit"
+                <button class="btn login_btn text-title txt-xs" id="submit"
                 style="display: inline-block; overflow: hidden">
                    <span id="login-text">LOGIN</span>
                     <img

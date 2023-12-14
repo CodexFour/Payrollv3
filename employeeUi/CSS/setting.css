@@ -1,0 +1,8 @@
+#options{
+    display: grid;
+    gap: 4px;
+}
+.login-list{
+    max-height: 150px;
+    overflow: auto;
+}

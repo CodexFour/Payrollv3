@@ -1,0 +1,223 @@
+#hero div .date-today-icon {
+  width: 30px;
+  height: 30px;
+  background-color: rebeccapurple;
+  border-radius: 5px;
+}
+
+/* ==== CLOCK ====== */
+:root{
+  --timer-bg: #dbdbdb;
+
+  /* rgb(255, 231, 187) /// Orange */
+}
+#hero .clock {
+  /* transform: scale(1.5); Adjust clock size here */
+  position: relative;
+  margin: 32px auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 20px 3px var(--timer-bg);
+  box-shadow: 0px 0px 20px 3px var(--timer-bg);
+
+  transition: all 1s ease-in-out;
+}
+#hero .clock::before {
+  content: "";
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  border: 4px solid var(--timer-bg);
+  position: absolute;
+  z-index: -1000;
+
+  box-shadow: inset 0px 0px 20px 3px var(--timer-bg);
+
+  transition: all 1s ease-in-out;
+
+}
+#hero .clock .time {
+  transform: rotate(270deg);
+}
+#hero .clock .time .timer {
+  fill: transparent;
+  stroke: #80ffb6;
+  stroke-width: 5px;
+  stroke: 3;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+}
+/* .timer-ontime{
+  stroke: rgb(29, 111, 233) !important;
+} */
+#hero .clock .time .timer #circle {
+  transform: translate(10px, 12px);
+  stroke-dasharray: 570;
+  stroke-dashoffset: 570;
+
+  /* transition: all ease 1s; */
+}
+#hero .clock .time .clock-dot {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translate(10px, 11px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10;
+
+  /* transition: transform ease 1s; */
+}
+#hero .clock .time .clock-dot::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #80ffb6;
+  border-radius: 50%;
+  margin-top: 8px;
+}
+#hero .clock .time span {
+  inset: 10px;
+  position: absolute;
+  text-align: center;
+  transform: rotate(calc(45deg * var(--i)));
+  z-index: -100;
+}
+#hero .clock .time span b {
+  font-size: 1rem;
+  color: var(--timer-bg);
+  display: inline-block;
+
+  transition: all 1s ease-in-out;
+
+}
+#hero .clock .clock-labels {
+  position: absolute;
+}
+
+/* === TIME TABLE ======= */
+#time-table {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "tl tl"
+    "cg cg";
+}
+#time-table .am-pm {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
+  z-index: 1;
+  height: 100%;
+}
+#time-table .vl {
+  position: absolute;
+  border: 1px solid gray;
+  border-style: dashed;
+  height: 90%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#time-table .hl {
+  position: absolute;
+  border: 1px solid gray;
+  border-style: dashed;
+  width: 90%;
+  height: 0;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#time-table .time-labels {
+  grid-area: tl;
+}
+#time-table .time-labels .time-in {
+  grid-area: ti;
+}
+#time-table .time-labels .time-in::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #4bc0c0;
+  margin-left: -10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#time-table .time-labels .time-out {
+  grid-area: to;
+}
+#time-table .time-labels .time-out::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ff6384;
+  margin-left: -10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+#time-table .clock-grid {
+  grid-area: cg;
+  width: 100%;
+  height: 200px;
+  background-color: white;
+
+  display: grid;
+  grid-template-areas:
+    "c1 c2"
+    "c3 c4";
+  gap: 10px;
+  position: relative;
+}
+#time-table .clock-grid .box {
+  width: 100%;
+  height: 100%;
+}
+#time-table .clock-grid .child1 {
+  grid-area: c1;
+}
+#time-table .clock-grid .child2 {
+  grid-area: c2;
+}
+#time-table .clock-grid .child3 {
+  grid-area: c3;
+}
+#time-table .clock-grid .child4 {
+  grid-area: c4;
+}
+
+/* ==== PAYSLIP INFO ======= */
+#payslip-info {
+  height: 150px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
+#payslip-info #recent-payslips {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+#payslip-info #recent-payslips #rp-list {
+  overflow: auto;
+}
+
+#next-payroll {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+#next-payroll .next-payroll-icon {
+  background-color: rebeccapurple;
+  width: 50px;
+  height: 50px;
+  border-radius: 25%;
+}

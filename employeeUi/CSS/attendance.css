@@ -1,0 +1,41 @@
+#records {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4px;
+}
+.custom-card {
+  padding: 10px 20px !important;
+  border-radius: 10px !important;
+}
+.tl-graph::-webkit-scrollbar {
+  display: none;
+}
+
+.tl-graph {
+  display: grid;
+  max-height: 200px;
+  overflow: auto;
+}
+.tl-row {
+  display: grid;
+  grid-template-columns: auto 30px 1fr;
+  place-items: center;
+}
+.tl-track {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  place-items: center;
+}
+.tl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: pink;
+  border: 2px solid gray;
+}
+.tl-vl {
+  height: 100%;
+  width: 1px;
+  background-color: gray;
+}
