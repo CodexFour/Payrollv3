@@ -24,7 +24,7 @@
                         <span class="text-content">
                             <input type="file"
                                    class="file-input"
-                                   accept="image/jpeg, image/png, image/webp"/>
+                                   accept="image/jpeg, image/jpg, image/png, image/webp"/>
                             <span class="btn text-bold txt-xxs btn-transparent btn-border tertiary-color">Upload a file</span>
                             <span class="text-regular txt-teen instruction">Pick a profile picture <br>under 10MB</span>
                         </span>
@@ -241,7 +241,7 @@
 
                 </label>
             </div>
-            <button type="submit" class="btn text-bold txt-xxs btn-save" id="add-employee">SAVE</button>
+            <button class="btn text-bold txt-xxs btn-save" id="add-employee">SAVE</button>
         </form>
     </main>
 

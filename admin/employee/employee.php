@@ -8,7 +8,7 @@
             </div>
             <div class="line"></div>
             <div>
-                <strong class="text-bold txt-m">300</strong>
+                <strong class="text-bold txt-m" id="emp_total_emp">---</strong>
                 <p class="text-subtitle txt-xxs">Employees</p>
             </div>
         </div>

@@ -5,6 +5,7 @@ $con = connect('');
 
 if (isset($_POST['page'])) {
     $page = strtolower($_POST['page']);
+    // GET DASHBOARD DATAS
     if ($page === 'dashboard') {
         // QUERIES
         $employees = $con->query('SELECT * FROM employees');
@@ -57,6 +58,34 @@ if (isset($_POST['page'])) {
                 'currPayDate' => $currPayDate,
                 'nextPayDate' => $nextPayDate,
                 'leaveRows' => $tableRows
+            )
+        );
+
+
+
+    // GET EMPLOYEE DATAS   
+    } elseif ($page === 'employee'){
+        $employees = $con->query('SELECT * FROM employees');
+        $dprtm = $con->query('SELECT * FROM payroll_db.department;');
+
+        $empCount = $employees->num_rows;
+        $empDprtm = array();
+        while ($row = $dprtm->fetch_assoc()){
+            $dcount = $con->query('SELECT COUNT(employee_id) 
+                                    AS "count" FROM employees WHERE department_id = '.$row['department_id']
+                                    )->fetch_assoc()['count'];
+            $empDprtm[$row['department_id']] = [$row['department_name'], $dcount];
+        }
+        $employeeRows = array();
+        while ($row = $employees->fetch_assoc()){
+            $employeeRows[$row['employee_id']] = $row;
+        }
+
+        echo json_encode(
+            array(
+                'employees' => $employeeRows,
+                'empCount' => $empCount,
+                'departments' => $empDprtm
             )
         );
     }
