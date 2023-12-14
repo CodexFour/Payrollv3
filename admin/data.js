@@ -1,20 +1,24 @@
-function requestDashboardData() {
+function requestData(currentPage) {
   const request = new XMLHttpRequest();
   request.onreadystatechange = () => {
       if(request.status == 200){
         let responseObject = null;
       try {
         responseObject = JSON.parse(request.responseText);
-        handleData(responseObject);
+        if(currentPage === 'dashboard'){
+          handleDashboard(responseObject);
+        }
       } catch (err) {
         console.error("Parse failed");
       }
       }
   };
-  request.open("GET", "data.php", true);
-  request.send();
+  const requestPage = `page=${currentPage}`;
+  request.open("POST", "data.php", true);
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send(requestPage);
 }
-function handleData(responseObject) {
+function handleDashboard(responseObject) {
   console.log(responseObject);
   document.querySelector("#db_total_emp").innerHTML = responseObject.empCount;
   document.querySelector("#db_total_salary").innerHTML = responseObject.totalSalary;

@@ -80,7 +80,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         fetchDashboard();
-        requestDashboardData();
+        requestData('dashboard');
         // attendance_timesheet_chart();
         // calendar();
     });
@@ -98,21 +98,26 @@
             console.log(tab_selector.innerHTML);
             if (tab_selector.innerHTML === 'DASHBOARD') {
                 await fetchDashboard();
-                requestDashboardData();
+                requestData('dashboard');
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
                 await fetch('.admin-content', 'employee/employee[cuello].php');
                 department_chart();
+                requestData('employee');
             } else if (tab_selector.innerHTML === 'SALARY') {
                 await fetch('.admin-content', 'salary/salary.php');
                 salary_chart();
+                requestData('salary');
             } else if (tab_selector.innerHTML === 'ATTENDANCE') {
                 await fetch('.admin-content', 'attendance/attendance.php');
                 attendance_timesheet_chart();
                 calendar();
+                requestData('attendance');
             } else if (tab_selector.innerHTML === 'PAYMENTS &amp; DEDUCTIONS') {
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
+                requestData('deduction');
             } else if (tab_selector.innerHTML === 'SUMMARY') {
                 await fetch('.admin-content', 'summary/summary.php');
+                requestData('summary');
             }
         });
     });
