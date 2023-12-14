@@ -70,9 +70,9 @@
                 <div class="payroll-info">
                     <img src="../src/assets/icons/svg/payroll_date.svg" alt="image" class="icon-xl"/>
                     <h2 class="text-title txt-xxs">PAYROLL DATE</h2>
-                    <strong class="text-title txt-xs">10/30/2023</strong>
-                    <p class="text-regular txt-teen">Payroll Run: <span class="text-bold txt-teen">10/15/2020</span>
-                        <span class="text-bold txt-teen">-</span> <span class="text-bold txt-teen">10/30/2023</span></p>
+                    <strong class="text-title txt-xs db_next_pr_date">--/--/----</strong>
+                    <p class="text-regular txt-teen">Payroll Run: <span class="text-bold txt-teen" id="db_curr_pr_date">--/--/----</span>
+                        <span class="text-bold txt-teen">-</span> <span class="text-bold txt-teen db_next_pr_date">--/--/----</span></p>
                     <button class="btn btn-deploy btn-name txt-xxs"
                         onclick="modal('.deploy-payslip', 'modal/payslip/payslip.html')">
                         DEPLOY

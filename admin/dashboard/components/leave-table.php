@@ -54,7 +54,7 @@
         </th>
     </tr>
     </thead>
-    <tbody class="table-body">
+    <tbody class="table-body" id="db_leave_tbl">
     <tr onclick="openModal('.modal-view-leave')">
         <td class="table-content-default">
             <img

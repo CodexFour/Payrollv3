@@ -46,7 +46,7 @@
         </th>
     </tr>
     </thead>
-    <tbody class="table-body">
+    <tbody class="table-body" id="emp_emp_tbl">
     <tr>
         <td class="table-content-default">
             <img
