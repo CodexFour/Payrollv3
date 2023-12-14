@@ -96,7 +96,7 @@
             if (tab_selector.innerHTML === 'DASHBOARD') {
                 await fetchDashboard();
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
-                await fetch('.admin-content', 'employee/employee[cuello].php');
+                await fetch('.admin-content', 'employee/employee.php');
                 department_chart();
             } else if (tab_selector.innerHTML === 'SALARY') {
                 await fetch('.admin-content', 'salary/salary.php');
