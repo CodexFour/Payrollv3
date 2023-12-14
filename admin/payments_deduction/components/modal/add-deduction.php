@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../admin.css">
+<!--<link rel="stylesheet" href="../../../admin.css">-->
 <section class="modal-content card">
     <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-deduction')">
     </button>
@@ -36,7 +36,7 @@
                     </label>
                     <div class="employee-field-group">
                     <label for="deduction-amount" class="fields-group margin-unset">
-                        <span class="text-title txt-xxs form-required">Rate (per year)</span>
+                        <span class="text-title txt-xxs form-required">Rate</span>
                         <input class="fields employee-field-haft text-regular txt-xxs"
                                id="deduction-amount"
                                name="deduction-amount"
@@ -61,7 +61,7 @@
 
                         <label for="deduction-amount" class="fields-group margin-unset">
                             <span class="text-title txt-xxs">Penalty</span>
-                            <input class="fields perc employee-field-haft text-regular txt-xxs"
+                            <input class="fields employee-field-haft text-regular txt-xxs"
                                    id="deduction-amount"
                                    name="deduction-amount"
                                    type="number"/>

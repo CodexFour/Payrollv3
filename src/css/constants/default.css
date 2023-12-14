@@ -163,7 +163,7 @@ dialog{
 
 
 .toast_notification {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 5px;
     border-radius: 5px;

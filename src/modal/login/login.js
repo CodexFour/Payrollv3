@@ -94,7 +94,7 @@ function handleResponse(responseObject) {
           // user and password is confirmed...
           // move on to next page
           // location.href = "admin/admin.php";
-          location.href = "main.php";
+          location.href = "../../../Payroll/admin/admin.php";
         }
       }
     }
