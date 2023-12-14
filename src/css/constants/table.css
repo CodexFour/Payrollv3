@@ -8,14 +8,15 @@ table {
 
 
 }
-.head{
+
+.head {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-.table-column > th{
+.table-column > th {
     padding: 10px 0;
 }
 
@@ -35,17 +36,16 @@ table {
 /*}*/
 
 
-
 tbody tr td {
     padding: 10px;
 }
 
 
-.table-head{
+.table-head {
     background-color: var(--accent);
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .table-body {
@@ -63,7 +63,8 @@ tbody tr td {
 }
 
 .table-body > tr:hover {
-    background-color: rgba(2, 166, 98, 0.54);
+    --table-hover: #98e1c5;
+    background-color: var(--table-hover);
     cursor: pointer;
 }
 
@@ -72,8 +73,6 @@ tbody tr td {
     display: grid;
     place-items: center;
 }
-
-
 
 
 /*new class for payments and deduction*/
@@ -102,7 +101,7 @@ tbody tr td {
 }
 
 .paymentstable-body {
-    
+
     background-color: var(--primary);
     text-align: left;
 

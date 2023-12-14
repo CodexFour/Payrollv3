@@ -14,72 +14,49 @@
 
 .summary-table {
     min-width: max-content;
-    position: relative;
 }
 
-.sticky-column {
+
+.summary-table-column tr > :first-child,
+.summary-table-row tr > :first-child {
     position: sticky;
     left: 0;
-    background-color: #FFD980;
     z-index: 1;
 }
 
-/* Adjust width if needed */
-.sticky-column td:nth-child(2),
-.sticky-column th:nth-child(2) {
+.summary-table-column tr > :nth-child(2),
+.summary-table-row tr > :nth-child(2) {
     position: sticky;
-    left: 0;
-    background-color: #FFD980;
+    left: 87.5px;
+}
+
+.summary-table-row tr:nth-child(odd) > :first-child,
+.summary-table-row tr:nth-child(odd) > :nth-child(2)
+{
+    background-color: var(--primary);
+}
+.summary-table-row tr:nth-child(even) > :first-child,
+.summary-table-row tr:nth-child(even) > :nth-child(2){
+    background-color: var(--table-background-color);
+}
+/*.summary-table-row > tr:nth-child(2){*/
+/*    background-color: #AD84FF;*/
+/*}*/
+
+.summary-table-row tr > :nth-child(2) {
     z-index: 1;
 }
 
+.summary-table-column tr > :first-child,
+.summary-table-column tr > :nth-child(2) {
+    z-index: 3;
+}
 
-/*.summary-table-row tr > :nth-child(2)  {*/
-/*    position: sticky;*/
-/*    left: 0;*/
-/*    z-index:1;*/
-/*    background-color: #FFD980;*/
-/*}*/
 
-/*.summary-table-column tr > :nth-child(2){*/
-/*    position: fixed;*/
-/*    left: 0;*/
-/*    background-color: #FFD980;*/
-/*}*/
-
-/*tbody tr > :nth-child(2) {*/
-/*    position: sticky;*/
-/*    z-index: 1;*/
-/*    left: 0;*/
-/*    background: #ff9e9e;*/
-/*}*/
-
-/*.table_employee_name{*/
-/*    margin-left: 0;*/
-/*    position: sticky;*/
-/*    left: -1px;*/
-/*    width: fit-content;*/
-/*    text-align: left !important;*/
-/*    z-index: 1;*/
-/*}*/
-/*.employee_name{*/
-/*    z-index: 0;*/
-/*}*/
-/*.table-row:hover > .employee_name:hover{*/
-/*    background-color: #02A66289;*/
-/*}*/
-/*.table-body > tr:hover + .employee_name{*/
-/*    background-color: rgba(2, 166, 98, 0.54);*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.table-row > .employee_name{*/
-/*    background-color: var(--primary);*/
-/*}*/
-
-/*.table-row:nth-child(even) > .employee_name{*/
-/*    background-color: var(--table-background-color);*/
-/*}*/
+.summary-table-row tr > :first-child.hovered,
+.summary-table-row tr > :nth-child(2).hovered{
+    background-color: var(--table-hover);
+}
 
 
 

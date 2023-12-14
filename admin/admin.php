@@ -113,6 +113,45 @@
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
             } else if (tab_selector.innerHTML === 'SUMMARY') {
                 await fetch('.admin-content', 'summary/summary.php');
+
+                // const tableRows = document.querySelectorAll('.table-body > tr');
+                // const summaryFirstChildren = document.querySelectorAll('.summary-table-row tr > :first-child');
+                //
+                // tableRows.forEach(e => {
+                //     e.addEventListener('mouseover', () => {
+                //         let propertyValue = window.getComputedStyle(e, ':hover').getPropertyValue('cursor');
+                //
+                //         if (propertyValue === 'pointer') {
+                //             summaryFirstChildren.forEach(element => {
+                //                 alert(element.innerHTML)
+                //             })
+                //         }
+                //
+                //     })
+                // })
+                const tableBody = document.querySelector('.table-body');
+                const summaryFirstChildren = document.querySelectorAll('.summary-table-row tr > :first-child');
+                const summaryNthChildren = document.querySelectorAll('.summary-table-row tr > :nth-child(2)');
+
+                tableBody.addEventListener('mouseover', function(event) {
+                    if (event.target.tagName === 'TD' && event.target.parentNode.classList.contains('table-row')) {
+                        let index = event.target.parentNode.rowIndex;
+                        summaryFirstChildren[index - 1].classList.add('hovered');
+                        summaryNthChildren[index - 1].classList.add('hovered');
+                    }
+                });
+
+                tableBody.addEventListener('mouseout', function(event) {
+                    if (event.target.tagName === 'TD' && event.target.parentNode.classList.contains('table-row')) {
+                        if (event.relatedTarget && event.target.parentNode.classList.contains('table-row')) {
+                            let index = event.target.parentNode.rowIndex;
+                            summaryFirstChildren[index - 1].classList.remove('hovered');
+                            summaryNthChildren[index - 1].classList.remove('hovered');
+                        }
+                    }
+                });
+
+
             }
         });
     });
@@ -144,7 +183,6 @@
             }
         }
     });
-
 
 
 </script>
