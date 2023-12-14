@@ -4,7 +4,8 @@ session_start();
 $con = connect('');
 
 if (isset($_POST['page'])) {
-    if ($_POST['page'] === 'dashboard') {
+    $page = strtolower($_POST['page']);
+    if ($page === 'dashboard') {
         // QUERIES
         $employees = $con->query('SELECT * FROM employees');
         $payroll = $con->query( //get lastest months's
@@ -23,37 +24,39 @@ if (isset($_POST['page'])) {
             FROM `payroll_db`.`attendance`
             WHERE status = 'absent' AND date BETWEEN (SELECT MAX(payroll_date_period) FROM payroll_db.payroll) AND CURDATE();"
         );
+        $currPay = $con->query(
+            "SELECT DATE_ADD(MAX(payroll_date_period), INTERVAL 1 DAY)
+            AS 'Result' FROM payroll_db.payroll"
+        );
+        $nextPay = $con->query(
+            "SELECT 
+                CASE 
+                    WHEN MAX(payroll_date_period) IS NULL THEN NULL
+                    WHEN DAY(MAX(payroll_date_period)) <= 15 THEN LAST_DAY(MAX(payroll_date_period))
+                    ELSE DATE_ADD(LAST_DAY(MAX(payroll_date_period)), INTERVAL 15 DAY)
+                END AS Result
+            FROM payroll_db.payroll;
+            ");
         
         // COUNTS
         $empCount = $employees->num_rows;
         $totalSalary = array_sum(array_column($payroll->fetch_all(MYSQLI_ASSOC), 'amount'));
         $leaveCount = $leave->num_rows;
         $absentCount = $absent->num_rows;
+        $currPayDate = date('m/d/Y', strtotime($currPay->fetch_assoc()['Result']));
+        $nextPayDate = date('m/d/Y', strtotime($nextPay->fetch_assoc()['Result']));
         
-        $tableRows = '<tr onclick="openModal(".modal-view-leave")">
-                        <td class="table-content-default">
-                            <img
-                                    src="../../../src/assets/img/img.png"
-                                    alt="image"
-                                    class="icon-m icon-soft-edge"
-                            />
-                        </td>
-                        <td class="text-regular txt-xxs">John Doe</td>
-                        <td class="text-regular txt-xxs">10-20-2023</td>
-                        <td class="text-regular txt-xxs">10-30-2023</td>
-                        <td class="text-regular txt-xxs">10</td>
-                        <td class="text-regular txt-xxs">-</td>
-                        <td>
-                            <span class="text-regular txt-xxs status inactive"></span>
-                        </td>
-                    </tr>';
+        $tableRows = [1,2,3,4,5];
 
         echo json_encode(
             array(
                 'empCount' => $empCount,
                 'totalSalary' => $totalSalary,
                 'leaveCount' => $leaveCount,
-                'absentCount' => $absentCount
+                'absentCount' => $absentCount,
+                'currPayDate' => $currPayDate,
+                'nextPayDate' => $nextPayDate,
+                'leaveRows' => $tableRows
             )
         );
     }
