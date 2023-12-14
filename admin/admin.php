@@ -75,7 +75,7 @@
 <script src="../lib/code/highcharts.js"></script>
 <script src="../src/js/modal.js"></script>
 <script src="../lib/code/modules/variable-pie.js"></script>
-<script src="data.js"></script>
+<script src="download.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {

@@ -16,7 +16,7 @@ function requestData(currentPage) {
       }
   };
   const requestPage = `page=${currentPage}`;
-  request.open("POST", "data.php", true);
+  request.open("POST", "download.php", true);
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.send(requestPage);
 }
