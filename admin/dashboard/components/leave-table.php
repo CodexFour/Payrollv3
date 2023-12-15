@@ -46,7 +46,7 @@
         </th>
         <th>
             <div class="head">
-                <span class="text-bold txt-xxs primary-color">STATUS</span>
+                <span class="text-bold txt-xxs primary-color">LEAVE TYPE</span>
                 <svg class="primary-color sort-icon">
                     <use href="../../../src/assets/icons/svg/sort.svg#sort">
                 </svg>
@@ -69,7 +69,7 @@
         <td class="text-regular txt-xxs">10</td>
         <td class="text-regular txt-xxs">-</td>
         <td>
-            <span class="text-regular txt-xxs status inactive"></span>
+            <span class="text-regular txt-xxs status leave-type">Sick Leave</span>
         </td>
     </tr>
 

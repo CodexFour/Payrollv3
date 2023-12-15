@@ -1,4 +1,4 @@
-<!--<link rel="stylesheet" href="../../../../admin.css">-->
+<link rel="stylesheet" href="../../../../admin.css">
 <section class="modal-content card">
     <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-view-leave')">
     </button>
@@ -32,7 +32,7 @@
         <div class="leave-details">
             <h2 class="text-title leave-header txt-xs">LEAVE DETAILS</h2>
             <span id="leave_employee_leave_status"
-                  class="view-leave-status status inactive text-bold txt-xxs">Inactive</span>
+                  class="view-leave-status status inactive text-bold txt-xxs"></span>
             <div class="leave-body">
                 <div>
                     <div class="leave-details-card">

@@ -81,7 +81,7 @@
                 </div>
 
             </div>
-            <div class="card card-add-employee">
+            <div class="card card-add-employee" onclick="openModal('.modal-employee')">
                 <div class="side-btn-selection btn-selection">
                     <div class="dashboard-actions">
                         <img class="icon-xxl" src="../src/assets/icons/svg/user-add.svg" alt="">
@@ -96,5 +96,7 @@
     </div>
 </article>
 
+
 <!--Modals-->
 <dialog class="modal modal-leave"> <?php include_once '../dashboard/components/modal/leave/leave.php' ?> </dialog>
+<dialog class="modal modal-employee"> <?php include_once '../employee/components/modal/add-employee.php' ?> </dialog>

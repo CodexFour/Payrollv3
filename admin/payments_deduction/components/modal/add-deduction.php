@@ -34,30 +34,38 @@
                                type="text"/>
                         <span class="txt-teen text-regular notification error">ERROR MSG</span>
                     </label>
-                    <div class="employee-field-group">
-                    <label for="deduction-amount" class="fields-group margin-unset">
-                        <span class="text-title txt-xxs form-required">Rate</span>
-                        <input class="fields employee-field-haft text-regular txt-xxs"
+                    <label for="deduction-amount" class="fields-group">
+                        <span class="text-title txt-xxs">Amount</span>
+                        <input class="fields employee-field-regular text-regular txt-xxs"
                                id="deduction-amount"
                                name="deduction-amount"
                                type="number"/>
                         <span class="txt-teen text-regular notification error">ERROR MSG</span>
                     </label>
+                    <div class="employee-field-group">
+                        <label for="deduction-rate" class="fields-group margin-unset">
+                            <span class="text-title txt-xxs">Rate</span>
+                            <input class="fields employee-field-haft text-regular txt-xxs"
+                                   id="deduction-rate"
+                                   name="deduction-rate"
+                                   type="number"/>
+                            <span class="txt-teen text-regular notification error">ERROR MSG</span>
+                        </label>
 
-                    <!--                    if the deduction type is loan, the term must be shown otherwise hide
-                                               TODO: if regular -> remove <div class="employee-field-group"> &  <label for="deduction-amount" class="fields-group margin-unset">
-                                                <span class="text-title txt-xxs form-required">Term</span>
-                                                <input class="fields employee-field-haft text-regular txt-xxs"
-                                                       id="deduction-amount"
-                                                       name="deduction-amount"
-                                                       type="number"/>
-                                                <span class="txt-teen text-regular notification error">ERROR MSG</span>
-                                                  </label>
+                        <!--                    if the deduction type is loan, the term must be shown otherwise hide
+                                                   TODO: if regular -> remove <div class="employee-field-group"> &  <label for="deduction-amount" class="fields-group margin-unset">
+                                                    <span class="text-title txt-xxs form-required">Term</span>
+                                                    <input class="fields employee-field-haft text-regular txt-xxs"
+                                                           id="deduction-amount"
+                                                           name="deduction-amount"
+                                                           type="number"/>
+                                                    <span class="txt-teen text-regular notification error">ERROR MSG</span>
+                                                      </label>
 
-                                                 TODO: the principal must set 0 as default;
+                                                     TODO: the principal must set 0 as default;
 
 
-                    -->
+                        -->
 
                         <label for="deduction-amount" class="fields-group margin-unset">
                             <span class="text-title txt-xxs">Penalty</span>

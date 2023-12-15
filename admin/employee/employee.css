@@ -54,19 +54,11 @@
     margin: 0 55px;
 }
 
-/*.employee-department-summary {*/
-/*    display: grid;*/
-/*    grid-template-columns: 1fr 1fr 1fr;*/
-/*    grid-template-rows: 1fr 1fr 1fr;*/
-/*    grid-template-areas:*/
-/*    "SOE SET SOC"*/
-/*    "SHT SOB IBE"*/
-/*    ". STAFF .";*/
-/*    grid-gap: 20px;*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 24px;*/
-/*    !*margin-left: 30px;*!*/
-/*}*/
+.employee-section{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
 
 .employee-department-summary{
     display: flex;
@@ -167,3 +159,33 @@
 .department-initial-field{
     width: 100px;
 }
+
+.employee-details-info{
+    display: flex;
+    gap: 10px;
+
+}
+
+.id-color{
+    background-color: var(--navbar-color);
+}
+
+.employee-id-card{
+    padding: 3px 10px;
+    border-radius: 5px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.view-employee-action{
+    margin: auto 0;
+}
+
+/*.id-color:before{*/
+/*    content: '';*/
+/*    background: transparent url("../../src/assets/icons/svg/employee-id.svg") no-repeat;*/
+/*    background-size: 24px 24px;*/
+/*}*/

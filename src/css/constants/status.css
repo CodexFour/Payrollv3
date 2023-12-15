@@ -6,6 +6,10 @@
     color: var(--tertiary);
 }
 
+.leave-type{
+    background-color: var(--status-inactive);
+}
+
 .inactive {
     background-color: var(--status-inactive);
 }

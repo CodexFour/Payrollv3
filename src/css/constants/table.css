@@ -63,7 +63,6 @@ tbody tr td {
 }
 
 .table-body > tr:hover {
-    --table-hover: #98e1c5;
     background-color: var(--table-hover);
     cursor: pointer;
 }

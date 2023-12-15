@@ -56,9 +56,9 @@
     padding: 5px;
 }
 
-.status {
-    position: relative;
-}
+/*.status {*/
+/*    position: relative;*/
+/*}*/
 
 .payments-form {
     display: flex;
