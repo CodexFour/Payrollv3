@@ -76,6 +76,7 @@
 <script src="../src/js/modal.js"></script>
 <script src="../lib/code/modules/variable-pie.js"></script>
 <script src="download.js"></script>
+<script src="upload.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {

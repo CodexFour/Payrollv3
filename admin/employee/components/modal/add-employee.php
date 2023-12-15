@@ -1,3 +1,6 @@
+<?php
+include_once '../../src/phpFunctions/connection.php';
+$con = connect(''); ?>
 <link rel="stylesheet" href="../../../admin.css">
 <section class="modal-content card">
     <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-employee')">
@@ -17,14 +20,14 @@
 
     <main class="modal-body">
         <strong class="text-bold txt-xxs text-center">EMPLOYEE INFORMATION</strong>
-        <form>
+        <form onsubmit="return false" id="add-employee-form">
             <div id="employee-form">
                 <div class="employee-header personal-information">
                     <h2 class="text-bold txt-xs">Personal Information</h2>
                 </div>
                 <div>
                     <div class="employee-profile-container">
-                        <img src="../../../../src/assets/img/profile.jpg" alt=""
+                        <img src="../src/assets/img/profile.jpg" alt=""
                              class="icon-xl icon-employee icon-cover">
                         <label class="file-input-container">
                         <span class="text-content">
@@ -32,7 +35,9 @@
 <!--                            IMPORTANT REMINDER: YOU MUST VALIDATE THE SIZE OF AN IMAGE IT MUST BE UNDER 5MB-->
                             <input type="file"
                                    class="file-input"
-                                   accept="image/jpeg, image/png, image/webp"/>
+                                   accept="image/jpeg, image/png, image/webp"
+                                   name="employee-pfp"
+                                   id="employee-pfp"/>
                             <span class="btn text-bold txt-xxs btn-transparent btn-border tertiary-color">Upload a file</span>
                             <span class="text-regular txt-teen instruction">Pick a profile picture <br>under 5MB</span>
                         </span>
@@ -122,7 +127,7 @@
                 <label for="employee-suffix" class="fields-group employee-suffix">
                     <span class="text-title txt-xxs">Suffix</span>
 <!--                    TODO: GET THE VALUE OF SUFFIX                    -->
-                    <select class="fields employee-field-regular text-title txt-xxs" id="employee-suffix">
+                    <select class="fields employee-field-regular text-title txt-xxs" name="employee-suffix" id="employee-suffix">
                         <option class="text-subtitle" value="" disabled selected>-Select-</option>
                         <option class="text-subtitle" value="Jr.">Jr.</option>
                         <option class="text-subtitle" value="Sr.">Sr.</option>
@@ -170,7 +175,7 @@
                     </label> <label for="employee-gender" class="fields-group employee-gender">
                         <span class="text-title txt-xxs form-required">Gender</span>
 <!--                        TODO: GET THE VALUE OF GENDER                        -->
-                        <select class="fields employee-field-haft text-title txt-xxs" id="employee-gender">
+                        <select class="fields employee-field-haft text-title txt-xxs" name="employee-gender" id="employee-gender">
                             <option class="text-subtitle" value="" disabled selected>-Select-</option>
                             <option class="text-subtitle" value="M">Male</option>
                             <option class="text-subtitle" value="F">Female</option>
@@ -279,10 +284,14 @@
                     <!--                    TODO: GET THE VALUE OF THE SELECTED OPTION OF THE USER
                                                the options tag and value must dependent to the department available in the database
                     -->
-                    <select class="fields employee-field-regular text-title txt-xxs" id="employee-department">
+                    <select class="fields employee-field-regular text-title txt-xxs" id="employee-department" name="employee-department">
                         <option class="text-subtitle" value="" disabled selected>-Select-</option>
-                        <option class="text-subtitle" value="M">Male</option>
-                        <option class="text-subtitle" value="F">Female</option>
+                        <?php
+                        $dept = $con->query('SELECT * FROM payroll_db.department;');
+                        while ($row = $dept->fetch_assoc()){
+                            echo '<option class="text-subtitle" value="'.$row['department_id'].'">'.$row['department_name'].'</option>';
+                        }
+                        ?>
                     </select>
                     <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                                             TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
@@ -292,11 +301,17 @@
                 </label>
                 <label for="employee-job-title" class="fields-group employee-job-title">
                     <span class="text-title txt-xxs form-required">Job Title</span>
+                    <select class="fields employee-field-regular text-title txt-xxs" id="employee-job-title" name="employee-job-title">
+                        <option class="text-subtitle" value="" disabled selected>-Select-</option>
+                        <?php
+                        $dept = $con->query('SELECT * FROM payroll_db.job_class;');
+                        while ($row = $dept->fetch_assoc()){
+                            echo '<option class="text-subtitle" value="'.$row['job_id'].'">'.$row['job_title'].'</option>';
+                        }
+                        ?>
+                    </select>
                     <!--                    TODO: GET THE VALUE OF JOB TITLE                        -->
-                    <input class="fields employee-field-regular text-regular txt-xxs"
-                           id="employee-job-title"
-                           name="employee-job-title"
-                           type="text"/>
+    
                     <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                                             TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
                                                 WARNING, ERROR-->
@@ -307,10 +322,10 @@
                 <label for="employee-working-type" class="fields-group employee-working-type">
                     <span class="text-title txt-xxs form-required">Working Type</span>
 <!--                    TODO: GET THE VALUE OF WORKING TYPE                    -->
-                    <select class="fields employee-field-regular text-title txt-xxs" id="employee-working-type">
+                    <select class="fields employee-field-regular text-title txt-xxs" id="employee-working-type" name="employee-working-type">
                         <option class="text-subtitle" value="" disabled selected>-Select-</option>
-                        <option class="text-subtitle" value="M">Regular</option>
-                        <option class="text-subtitle" value="F">Probationary</option>
+                        <option class="text-subtitle" value="Regular">Regular</option>
+                        <option class="text-subtitle" value="Probationary">Probationary</option>
                     </select>
                     <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                                             TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
@@ -333,7 +348,7 @@
                 </label>
             </div>
 <!--            TODO SAVE THE DATA IN THE DATABASE-->
-            <button type="submit" class="btn text-bold txt-xxs btn-save" id="add-employee">SAVE</button>
+            <button class="btn text-bold txt-xxs btn-save" id="add-employee" onclick="empFormSubmit()">SAVE</button>
         </form>
     </main>
 
