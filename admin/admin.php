@@ -17,16 +17,16 @@
         </div>
         <div class="nav-container-right">
 
-<!--            TODO: when it clicks, change the icon into employee-ui.svg-->
-      <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
+            <!--            TODO: when it clicks, change the icon into employee-ui.svg-->
+            <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
                  onclick="toggle('.open-notification')"/>
 
 
             <div class="notification-badge">
                 <img src="../src/assets/icons/notification.svg" alt="image" class="icon icon-m"
-                    onclick="toggle('.open-notification')"/>
+                     onclick="toggle('.open-notification')"/>
 
-<!--                NOTE: SEE THE DOCUMENTATION IN THE CSS RULE-->
+                <!--                NOTE: SEE THE DOCUMENTATION IN THE CSS RULE-->
                 <span class="notification-badge-counter text-bold txt-teen primary-color">28</span>
             </div>
             <div class="nav-employee-info" onclick="adminSetting()">
@@ -42,8 +42,10 @@
                     <img src="../src/assets/icons/svg/account-setting.svg" alt="" class="icon-xs">Account Setting</span>
                 <span class="txt-xxs text-bold group-settings">
                     <img src="../src/assets/icons/svg/settings.svg" alt="" class="icon-xs">Settings</span>
-                <span class="txt-xxs text-bold group-settings">
-                    <img src="../src/assets/icons/svg/logout.svg" alt="" class="icon-xs">Log out</span>
+                <span class="txt-xxs text-bold group-settings" onclick="logout()">
+                    <img src="../src/assets/icons/svg/logout.svg" alt="" class="icon-xs">Log out
+                </span>
+
             </div>
         </div>
     </nav>
@@ -98,6 +100,10 @@
 <script src="upload.js"></script>
 
 <script>
+
+    function logout() {
+        window.location.href = '../src/phpFunctions/logout.php';
+    }
     function adminSetting() {
         let nav = document.getElementById("admin-setting");
         if (nav.style.display === "none") {
@@ -107,6 +113,7 @@
         }
 
     }
+
     document.addEventListener("DOMContentLoaded", function () {
         fetchDashboard();
         // attendance_timesheet_chart();
