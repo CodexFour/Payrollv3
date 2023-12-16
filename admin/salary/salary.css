@@ -110,7 +110,7 @@
 
 .employee-search-control {
     display: flex;
-    gap: 10px
+    gap: 10px;
 }
 
 .view-payslip{
@@ -121,4 +121,56 @@
 .view-payslip:hover{
     opacity: 1;
 }
+
+.payslip-header{
+    margin: 0 auto;
+    width: 310px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.payroll-details-container{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 10px;
+    width: 330px;
+}
+
+.payroll-details{
+    display: flex;
+    justify-content: space-between;;
+}
+
+
+.payroll-container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.amount:before{
+    content: "₱";
+}
+
+.payroll-footer{
+    margin-top: 10px;
+    height:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.payroll-in-charge{
+    display: flex;
+    flex-direction: column;
+}
+
+
 

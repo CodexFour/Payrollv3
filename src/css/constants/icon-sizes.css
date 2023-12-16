@@ -4,7 +4,8 @@
     width: var(--teen);
     height: var(--teen);
 }
-.icon-xxs{
+
+.icon-xxs {
     width: var(--xxs);
     height: var(--xxs);
 }
@@ -23,18 +24,22 @@
     width: var(--medium);
     height: var(--medium);
 }
+
 .icon-l {
     width: var(--large);
     height: var(--large);
 }
+
 .icon-xl {
     width: var(--xl);
     height: var(--xl);
 }
+
 .icon-xxl {
     width: var(--xxl);
     height: var(--xxl);
 }
+
 .icon-xxxl {
     width: var(--xxxl);
     height: var(--xxxl);
@@ -45,20 +50,32 @@
     /*object-fit: cover;*/
 }
 
-.icon-soft-edge{
+.icon-soft-edge {
     border-radius: 20%;
 }
 
-.icon-employee{
+.icon-employee {
     border-radius: 10%;
 }
 
-.icon-cover{
+.icon-cover {
     object-fit: cover;
 }
 
-.icon-border{
+.icon-border {
     border: 2px solid var(--primary);
+}
+
+.icon{
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.icon:hover {
+    background-color: rgba(190, 190, 190, 0.438);
 }
 
 

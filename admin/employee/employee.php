@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../admin.css">
+<!--<link rel="stylesheet" href="../admin.css">-->
 <article id="employee" class="employee-content-container">
     <div class="employee-content-total-employees">
         <div class="card employee-content-total-employees-head">

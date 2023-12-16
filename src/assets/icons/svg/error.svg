@@ -1,12 +1,13 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" xml:space="preserve" width="16px" height="16px" fill="#000000">
-
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-<g id="SVGRepo_iconCarrier"> <circle style="fill:#D75A4A;" cx="25" cy="25" r="25"/> <polyline style="fill:none;stroke:#F0f0f0;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" points="16,34 25,25 34,16 "/> <polyline style="fill:none;stroke:#F0f0f0;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" points="16,16 25,25 34,34 "/> </g>
-
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="-35.45705032348633 -34.93067932128906 521.335693359375 521.335693359375">
+    <g>
+        <g fill-rule="evenodd" clip-rule="evenodd">
+            <circle cx="225.26" cy="225.74" r="184.32" fill="#fe646f" transform="rotate(-45 225.232 225.798)"
+                    opacity="1" data-original="#fe646f" class=""></circle>
+            <g fill="#e6e9ed">
+                <path d="M225.26 281.35c-4.09 0-7.59-3.49-8.3-8.29l-20.92-141.1c-2.63-17.77 8.85-34.06 24-34.06h10.43c15.15 0 26.63 16.29 24 34.06l-20.92 141.1c-.7 4.8-4.2 8.29-8.29 8.29zM244.4 334.43c0-10.54-8.6-19.14-19.14-19.14s-19.14 8.6-19.14 19.14 8.6 19.14 19.14 19.14 19.14-8.59 19.14-19.14z"
+                      fill="#e6e9ed" opacity="1" data-original="#e6e9ed" class=""></path>
+            </g>
+        </g>
+    </g>
 </svg>

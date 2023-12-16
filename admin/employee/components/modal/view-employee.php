@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../admin.css">
+<!--<link rel="stylesheet" href="../../../admin.css">-->
 <section class="modal-content card">
     <button class="btn btn-iconic btn-close btn-transparent" id="view--employee-close" onclick="closeModal('.modal-view-employee')">
     </button>
@@ -34,11 +34,11 @@
                     <span id="employee-birthdate" class="text-subtitle txt-xxs">O1-O1-2013</span>
                 <div class="employee_job-info">
                     <span class="department-badge id-color employee-id-card">
-                    <img src="../../../../src/assets/icons/svg/employee-id.svg" alt="" class="icon-s">
+                    <img src="../../../../src/assets/icons/svg/employee-id.svg" alt="" class="icon-xs">
                         <span id="employee_id" class="text-bold txt-xxs primary-color">1234</span>
                     </span>
                     <span id="employee-frid" class="text-subtitle txt-xxs employee-id-card">
-                       <img src="../../../../src/assets/icons/svg/rfid.svg" alt="" class="icon-s">
+                       <img src="../../../../src/assets/icons/svg/rfid.svg" alt="" class="icon-xs">
                         <span id="employee_rfid" class="text-bold txt-xxs">RFID</span>
                     </span>
                 </div>

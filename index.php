@@ -386,7 +386,7 @@
 <!--Modals-->
 <dialog class="modal modal-forgot"> <?php include_once 'forgotPassword.php' ?> </dialog>
 <dialog class="modal modal-resetPassword"> <?php include_once 'resetpassword.php' ?> </dialog>
-<dialog class="modal modal-login"> <?php include_once 'src/modal/login/login.php'?> </dialog>
+<dialog class="modal modal-login"> <?php include_once 'src/modal/login/login.php' ?> </dialog>
 
 
 <script src="main.js"></script>

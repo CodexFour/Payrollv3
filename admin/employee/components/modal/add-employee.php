@@ -1,7 +1,7 @@
 <?php
 include_once '../../src/phpFunctions/connection.php';
 $con = connect(''); ?>
-<link rel="stylesheet" href="../../../admin.css">
+<!--<link rel="stylesheet" href="../../../admin.css">-->
 <section class="modal-content card">
     <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-employee'); changeToEditTitle(false); clearEmployeeField()">
     </button>
@@ -29,7 +29,7 @@ $con = connect(''); ?>
                     <div class="employee-profile-container">
                         <img src="../src/assets/img/profile.jpg" alt=""
                              class="icon-xl icon-employee icon-cover">
-                        <label class="file-input-container">
+                        <label class="file-input-container" for="employee-pfp">
                         <span class="text-content">
 <!--                         TODO: GET THE IMAGE UPLOADED BY THE USER.  -->
 <!--                            IMPORTANT REMINDER: YOU MUST VALIDATE THE SIZE OF AN IMAGE IT MUST BE UNDER 5MB-->
@@ -50,7 +50,7 @@ $con = connect(''); ?>
                 </div>
 
 
-                <label for="employee-rfid" class="fields-group employee-rfid">
+                <label for="employee-rfid" class="fields-group employee_rfid">
 <!--                    TODO: GET THE VALUE OF RFID NUMBER-->
                     <span class="text-title txt-xxs form-required">RFID No.</span>
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -63,12 +63,12 @@ $con = connect(''); ?>
                     <span class="txt-teen text-regular notification error">ERROR MSG</span>
 
                 </label>
-                <label for="employee-id" class="fields-group employee-id">
+                <label for="employee_id" class="fields-group employee_id">
 <!--                    TODO: GET THE VALUE OF ID-->
                     <span class="text-title txt-xxs form-required">ID Number</span>
                     <input onkeydown="return false" class="fields employee-field-regular text-regular txt-xxs"
-                           id="employee-id"
-                           name="employee-id"
+                           id="employee_id"
+                           name="employee_id"
                            type="number"
                            />
                     <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
@@ -78,7 +78,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-firstname" class="fields-group employee-firstname">
+                <label for="employee-firstname" class="fields-group employee_firstname">
                     <span class="text-title txt-xxs form-required">First Name</span>
 <!--                     TODO: GET THE VALUE OF FIRST NAME-->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -93,7 +93,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-lastname" class="fields-group employee-lastname">
+                <label for="employee-lastname" class="fields-group employee_lastname">
 <!--                    TODO: GET THE VALUE OF LAST NAME                    -->
                     <span class="text-title txt-xxs form-required">Last Name</span>
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -109,7 +109,7 @@ $con = connect(''); ?>
 
                 </label>
                 <!--                <div class="middle-name_suffix employee-field-group">-->
-                <label for="employee-middlename" class="fields-group employee-middlename">
+                <label for="employee-middlename" class="fields-group employee_middlename">
 <!--                    TODO: GET THE VALUE OF MIDDLE NAME-->
                     <span class="text-title txt-xxs">Middle Name</span>
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -124,7 +124,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-suffix" class="fields-group employee-suffix">
+                <label for="employee-suffix" class="fields-group employee_suffix">
                     <span class="text-title txt-xxs">Suffix</span>
 <!--                    TODO: GET THE VALUE OF SUFFIX                    -->
                     <select class="fields employee-field-regular text-title txt-xxs" name="employee-suffix" id="employee-suffix">
@@ -143,7 +143,7 @@ $con = connect(''); ?>
 
                 </label>
                 <!--                </div>-->
-                <label for="employee-birthdate" class="fields-group employee-birthdate">
+                <label for="employee-birthdate" class="fields-group employee_birthdate">
                     <span class="text-title txt-xxs form-required">Birth Date</span>
 <!--                    TODO: GET THE VALUE OF BIRTH DATE                    -->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -158,7 +158,7 @@ $con = connect(''); ?>
 
                 </label>
                 <div class="gender-age employee-field-group">
-                    <label for="employee-age" class="fields-group employee-age">
+                    <label for="employee-age" class="fields-group employee_age">
                         <span class="text-title txt-xxs form-required">Age</span>
 <!--                        TODO: GET THE VALUE OF AGE                        -->
                         <input class="fields employee-field-haft text-regular txt-xxs"
@@ -172,7 +172,7 @@ $con = connect(''); ?>
                         <span class="txt-teen text-regular notification error">ERROR MSG</span>
 
 
-                    </label> <label for="employee-gender" class="fields-group employee-gender">
+                    </label> <label for="employee-gender" class="fields-group employee_gender">
                         <span class="text-title txt-xxs form-required">Gender</span>
 <!--                        TODO: GET THE VALUE OF GENDER                        -->
                         <select class="fields employee-field-haft text-title txt-xxs" name="employee-gender" id="employee-gender">
@@ -187,7 +187,7 @@ $con = connect(''); ?>
 
                     </label>
                 </div>
-                <label for="employee-email" class="fields-group employee-email">
+                <label for="employee-email" class="fields-group employee_email">
                     <span class="text-title txt-xxs form-required">Email</span>
 <!--                    TODO: GET THE VALUE OF EMAIL                    -->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -201,7 +201,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-phone" class="fields-group employee-phone">
+                <label for="employee-phone" class="fields-group employee_phone">
 <!--                    TODO: GET THE VALUE OF PHONE                    -->
                     <span class="text-title txt-xxs form-required">Phone No.</span>
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -219,7 +219,7 @@ $con = connect(''); ?>
                     <h2 class="text-bold txt-xs">Address Information</h2>
                 </div>
 
-                <label for="employee-street" class="fields-group employee-street">
+                <label for="employee-street" class="fields-group employee_street">
                     <span class="text-title txt-xxs form-required">Street</span>
 <!--                    TODO: GET THE VALUE OF STREET                    -->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -234,7 +234,7 @@ $con = connect(''); ?>
 
                 </label>
 
-                <label for="employee-barangay" class="fields-group employee-barangay">
+                <label for="employee-barangay" class="fields-group employee_barangay">
                     <span class="text-title txt-xxs form-required">Barangay</span>
 <!--                    TODO: GET THE VALUE OF BARANGAY                    -->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -248,7 +248,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-city" class="fields-group employee-city">
+                <label for="employee-city" class="fields-group employee_city">
                     <span class="text-title txt-xxs form-required">City</span>
 <!--                    TODO: GET THE VALUE OF CITY                    -->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -262,7 +262,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-province" class="fields-group employee-province">
+                <label for="employee-province" class="fields-group employee_province">
                     <span class="text-title txt-xxs form-required">Province</span>
 <!--                    TODO: GET THE VALUE OF PROVINCE                    -->
                     <input class="fields employee-field-regular text-regular txt-xxs"
@@ -279,7 +279,7 @@ $con = connect(''); ?>
                 <div class="employee-header job-information">
                     <h2 class="text-bold txt-xs">Job Information</h2>
                 </div>
-                <label for="employee-department" class="fields-group employee-department">
+                <label for="employee-department" class="fields-group employee_department">
                     <span class="text-title txt-xxs form-required">Department</span>
                     <!--                    TODO: GET THE VALUE OF THE SELECTED OPTION OF THE USER
                                                the options tag and value must dependent to the department available in the database
@@ -299,7 +299,7 @@ $con = connect(''); ?>
                     <span class="txt-teen text-regular notification error">ERROR MSG</span>
 
                 </label>
-                <label for="employee-job-title" class="fields-group employee-job-title">
+                <label for="employee-job-title" class="fields-group employee_job_title">
                     <span class="text-title txt-xxs form-required">Job Title</span>
                     <select class="fields employee-field-regular text-title txt-xxs" id="employee-job-title" name="employee-job-title">
                         <option class="text-subtitle" value="" disabled selected>-Select-</option>
@@ -319,7 +319,7 @@ $con = connect(''); ?>
 
 
                 </label>
-                <label for="employee-working-type" class="fields-group employee-working-type">
+                <label for="employee-working-type" class="fields-group employee_working_type">
                     <span class="text-title txt-xxs form-required">Working Type</span>
 <!--                    TODO: GET THE VALUE OF WORKING TYPE                    -->
                     <select class="fields employee-field-regular text-title txt-xxs" id="employee-working-type" name="employee-working-type">
@@ -334,7 +334,7 @@ $con = connect(''); ?>
 
                 </label>
 <!--                TODO: GET THE VALUE OF HIRED DATE                -->
-                <label for="employee-hired-date" class="fields-group employee-hired-date">
+                <label for="employee-hired-date" class="fields-group employee_hired_date">
                     <span class="text-title txt-xxs form-required">Hired Date</span>
                     <input class="fields employee-field-regular text-regular txt-xxs"
                            id="employee-hired-date"

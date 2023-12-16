@@ -98,8 +98,11 @@
             <span class="text-regular txt-xxs status paid"></span>
         </td>
         <td>
-            <a href="#" class="text-regular txt-xxs view-payslip">View Payslip</a>
+            <span class="text-regular txt-xxs view-payslip" onclick="openModal('.modal-payslip')">View Payslip</span>
         </td>
     </tr>
     </tbody>
 </table>
+
+<dialog class="modal modal-payslip"> <?php include_once 'modal/view-payslip.php' ?> </dialog>
+
