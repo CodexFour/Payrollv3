@@ -205,7 +205,7 @@
     }
     function clearEmployeeField(){
         let inputs = document.querySelectorAll('#add-employee-form input');
-        alert(inputs.size);
+        alert(inputs.length);
         inputs.forEach((i) =>{
             i.value = null;
         })

@@ -1,6 +1,6 @@
 function empFormSubmit() {
   let empForm = document.querySelector("#add-employee-form");
-  let id = empForm.querySelector("#employee-id");
+  let id = empForm.querySelector("#employee_id");
   let pfp = empForm.querySelector("#employee-pfp");
   let rfid = empForm.querySelector("#employee-rfid");
   let fn = empForm.querySelector("#employee-firstname");
