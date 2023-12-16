@@ -3,10 +3,10 @@ include_once '../src/phpFunctions/connection.php';
 session_start();
 $con = connect('');
 
-if (isset($_POST['page'])) {
-    $page = strtolower($_POST['page']);
+if (isset($_POST['request'])) {
+    $request = strtolower($_POST['request']);
     // GET DASHBOARD DATAS
-    if ($page === 'dashboard') {
+    if ($request === 'dashboard') {
         // QUERIES
         $employees = $con->query('SELECT * FROM employees');
         $payroll = $con->query( //get lastest months's
@@ -71,7 +71,7 @@ if (isset($_POST['page'])) {
 
 
     // GET EMPLOYEE DATAS   
-    } elseif ($page === 'employee'){
+    } elseif ($request === 'employee'){
         $employees = $con->query('SELECT * FROM employees');
         $dprtm = $con->query('SELECT * FROM payroll_db.department;');
 
@@ -94,6 +94,13 @@ if (isset($_POST['page'])) {
                 'empCount' => $empCount,
                 'departments' => $empDprtm
             )
+        );
+
+    } elseif ($request === 'emp_info'){
+        $employees = $con->query('SELECT * FROM employees WHERE employee_id = '.$_POST['emp_id']);
+        $empRow = $employees->fetch_assoc();
+        echo json_encode(
+            $empRow
         );
     }
 }

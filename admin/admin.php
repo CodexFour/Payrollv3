@@ -171,6 +171,19 @@
         }
     });
 
+    // For add/edit employee modal title
+    function changeToEditTitle(bool){
+        let titleElm = document.querySelector('#add-employee-title');
+        titleElm.innerHTML = bool? "EDIT EMPLOYEE": "ADD NEW EMPLOYEE";
+    }
+    function clearEmployeeField(){
+        let inputs = document.querySelectorAll('#add-employee-form input');
+        alert(inputs.size);
+        inputs.forEach((i) =>{
+            i.value = null;
+        })
+        alert("cleared")
+    }
 
 </script>
 </body>

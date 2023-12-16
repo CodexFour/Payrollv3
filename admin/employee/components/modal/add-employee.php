@@ -3,7 +3,7 @@ include_once '../../src/phpFunctions/connection.php';
 $con = connect(''); ?>
 <link rel="stylesheet" href="../../../admin.css">
 <section class="modal-content card">
-    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-employee')">
+    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-employee'); changeToEditTitle(false); clearEmployeeField()">
     </button>
     <header class="modal-header">
         <div class="card-name">
@@ -13,7 +13,7 @@ $con = connect(''); ?>
                         • Update employee information -> SUBHEADING
 -->
 
-            <strong class="text-title txt-xs">ADD NEW EMPLOYEE</strong>
+            <strong class="text-title txt-xs" id="add-employee-title">ADD NEW EMPLOYEE</strong>
             <span class="text-subtitle txt-xxs">Fill out the form to add new employee</span>
         </div>
     </header>
@@ -66,11 +66,11 @@ $con = connect(''); ?>
                 <label for="employee-id" class="fields-group employee-id">
 <!--                    TODO: GET THE VALUE OF ID-->
                     <span class="text-title txt-xxs form-required">ID Number</span>
-                    <input class="fields employee-field-regular text-regular txt-xxs"
+                    <input onkeydown="return false" class="fields employee-field-regular text-regular txt-xxs"
                            id="employee-id"
                            name="employee-id"
                            type="number"
-                           disabled/>
+                           />
                     <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                                             TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
                                                 WARNING, ERROR-->

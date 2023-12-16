@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../../../admin.css">
 <section class="modal-content card">
-    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-view-employee')">
+    <button class="btn btn-iconic btn-close btn-transparent" id="view--employee-close" onclick="closeModal('.modal-view-employee')">
     </button>
     <header class="modal-header">
         <div class="card-name">
@@ -10,7 +10,7 @@
         <div class="view-employee-action">
             <div class="action-container">
                 <div class="action">
-                    <div class="action-icon edit-icon">
+                    <div class="action-icon edit-icon" id="employee-edit-btn">
                         <img src="../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs">
                     </div>
                     <div class="action-icon delete-icon">
