@@ -16,16 +16,34 @@
             <h1 class="text-title txt-s primary-color" id="nav-title">DASHBOARD</h1>
         </div>
         <div class="nav-container-right">
-            <button type="button" class="btn nav-title text-title txt-xxs nav-button ">SWITCH TO EMPLOYEE</button>
-            <img src="../src/assets/icons/notification.svg" alt="image" class="nav-notification"
+
+<!--            TODO: when it clicks, change the icon into employee-ui.svg-->
+      <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
                  onclick="toggle('.open-notification')"/>
-            <div class="nav-employee-info">
+
+
+            <div class="notification-badge">
+                <img src="../src/assets/icons/notification.svg" alt="image" class="icon icon-m"
+                    onclick="toggle('.open-notification')"/>
+
+<!--                NOTE: SEE THE DOCUMENTATION IN THE CSS RULE-->
+                <span class="notification-badge-counter text-bold txt-teen primary-color">28</span>
+            </div>
+            <div class="nav-employee-info" onclick="adminSetting()">
                 <div class="nav-employee-details">
                     <span class="text-title txt-xs primary-color">John Doe</span> <!--TODO: Change name-->
                     <span class="text-regular txt-xxs primary-color">Admin</span> <!--TODO: Change role-->
                 </div>
                 <!--TODO: Change image base on the image in the database-->
-                <img src="../src/assets/img/img.png" alt="image" class="icon-l icon-round"/>
+                <img src="../src/assets/img/img.png" alt="image" class="icon-l icon-round icon-cover"/>
+            </div>
+            <div id="admin-setting" class="collapse-menu">
+                <span class="txt-xxs text-bold group-settings" onclick="openModal('.modal-account-settings')">
+                    <img src="../src/assets/icons/svg/account-setting.svg" alt="" class="icon-xs">Account Setting</span>
+                <span class="txt-xxs text-bold group-settings">
+                    <img src="../src/assets/icons/svg/settings.svg" alt="" class="icon-xs">Settings</span>
+                <span class="txt-xxs text-bold group-settings">
+                    <img src="../src/assets/icons/svg/logout.svg" alt="" class="icon-xs">Log out</span>
             </div>
         </div>
     </nav>
@@ -69,6 +87,7 @@
 
 </main>
 
+<dialog class="modal modal-account-settings"> <?php include_once 'modal/account-settings.php' ?> </dialog>
 <script src="../src/js/charts.js"></script>
 <script src="../src/js/HTTPRequest.js"></script>
 <script src="../src/js/calendar.js"></script>
@@ -79,9 +98,17 @@
 <script src="upload.js"></script>
 
 <script>
+    function adminSetting() {
+        let nav = document.getElementById("admin-setting");
+        if (nav.style.display === "none") {
+            nav.style.display = "block";
+        } else {
+            nav.style.display = "none";
+        }
+
+    }
     document.addEventListener("DOMContentLoaded", function () {
         fetchDashboard();
-        requestData('dashboard');
         // attendance_timesheet_chart();
         // calendar();
     });
@@ -145,6 +172,7 @@
 
     async function fetchDashboard() {
         await fetch('.admin-content', 'dashboard/dashboard.php');
+        requestData('dashboard');
         dashboard_chart();
     }
 
