@@ -121,9 +121,135 @@
 }
 
 .percent-icon {
+
     background: #FFFFFF url("../../src/assets/icons/svg/percent.svg") no-repeat right;
     background-size: 20px 20px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
     padding: .5em 2.5em .5em 1em;
     width: 90px;
+}
+
+
+.calculator-field {
+    min-height: 40px;
+    background: #FFFFFF;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #707070;
+    padding: 5px 10px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#deduction-amount:disabled{
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+
+.calculator-functions {
+    width: 350px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    grid-template-rows: repeat(4, minmax(50px, 1fr));
+    gap: 10px;
+    user-select: none;
+}
+
+/*.backspace {*/
+/*    grid-area: backspace;*/
+/*}*/
+
+/*.gross {*/
+/*    grid-area: gross;*/
+/*}*/
+
+/*.plus {*/
+/*    grid-area: plus;*/
+/*}*/
+
+/*.seven {*/
+/*    grid-area: seven;*/
+/*}*/
+
+/*.eight {*/
+/*    grid-area: eight;*/
+/*}*/
+
+/*.nine {*/
+/*    grid-area: nine;*/
+/*}*/
+
+
+/*.net {*/
+/*    grid-area: net;*/
+/*}*/
+
+/*.minus {*/
+/*    grid-area: minus;*/
+/*}*/
+
+/*.four {*/
+/*    grid-area: four;*/
+/*}*/
+
+/*.five {*/
+/*    grid-area: five;*/
+/*}*/
+
+/*.six {*/
+/*    grid-area: six;*/
+/*}*/
+
+/*.open-parenthesis {*/
+/*    grid-area: open-parenthesis;*/
+/*}*/
+
+/*.times{*/
+/*    grid-area: times;*/
+/*}*/
+
+/*.one {*/
+/*    grid-area: one;*/
+/*}*/
+
+/*.two {*/
+/*    grid-area: two;*/
+/*}*/
+
+/*.three {*/
+/*    grid-area: three;*/
+/*}*/
+
+/*.close-parenthesis {*/
+/*    grid-area: close-parenthesis;*/
+/*}*/
+
+/*.divide {*/
+/*    grid-area: divide;*/
+/*}*/
+
+/*.dot {*/
+/*    grid-area: dot;*/
+/*}*/
+
+/*.zero {*/
+/*    grid-area: zero;*/
+/*}*/
+
+/*.exponent {*/
+/*    grid-area: exponent;*/
+/*}*/
+
+.box {
+    display: grid;
+    place-items: center;
+    outline: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+.box1 {
+
 }

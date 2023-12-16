@@ -13,3 +13,7 @@
 .text-justify{
     text-align: justify;
 }
+
+.text-underline{
+    text-decoration: underline;
+}
