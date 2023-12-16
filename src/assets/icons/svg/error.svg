@@ -1,13 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="-35.45705032348633 -34.93067932128906 521.335693359375 521.335693359375">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px" viewBox="0 0 91.66 91.66">
+  <g id="Layer_1-2" data-name="Layer 1-2">
     <g>
-        <g fill-rule="evenodd" clip-rule="evenodd">
-            <circle cx="225.26" cy="225.74" r="184.32" fill="#fe646f" transform="rotate(-45 225.232 225.798)"
-                    opacity="1" data-original="#fe646f" class=""></circle>
-            <g fill="#e6e9ed">
-                <path d="M225.26 281.35c-4.09 0-7.59-3.49-8.3-8.29l-20.92-141.1c-2.63-17.77 8.85-34.06 24-34.06h10.43c15.15 0 26.63 16.29 24 34.06l-20.92 141.1c-.7 4.8-4.2 8.29-8.29 8.29zM244.4 334.43c0-10.54-8.6-19.14-19.14-19.14s-19.14 8.6-19.14 19.14 8.6 19.14 19.14 19.14 19.14-8.59 19.14-19.14z"
-                      fill="#e6e9ed" opacity="1" data-original="#e6e9ed" class=""></path>
-            </g>
-        </g>
+      <circle cx="45.83" cy="45.83" r="45.83" fill="#fe646f" stroke-width="0"/>
+      <path d="m45.84,59.65c-1.02,0-1.89-.87-2.06-2.06l-5.2-35.08c-.65-4.42,2.2-8.47,5.97-8.47h2.59c3.77,0,6.62,4.05,5.97,8.47l-5.2,35.08c-.17,1.19-1.04,2.06-2.06,2.06h0Zm4.76,13.2c0-2.62-2.14-4.76-4.76-4.76s-4.76,2.14-4.76,4.76,2.14,4.76,4.76,4.76,4.76-2.14,4.76-4.76Z" fill="#e6e9ed" fill-rule="evenodd" stroke-width="0"/>
     </g>
+  </g>
 </svg>

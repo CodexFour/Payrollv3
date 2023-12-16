@@ -1,6 +1,7 @@
 function dashboard_chart() {
     Highcharts.chart('dashboard-chart', {
         chart: {
+            type: 'area',
             backgroundColor: 'transparent',
             style: {
                 fontFamily: 'Roboto Bold',
