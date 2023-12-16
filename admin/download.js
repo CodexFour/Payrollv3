@@ -109,7 +109,7 @@ function fetchEmployeeData(empid) {
 function applyEmployeeModal(responseObject) {
   console.log(responseObject);
   let empForm = document.querySelector("#add-employee-form");
-  let id = empForm.querySelector("#employee-id");
+  let id = empForm.querySelector("#employee_id");
   id.onkeydown = (e) => {return false};
   let pfp = empForm.querySelector("#employee-pfp");
   let rfid = empForm.querySelector("#employee-rfid");
