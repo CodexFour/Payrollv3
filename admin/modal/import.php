@@ -29,7 +29,7 @@
                     <span class="txt-teen text-regular notification error">ERROR MSG</span>
                 </label>
             </div>
-            <button type="submit" class="btn text-bold txt-xxs btn-save" id="export">EXPORT</button>
+            <button type="submit" class="btn text-bold txt-xxs btn-save" id="import">IMPORT</button>
         </form>
 
     </main>

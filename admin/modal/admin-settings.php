@@ -18,8 +18,8 @@
                             <span class="text-subtitle txt-teen">Data Transfer and Exchange</span>
                         </div>
 
-                        <div class="data-action-container" onclick="openModal('.modal-import')">
-                            <div class="data-action">
+                        <div class="data-action-container">
+                            <div class="data-action" onclick="openModal('.modal-import')">
                                 <img src="../../src/assets/icons/svg/import.svg" alt="" class="icon-xl">
                                 <span class="text-title txt-xxs">Import</span>
                             </div>
