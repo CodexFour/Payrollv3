@@ -371,15 +371,13 @@
 
     function clearEmployeeField() {
         let inputs = document.querySelectorAll('#add-employee-form input');
-        alert(inputs.length);
-        inputs.forEach((i) => {
         let selects = document.querySelectorAll('#add-employee-form select');
         inputs.forEach((i) =>{
             i.value = null;
         })
         selects.forEach((s) =>{
             s.value = "";
-        })
+        });
     }
     function clearEmployeeView(){
         let empView = document.querySelector("#view-employee-modal");
