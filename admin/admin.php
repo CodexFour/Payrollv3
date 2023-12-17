@@ -373,10 +373,32 @@
         let inputs = document.querySelectorAll('#add-employee-form input');
         alert(inputs.length);
         inputs.forEach((i) => {
+        let selects = document.querySelectorAll('#add-employee-form select');
+        inputs.forEach((i) =>{
             i.value = null;
         })
-        alert("cleared")
+        selects.forEach((s) =>{
+            s.value = "";
+        })
     }
+
+    // For format date purposes
+    function formatTextDate(inputDate) {
+    const dateParts = inputDate.split('-');
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    const formattedDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+
+    const monthName = monthNames[formattedDate.getMonth()];
+
+    const day = formattedDate.getDate();
+    const year = formattedDate.getFullYear();
+
+    // Concatenate the formatted date
+    const result = `${monthName} ${day} ${year}`;
+
+    return result;
+}
 
 </script>
 </body>

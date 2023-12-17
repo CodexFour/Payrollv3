@@ -53,9 +53,11 @@ function empFormSubmit() {
           if (responseObject.status === 1) {
             alert("Employee successfully added!");
             closeModal(".modal-employee");
+            clearEmployeeField();
           } else if (responseObject.status === 2) {
             alert("Employee successfully edited!");
             closeModal(".modal-employee");
+            clearEmployeeField();
           }
           requestData("employee");
         }
@@ -66,6 +68,36 @@ function empFormSubmit() {
   };
   request.open("POST", "upload.php", true);
   request.send(formData);
+}
+
+function deleteEmp(empId){
+  const request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+    if (request.status == 200 && request.readyState == 4) {
+      let responseObject = null;
+      try {
+        console.log(request.responseText);
+        responseObject = JSON.parse(request.responseText);
+        if (responseObject.status > 0) {
+          if (responseObject.status === 0) {
+            alert("An error has occured\n\n"+responseObject.error);
+          }
+          if (responseObject.status === 1) {
+            alert("Employee has been deleted");
+            closeModal(".modal-employee");
+            closeModal('.modal-view-employee');
+            clearEmployeeField();
+          }
+          requestData("employee");
+        }
+      } catch (err) {
+        console.error("Parse failed");
+      }
+    }
+  };
+  request.open("POST", "upload.php");
+  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  request.send(`request=emp-delete&emp-id=${empId}`);
 }
 
 function leaveFormSubmit() {

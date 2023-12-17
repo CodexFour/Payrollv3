@@ -99,6 +99,9 @@ if (isset($_POST['request'])) {
     } elseif ($request === 'emp_info'){
         $employees = $con->query('SELECT * FROM employees WHERE employee_id = '.$_POST['emp_id']);
         $empRow = $employees->fetch_assoc();
+        $empRow['department_name'] = $con->query('SELECT department_name AS "dn" FROM department WHERE department_id = '.$empRow['department_id'])->fetch_assoc()['dn'];
+        $empRow['job_title'] = $con->query('SELECT job_title AS "jt" FROM job_class WHERE job_id = '.$empRow['job_id'])->fetch_assoc()['jt'];
+        $empRow['address'] = $con->query('SELECT * FROM `address` WHERE employee_id ='.$_POST['emp_id'])->fetch_assoc();
         echo json_encode(
             $empRow
         );

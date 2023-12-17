@@ -91,10 +91,14 @@ function fetchEmployeeData(empid) {
       try {
         responseObject = JSON.parse(request.responseText);
         console.log(responseObject);
-        changeToEditTitle(true);
+        applyEmployeeView(responseObject);
         document.querySelector("#employee-edit-btn").onclick = () => {
+          changeToEditTitle(true);
           openModal(".modal-employee");
           applyEmployeeModal(responseObject);
+        };
+        document.querySelector("#employee-delete-btn").onclick = () => {
+          deleteEmp(empid);
         };
       } catch (err) {
         console.error("Parse failed");
@@ -106,11 +110,72 @@ function fetchEmployeeData(empid) {
   request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   request.send(requestPage);
 }
+function applyEmployeeView(responseObject) {
+  let empView = document.querySelector("#view-employee-modal");
+  let id = empView.querySelector("#view-employee_id");
+  let pfp = empView.querySelector("#view-employee-pfp");
+  let rfid = empView.querySelector("#view-employee-rfid");
+  let name = empView.querySelector("#view-employee-name");
+  // let ln = empView.querySelector("#view-employee-lastname");
+  // let mn = empView.querySelector("#view-employee-middlename");
+  // let sf = empView.querySelector("#view-employee-suffix");
+  let bd = empView.querySelector("#view-employee-birthdate");
+  let age = empView.querySelector("#view-employee-age");
+  let sex = empView.querySelector("#view-employee-gender");
+  // let em = empView.querySelector("#view-employee-email");
+  // let phone = empView.querySelector("#view-employee-phone");
+  let strt = empView.querySelector("#view-employee-street");
+  let brgy = empView.querySelector("#view-employee-barangay");
+  let ct = empView.querySelector("#view-employee-city");
+  let pv = empView.querySelector("#view-employee-province");
+  let dpm = empView.querySelector("#view-employee-department");
+  let jtt = empView.querySelector("#view-employee-job-title");
+  let wkt = empView.querySelector("#view-employee-working-type");
+  let hd = empView.querySelector("#view-employee-hired-date");
+
+  id.innerHTML = responseObject["employee_id"];
+  rfid.innerHTML = responseObject["rfid"];
+  name.innerHTML = `${responseObject["first_name"]} ${responseObject["middle_name"]} ${responseObject["last_name"]} ${responseObject["suffix"]}`;
+  sex.innerHTML = responseObject["gender"];
+  age.innerHTML = responseObject["age"];
+  // phone.innerHTML = responseObject["phone_no"];
+  // em.innerHTML = responseObject["email"];
+
+  if(responseObject["address"] != null){
+    strt.innerHTML = responseObject["address"]["street"];
+    brgy.innerHTML = responseObject["address"]["barangay"];
+    ct.innerHTML = responseObject["address"]["city"];
+    pv.innerHTML = responseObject["address"]["province"];
+  }
+
+  dpm.innerHTML = responseObject["department_name"];
+  jtt.innerHTML = responseObject["job_title"];
+  wkt.innerHTML = responseObject["working_type"];
+  bd.innerHTML = formatTextDate(responseObject["birthdate"]);
+  hd.innerHTML = formatTextDate(responseObject["hired_date"]);
+
+
+  if (rfid.innerHTML == "") rfid.innerHTML = "-No RFID-"
+  if (name.innerHTML == "") name.innerHTML = "---- ---- ----"
+  if (bd.innerHTML == "") bd.innerHTML = "--- -- ----"
+  if (age.innerHTML == "") age.innerHTML = "--"
+  if (sex.innerHTML == "") sex.innerHTML = "-"
+  if (strt.innerHTML == "") strt.innerHTML = "----"
+  if (brgy.innerHTML == "") brgy.innerHTML = "----"
+  if (ct.innerHTML == "") ct.innerHTML = "----"
+  if (pv.innerHTML == "") pv.innerHTML = "----"
+  if (dpm.innerHTML == "") dpm.innerHTML = "----"
+  if (wkt.innerHTML == "") wkt.innerHTML = "----"
+  if (jtt.innerHTML == "") jtt.innerHTML = "----"
+  if (hd.innerHTML == "") hd.innerHTML = "--- -- ----"
+}
 function applyEmployeeModal(responseObject) {
   console.log(responseObject);
   let empForm = document.querySelector("#add-employee-form");
   let id = empForm.querySelector("#employee_id");
-  id.onkeydown = (e) => {return false};
+  id.onkeydown = (e) => {
+    return false;
+  };
   let pfp = empForm.querySelector("#employee-pfp");
   let rfid = empForm.querySelector("#employee-rfid");
   let fn = empForm.querySelector("#employee-firstname");
@@ -146,4 +211,11 @@ function applyEmployeeModal(responseObject) {
   wkt.value = responseObject["working_type"];
   hd.value = responseObject["hired_date"];
   dpm.value = responseObject["department_id"];
+
+  if(responseObject["address"] != null){
+    strt.value = responseObject["address"]["street"];
+    brgy.value = responseObject["address"]["barangay"];
+    ct.value = responseObject["address"]["city"];
+    pv.value = responseObject["address"]["province"];
+  }
 }
