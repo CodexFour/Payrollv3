@@ -102,7 +102,7 @@
                                placeholder="Search Employee"/>
                     </label>
                 </div>
-                <button class="btn text-bold txt-xxs">SUMMARY</button>
+                <button class="btn text-bold txt-xxs" onclick="openModal('.modal-export')">EXPORT</button>
             </div>
         </div>
         <div class="salary_table-container">
@@ -110,3 +110,4 @@
         </div>
     </div>
 </article>
+<dialog class="modal modal-export"> <?php include_once '../modal/exports.php' ?> </dialog>

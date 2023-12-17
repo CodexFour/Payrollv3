@@ -222,5 +222,28 @@
 .employee-attachment{
     border-radius: 10px;
 }
+.leave-type-settings{
+   width: 600px;
+}
+.leave-type-table-actions{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.leave-type-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.leave-status-type{
+    margin-left: auto;
+}
+
+.leave-type-header-container{
+    padding-right: 50px;
+}
 
 

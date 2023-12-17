@@ -72,7 +72,7 @@
                             <option class="text-subtitle" value="PM">PM</option>
                         </select>
                     </label>
-                    <button class="btn text-bold txt-xxs">EXPORT</button>
+                    <button class="btn text-bold txt-xxs" onclick="openModal('.modal-export')">EXPORT</button>
                 </div>
             </div>
         </div>
@@ -85,3 +85,4 @@
 <!--Modal-->
 <dialog class="modal modal-attendance"> <?php include_once 'components/modal/add-attendance.php' ?> </dialog>
 <dialog class="modal modal-holiday"> <?php include_once 'components/modal/add-holiday.php' ?> </dialog>
+<dialog class="modal modal-export"> <?php include_once '../modal/exports.php' ?> </dialog>

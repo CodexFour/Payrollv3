@@ -22,13 +22,143 @@
                  onclick="toggle('.open-notification')"/>
 
 
-            <div class="notification-badge">
-                <img src="../src/assets/icons/notification.svg" alt="image" class="icon icon-m"
-                     onclick="toggle('.open-notification')"/>
+            <div class="notification-badge" onclick="openNotification()">
+                <img src="../src/assets/icons/notification.svg" alt="image" class="icon icon-m"/>
 
                 <!--                NOTE: SEE THE DOCUMENTATION IN THE CSS RULE-->
                 <span class="notification-badge-counter text-bold txt-teen primary-color">28</span>
             </div>
+            <section class="admin-notification-container" id="notification">
+                <header class="notification-header">
+                    <div class="notification-head">
+                        <h2 class="text-bold txt-xs">Notifications</h2>
+                    </div>
+                    <span class="btn btn-transparent text-regular txt-teen highlight margin-left">Clear All</span>
+                </header>
+                <main class="notification-body">
+                    <div class="notification-section">
+                        <strong class="text-title txt-xs">Today</strong>
+                        <ul class="notification-content read">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                                <!--                    <span class="btn btn-transparent text-regular txt-teen highlight margin-left">Clear All</span>-->
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">1hr Ago</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notification-section">
+                        <strong class="text-title txt-xs">Yesterday</strong>
+                        <ul class="notification-content">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">4:30pm</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                        <ul class="notification-content">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">4:30pm</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                        <ul class="notification-content">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">4:30pm</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                        <ul class="notification-content">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">4:30pm</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                        <ul class="notification-content">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">4:30pm</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                        <ul class="notification-content">
+                            <li class="notification-content-pic">
+                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                            </li>
+                            <li class="notification-content-body">
+                                <span class="text-title txt-xxs">Jane Oxford</span>
+                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                            </li>
+                            <li class="notification-content-time">
+                                <span class="text-regular txt-teen">4:30pm</span>
+                            </li>
+                            <li class="notification-content-action">
+                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                            </li>
+                        </ul>
+                    </div>
+                </main>
+            </section>
+
+
             <div class="nav-employee-info" onclick="adminSetting()">
                 <div class="nav-employee-details">
                     <span class="text-title txt-xs primary-color">John Doe</span> <!--TODO: Change name-->
@@ -40,7 +170,7 @@
             <div id="admin-setting" class="collapse-menu">
                 <span class="txt-xxs text-bold group-settings" onclick="openModal('.modal-account-settings')">
                     <img src="../src/assets/icons/svg/account-setting.svg" alt="" class="icon-xs">Account Setting</span>
-                <span class="txt-xxs text-bold group-settings">
+                <span class="txt-xxs text-bold group-settings" onclick="openModal('.modal-admin-settings')">
                     <img src="../src/assets/icons/svg/settings.svg" alt="" class="icon-xs">Settings</span>
                 <span class="txt-xxs text-bold group-settings" onclick="logout()">
                     <img src="../src/assets/icons/svg/logout.svg" alt="" class="icon-xs">Log out
@@ -90,6 +220,8 @@
 </main>
 
 <dialog class="modal modal-account-settings"> <?php include_once 'modal/account-settings.php' ?> </dialog>
+<dialog class="modal modal-admin-settings"> <?php include_once 'modal/admin-settings.php' ?> </dialog>
+<!--<dialog class="modal modal-admin-settings"> --><?php //include_once 'modal/notification.php' ?><!-- </dialog>-->
 <script src="../src/js/charts.js"></script>
 <script src="../src/js/HTTPRequest.js"></script>
 <script src="../src/js/calendar.js"></script>
@@ -101,9 +233,35 @@
 
 <script>
 
+    function importFile() {
+        const button = document.querySelector("#import-choose-file"),
+            filepath = document.querySelector("#file-path"),
+            input = document.querySelector("#import-input");
+
+        button.onclick = () => {
+            input.click();
+        };
+
+        input.addEventListener("change", function (e) {
+            filepath.innerHTML = e.target.files[0].name;
+        });
+
+    }
+
     function logout() {
         window.location.href = '../src/phpFunctions/logout.php';
     }
+
+    function openNotification() {
+        let notification = document.getElementById('notification');
+        if (notification.style.visibility === 'hidden') {
+            notification.style.visibility = 'visible';
+        } else {
+            notification.style.visibility = 'hidden';
+        }
+
+    }
+
     function adminSetting() {
         let nav = document.getElementById("admin-setting");
         if (nav.style.display === "none") {
@@ -206,12 +364,15 @@
     });
 
     // For add/edit employee modal title
-    function changeToEditTitle(bool){
+    function changeToEditTitle(bool) {
         let titleElm = document.querySelector('#add-employee-title');
-        titleElm.innerHTML = bool? "EDIT EMPLOYEE": "ADD NEW EMPLOYEE";
+        titleElm.innerHTML = bool ? "EDIT EMPLOYEE" : "ADD NEW EMPLOYEE";
     }
-    function clearEmployeeField(){
+
+    function clearEmployeeField() {
         let inputs = document.querySelectorAll('#add-employee-form input');
+        alert(inputs.length);
+        inputs.forEach((i) => {
         let selects = document.querySelectorAll('#add-employee-form select');
         inputs.forEach((i) =>{
             i.value = null;

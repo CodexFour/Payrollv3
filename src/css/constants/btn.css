@@ -4,6 +4,8 @@
     border-style: none;
     border-radius: 5px;
     padding: 5px 15px;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .btn-test{
@@ -195,4 +197,14 @@
 
 .toggle-switch > input:checked:disabled + span::before {
     background-color: #80ffa8;
+}
+
+.btn-settings{
+    background-image: url("../../assets/icons/svg/setting.svg");
+    background-size: cover;
+    background-color: transparent;
+    background-position: center;
+    width: 16px;
+    height: 26px;
+    align-self: center;
 }

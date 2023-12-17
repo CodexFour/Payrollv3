@@ -1,5 +1,5 @@
 <section class="modal-content card">
-    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-department')">
+    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-add-department')">
     </button>
     <header class="modal-header modal-header-department">
         <div class="card-name">
@@ -33,7 +33,7 @@
                            placeholder="ABC"
                            type="text"/>
                     <!--NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
-                        TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
+                        TODO: SET THE DISPLAY INTO FLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
                             WARNING, ERROR-->
                     <span class="txt-teen text-regular notification error">ERROR MSG</span>
                 </label>

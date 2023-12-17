@@ -48,8 +48,12 @@
                         <strong class="text-title txt-xs">Total Number of Employees</strong>
                         <span class="text-subtitle txt-xxs">Exploring the Total Workforce Size</span>
                     </div>
-                    <button class="btn btn-add" onclick="openModal('.modal-department')">
-                    </button>
+                    <div>
+                        <button class="btn text-bold txt-xxs btn-settings" onclick="openModal('.modal-department-settings')"></button>
+
+<!--                        <button class="btn btn-add" onclick="openModal('.modal-department')">-->
+<!--                        </button>-->
+                    </div>
                 </div>
                 <div class="chart department-card">
                     <div id="department-donut-chart">
@@ -61,5 +65,5 @@
 </article>
 
 <!--Modals-->
-<dialog class="modal modal-department"> <?php include_once 'components/modal/add-department.php' ?> </dialog>
+<dialog class="modal modal-department-settings"> <?php include_once 'components/modal/settings/department-settings.php' ?> </dialog>
 <dialog class="modal modal-employee"> <?php include_once 'components/modal/add-employee.php' ?> </dialog>
