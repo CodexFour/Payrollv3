@@ -18,21 +18,21 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
     $mn = isset($_POST['employee-middlename']) ? $_POST['employee-middlename'] : "";
     $sf = isset($_POST['employee-suffix']) ? $_POST['employee-suffix'] : "";
     $bd = isset($_POST['employee-birthdate']) ? $_POST['employee-birthdate'] : NULL;
-    $age = 20; //$_POST['employee-age'];
+    $age = isset($_POST['employee-age']) ? $_POST['employee-age'] : ""; //$_POST['employee-age'];
     $gd = isset($_POST['employee-gender']) ? $_POST['employee-gender'] : "";
     $em = isset($_POST['employee-email']) ? $_POST['employee-email'] : "";
     $phone = isset($_POST['employee-phone']) ? $_POST['employee-phone'] : "";
     $dpm = isset($_POST['employee-department']) ? $_POST['employee-department'] : "";
     $jtt = isset($_POST['employee-job-title']) ? $_POST['employee-job-title'] : "";
     $wt = isset($_POST['employee-working-type']) ? $_POST['employee-working-type'] : "";
-    $hd = isset($_POST['employee-hired-date']) ? $_POST['employee-hired-date'] : "";
+    $hd = isset($_POST['employee-hired-date']) ? $_POST['employee-hired-date'] : NULL;
     $status_ = "ACTIVE";
     $isEmployed = 1;
 
 
-    $street = $_POST['employee-street'];
+    $strt = $_POST['employee-street'];
     $brgy = $_POST['employee-barangay'];
-    $cy = $_POST['employee-city'];
+    $ct = $_POST['employee-city'];
     $pv = $_POST['employee-province'];
     try {
         if ($id === NULL || empty($id)) { // Insert an employee
@@ -61,17 +61,13 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
 
             $stmt1->execute();
 
-            // $lastID = $con->insert_id;
-            // $query2 = "INSERT INTO address
-            // VALUES (NULL,?,?,?,?,?)";
-            // $stmt2 = $con->prepare($query2);
-            // $stmt2->bind_param('s',$lastID);
-            // $stmt2->bind_param('s',$street);
-            // $stmt2->bind_param('s',$brgy);
-            // $stmt2->bind_param('s',$ct);
-            // $stmt2->bind_param('s',$pv);
-            // $stmt2->execute();
-            // $stmt2->close();
+            $lastID = $con->insert_id;
+            $query2 = "INSERT INTO address
+            VALUES (NULL,?,?,?,?,?)";
+            $stmt2 = $con->prepare($query2);
+            $stmt2->bind_param('issss',$lastID,$strt,$brgy,$ct,$pv);
+            $stmt2->execute();
+            $stmt2->close();
 
             $status = 1;
             $err = $stmt1->errno > 0 ? $stmt1->error : "";
@@ -99,11 +95,20 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
             WHERE `employee_id` = ?";
 
             $stmt = $con->prepare($query);
-
-            // Assuming data types and order, adjust accordingly
             $stmt->bind_param('sssssisssissiiii', $fn, $ln, $mn, $sf, $gd, $age, $em, $phone, $bd, $jtt, $wt, $hd, $dpm, $status_, $isEmployed, $id);
-
             $stmt->execute();
+
+            $query2 = "UPDATE `address`
+            SET `street` = ?,
+                `barangay` = ?,
+                `city` = ?,
+                `province` = ?
+            WHERE `employee_id` = ?";
+
+            $stmt2 = $con->prepare($query2);
+            $stmt2->bind_param('ssssi',$strt,$brgy,$ct,$pv, $id);
+            $stmt2->execute();
+            $stmt2->close();
 
             $status = 2;
             $err = $stmt->errno > 0 ? $stmt->error : "";

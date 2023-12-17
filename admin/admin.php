@@ -212,10 +212,13 @@
     }
     function clearEmployeeField(){
         let inputs = document.querySelectorAll('#add-employee-form input');
+        let selects = document.querySelectorAll('#add-employee-form select');
         inputs.forEach((i) =>{
             i.value = null;
         })
-        alert("cleared")
+        selects.forEach((s) =>{
+            s.value = "";
+        })
     }
 
     // For format date purposes

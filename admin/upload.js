@@ -53,9 +53,11 @@ function empFormSubmit() {
           if (responseObject.status === 1) {
             alert("Employee successfully added!");
             closeModal(".modal-employee");
+            clearEmployeeField();
           } else if (responseObject.status === 2) {
             alert("Employee successfully edited!");
             closeModal(".modal-employee");
+            clearEmployeeField();
           }
           requestData("employee");
         }
@@ -83,7 +85,8 @@ function deleteEmp(empId){
           if (responseObject.status === 1) {
             alert("Employee has been deleted");
             closeModal(".modal-employee");
-            closeModal('.modal-view-employee')
+            closeModal('.modal-view-employee');
+            clearEmployeeField();
           }
           requestData("employee");
         }

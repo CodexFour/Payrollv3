@@ -122,8 +122,8 @@ function applyEmployeeView(responseObject) {
   let bd = empView.querySelector("#view-employee-birthdate");
   let age = empView.querySelector("#view-employee-age");
   let sex = empView.querySelector("#view-employee-gender");
-  let em = empView.querySelector("#view-employee-email");
-  let phone = empView.querySelector("#view-employee-phone");
+  // let em = empView.querySelector("#view-employee-email");
+  // let phone = empView.querySelector("#view-employee-phone");
   let strt = empView.querySelector("#view-employee-street");
   let brgy = empView.querySelector("#view-employee-barangay");
   let ct = empView.querySelector("#view-employee-city");
@@ -132,17 +132,42 @@ function applyEmployeeView(responseObject) {
   let jtt = empView.querySelector("#view-employee-job-title");
   let wkt = empView.querySelector("#view-employee-working-type");
   let hd = empView.querySelector("#view-employee-hired-date");
-  let submit = empView.querySelector("#add-employee");
 
   id.innerHTML = responseObject["employee_id"];
   rfid.innerHTML = responseObject["rfid"];
   name.innerHTML = `${responseObject["first_name"]} ${responseObject["middle_name"]} ${responseObject["last_name"]} ${responseObject["suffix"]}`;
   sex.innerHTML = responseObject["gender"];
-  dpm.innerHTML = responseObject["department_id"];
-  jtt.innerHTML = responseObject["job_id"];
+  age.innerHTML = responseObject["age"];
+  // phone.innerHTML = responseObject["phone_no"];
+  // em.innerHTML = responseObject["email"];
+
+  if(responseObject["address"] != null){
+    strt.innerHTML = responseObject["address"]["street"];
+    brgy.innerHTML = responseObject["address"]["barangay"];
+    ct.innerHTML = responseObject["address"]["city"];
+    pv.innerHTML = responseObject["address"]["province"];
+  }
+
+  dpm.innerHTML = responseObject["department_name"];
+  jtt.innerHTML = responseObject["job_title"];
   wkt.innerHTML = responseObject["working_type"];
   bd.innerHTML = formatTextDate(responseObject["birthdate"]);
   hd.innerHTML = formatTextDate(responseObject["hired_date"]);
+
+
+  if (rfid.innerHTML == "") rfid.innerHTML = "-No RFID-"
+  if (name.innerHTML == "") name.innerHTML = "---- ---- ----"
+  if (bd.innerHTML == "") bd.innerHTML = "--- -- ----"
+  if (age.innerHTML == "") age.innerHTML = "--"
+  if (sex.innerHTML == "") sex.innerHTML = "-"
+  if (strt.innerHTML == "") strt.innerHTML = "----"
+  if (brgy.innerHTML == "") brgy.innerHTML = "----"
+  if (ct.innerHTML == "") ct.innerHTML = "----"
+  if (pv.innerHTML == "") pv.innerHTML = "----"
+  if (dpm.innerHTML == "") dpm.innerHTML = "----"
+  if (wkt.innerHTML == "") wkt.innerHTML = "----"
+  if (jtt.innerHTML == "") jtt.innerHTML = "----"
+  if (hd.innerHTML == "") hd.innerHTML = "--- -- ----"
 }
 function applyEmployeeModal(responseObject) {
   console.log(responseObject);
@@ -186,4 +211,11 @@ function applyEmployeeModal(responseObject) {
   wkt.value = responseObject["working_type"];
   hd.value = responseObject["hired_date"];
   dpm.value = responseObject["department_id"];
+
+  if(responseObject["address"] != null){
+    strt.value = responseObject["address"]["street"];
+    brgy.value = responseObject["address"]["barangay"];
+    ct.value = responseObject["address"]["city"];
+    pv.value = responseObject["address"]["province"];
+  }
 }
