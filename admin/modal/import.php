@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../admin.css">
+<!--<link rel="stylesheet" href="../admin.css">-->
 <section class="modal-content card">
     <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-import')">
     </button>
