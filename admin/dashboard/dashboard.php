@@ -50,6 +50,7 @@
                     <span class="text-subtitle txt-xxs">Efficient Management of Employee Leaves</span>
                 </div>
                 <div class="card-actions">
+                    <button class="btn text-bold txt-xxs btn-settings" onclick="openModal('.modal-settings')"></button>
                     <label for="searching_employee">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee"
@@ -99,4 +100,5 @@
 
 <!--Modals-->
 <dialog class="modal modal-leave"> <?php include_once '../dashboard/components/modal/leave/leave.php' ?> </dialog>
+<dialog class="modal modal-settings"> <?php include_once '../dashboard/components/modal/settings/leave-settings.php' ?> </dialog>
 <dialog class="modal modal-employee"> <?php include_once '../employee/components/modal/add-employee.php' ?> </dialog>

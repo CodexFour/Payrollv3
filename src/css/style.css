@@ -804,7 +804,7 @@ button {
 
 .btn-clear {
     background-color: transparent;
-    align-self: flex-end;
+    margin-left: auto;
 }
 
 .notification-content-container {
