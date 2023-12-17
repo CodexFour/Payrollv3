@@ -18,7 +18,7 @@
                             <span class="text-subtitle txt-teen">Data Transfer and Exchange</span>
                         </div>
 
-                        <div class="data-action-container">
+                        <div class="data-action-container" onclick="openModal('.modal-import')">
                             <div class="data-action">
                                 <img src="../../src/assets/icons/svg/import.svg" alt="" class="icon-xl">
                                 <span class="text-title txt-xxs">Import</span>
@@ -193,3 +193,4 @@
     </main>
 </section>
 <dialog class="modal modal-export"> <?php include_once 'exports.php' ?> </dialog>
+<dialog class="modal modal-import"> <?php include_once 'import.php' ?> </dialog>
