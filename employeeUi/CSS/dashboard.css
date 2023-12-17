@@ -1,7 +1,6 @@
 #hero div .date-today-icon {
   width: 30px;
   height: 30px;
-  background-color: rebeccapurple;
   border-radius: 5px;
 }
 
@@ -216,7 +215,6 @@
   grid-template-rows: auto auto 1fr;
 }
 #next-payroll .next-payroll-icon {
-  background-color: rebeccapurple;
   width: 50px;
   height: 50px;
   border-radius: 25%;

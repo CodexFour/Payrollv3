@@ -1,6 +1,6 @@
 <!--<link rel="stylesheet" href="../../../admin.css">-->
 <section class="modal-content card" id="view-employee-modal">
-    <button class="btn btn-iconic btn-close btn-transparent" id="view--employee-close" onclick="closeModal('.modal-view-employee');">
+    <button class="btn btn-iconic btn-close btn-transparent" id="view--employee-close" onclick="closeModal('.modal-view-employee'); clearEmployeeView()">
     </button>
     <header class="modal-header">
         <div class="card-name">

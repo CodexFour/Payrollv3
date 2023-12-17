@@ -220,6 +220,23 @@
             s.value = "";
         })
     }
+    function clearEmployeeView(){
+        let empView = document.querySelector("#view-employee-modal");
+        empView.querySelector("#view-employee_id").innerHTML = "----"
+        empView.querySelector("#view-employee-name").innerHTML = "---- ---- ----"
+        empView.querySelector("#view-employee-rfid").innerHTML = "-No RFID-"
+        empView.querySelector("#view-employee-birthdate").innerHTML = "--- -- ----"
+        empView.querySelector("#view-employee-age").innerHTML = "--"
+        empView.querySelector("#view-employee-gender").innerHTML = "-"
+        empView.querySelector("#view-employee-street").innerHTML = "----"
+        empView.querySelector("#view-employee-barangay").innerHTML = "----"
+        empView.querySelector("#view-employee-city").innerHTML = "----"
+        empView.querySelector("#view-employee-province").innerHTML = "----"
+        empView.querySelector("#view-employee-department").innerHTML = "----"
+        empView.querySelector("#view-employee-working-type").innerHTML = "----"
+        empView.querySelector("#view-employee-job-title").innerHTML = "----"
+        empView.querySelector("#view-employee-hired-date").innerHTML = "--- -- ----"
+    }
 
     // For format date purposes
     function formatTextDate(inputDate) {

@@ -39,8 +39,6 @@ function empFormSubmit() {
   // }
 
   var formData = new FormData(empForm);
-  var fileBlob = pfp.files[0];
-  formData.append("fileBlob", fileBlob);
 
   const request = new XMLHttpRequest();
   request.onreadystatechange = () => {
@@ -87,6 +85,7 @@ function deleteEmp(empId){
             closeModal(".modal-employee");
             closeModal('.modal-view-employee');
             clearEmployeeField();
+            clearEmployeeView();
           }
           requestData("employee");
         }

@@ -15,7 +15,7 @@
     <h2>DASHBOARD</h2>
     <p class="font-b txt-lite">Welcome, [Nizam]</p>
     <div class="flex center flex-row left gap1">
-      <img src="" alt="" class="date-today-icon" />
+      <img src="assets/attendance.svg" alt="" class="date-today-icon" />
       <p class="font-b" id="date-today">NOV 12, 2023</p>
     </div>
     <div class="clock flex center">
@@ -79,7 +79,7 @@
       <p class="font-b font-s">Next Payroll</p>
       <p class="txt-lite font-b font-s">Scheduled payroll date</p>
       <div class="flex center space-e">
-        <img class="next-payroll-icon" src="" alt="" />
+        <img class="next-payroll-icon" src="assets/payroll_date.svg" alt="" />
         <p class="font-m font-b">Oct 30, 2023</p>
       </div>
     </div>

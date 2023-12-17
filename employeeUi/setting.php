@@ -17,7 +17,7 @@
     </section>
     <section id="options">
         <div class="uni-card">
-            <p class="font-b">Accounts</p>
+            <p class="font-b">Profile</p>
             <p class="font-b font-s txt-lite">Manage your information</p>
         </div>
         <div class="uni-card">

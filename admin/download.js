@@ -112,63 +112,51 @@ function fetchEmployeeData(empid) {
 }
 function applyEmployeeView(responseObject) {
   let empView = document.querySelector("#view-employee-modal");
-  let id = empView.querySelector("#view-employee_id");
   let pfp = empView.querySelector("#view-employee-pfp");
-  let rfid = empView.querySelector("#view-employee-rfid");
-  let name = empView.querySelector("#view-employee-name");
-  // let ln = empView.querySelector("#view-employee-lastname");
-  // let mn = empView.querySelector("#view-employee-middlename");
-  // let sf = empView.querySelector("#view-employee-suffix");
-  let bd = empView.querySelector("#view-employee-birthdate");
-  let age = empView.querySelector("#view-employee-age");
-  let sex = empView.querySelector("#view-employee-gender");
   // let em = empView.querySelector("#view-employee-email");
   // let phone = empView.querySelector("#view-employee-phone");
-  let strt = empView.querySelector("#view-employee-street");
-  let brgy = empView.querySelector("#view-employee-barangay");
-  let ct = empView.querySelector("#view-employee-city");
-  let pv = empView.querySelector("#view-employee-province");
-  let dpm = empView.querySelector("#view-employee-department");
-  let jtt = empView.querySelector("#view-employee-job-title");
-  let wkt = empView.querySelector("#view-employee-working-type");
-  let hd = empView.querySelector("#view-employee-hired-date");
 
-  id.innerHTML = responseObject["employee_id"];
-  rfid.innerHTML = responseObject["rfid"];
-  name.innerHTML = `${responseObject["first_name"]} ${responseObject["middle_name"]} ${responseObject["last_name"]} ${responseObject["suffix"]}`;
-  sex.innerHTML = responseObject["gender"];
-  age.innerHTML = responseObject["age"];
+  empView.querySelector("#view-employee_id").innerHTML = responseObject["employee_id"];
+  empView.querySelector("#view-employee-name").innerHTML = `${responseObject["first_name"]} ${responseObject["middle_name"]} ${responseObject["last_name"]} ${responseObject["suffix"]}`;
+  empView.querySelector("#view-employee-department").innerHTML = responseObject["department_name"];
+  empView.querySelector("#view-employee-job-title").innerHTML = responseObject["job_title"];
+
+  if(responseObject["rfid"]!=null && responseObject["rfid"] !="")
+    empView.querySelector("#view-employee-rfid").innerHTML = responseObject["rfid"];
+  
+  if(responseObject["gender"]!=null && responseObject["gender"] !="")
+    empView.querySelector("#view-employee-gender").innerHTML = responseObject["gender"];
+  
+  if(responseObject["age"]!=null && responseObject["age"] !="")
+    empView.querySelector("#view-employee-age").innerHTML = responseObject["age"];
+  
   // phone.innerHTML = responseObject["phone_no"];
   // em.innerHTML = responseObject["email"];
 
-  if(responseObject["address"] != null){
-    strt.innerHTML = responseObject["address"]["street"];
-    brgy.innerHTML = responseObject["address"]["barangay"];
-    ct.innerHTML = responseObject["address"]["city"];
-    pv.innerHTML = responseObject["address"]["province"];
+  if(responseObject["address"]!=null){
+    if(responseObject["address"]["street"]!=null && responseObject["address"]["street"] !="")
+    empView.querySelector("#view-employee-street").innerHTML = responseObject["address"]["street"];
+
+    if(responseObject["address"]["barangay"]!=null && responseObject["address"]["barangay"]!="")
+      empView.querySelector("#view-employee-barangay").innerHTML = responseObject["address"]["barangay"];
+
+    if(responseObject["address"]["city"]!=null && responseObject["address"]["city"] !="")
+      empView.querySelector("#view-employee-city").innerHTML = responseObject["address"]["city"];
+
+    if(responseObject["address"]["province"]!=null && responseObject["address"]["province"] !="")
+      empView.querySelector("#view-employee-province").innerHTML = responseObject["address"]["province"];
   }
-
-  dpm.innerHTML = responseObject["department_name"];
-  jtt.innerHTML = responseObject["job_title"];
-  wkt.innerHTML = responseObject["working_type"];
-  bd.innerHTML = formatTextDate(responseObject["birthdate"]);
-  hd.innerHTML = formatTextDate(responseObject["hired_date"]);
-
-
-  if (rfid.innerHTML == "") rfid.innerHTML = "-No RFID-"
-  if (name.innerHTML == "") name.innerHTML = "---- ---- ----"
-  if (bd.innerHTML == "") bd.innerHTML = "--- -- ----"
-  if (age.innerHTML == "") age.innerHTML = "--"
-  if (sex.innerHTML == "") sex.innerHTML = "-"
-  if (strt.innerHTML == "") strt.innerHTML = "----"
-  if (brgy.innerHTML == "") brgy.innerHTML = "----"
-  if (ct.innerHTML == "") ct.innerHTML = "----"
-  if (pv.innerHTML == "") pv.innerHTML = "----"
-  if (dpm.innerHTML == "") dpm.innerHTML = "----"
-  if (wkt.innerHTML == "") wkt.innerHTML = "----"
-  if (jtt.innerHTML == "") jtt.innerHTML = "----"
-  if (hd.innerHTML == "") hd.innerHTML = "--- -- ----"
+  
+  if(responseObject["working_type"]!=null && responseObject["working_type"] !="")
+    empView.querySelector("#view-employee-working-type").innerHTML = responseObject["working_type"];
+  
+  if(responseObject["birthdate"]!=null && responseObject["birthdate"] !="")
+    empView.querySelector("#view-employee-birthdate").innerHTML = formatTextDate(responseObject["birthdate"]);
+  
+  if(responseObject["hired_date"]!=null && responseObject["hired_date"] !="")
+     empView.querySelector("#view-employee-hired-date").innerHTML = formatTextDate(responseObject["hired_date"]);
 }
+
 function applyEmployeeModal(responseObject) {
   console.log(responseObject);
   let empForm = document.querySelector("#add-employee-form");
@@ -176,46 +164,28 @@ function applyEmployeeModal(responseObject) {
   id.onkeydown = (e) => {
     return false;
   };
-  let pfp = empForm.querySelector("#employee-pfp");
-  let rfid = empForm.querySelector("#employee-rfid");
-  let fn = empForm.querySelector("#employee-firstname");
-  let ln = empForm.querySelector("#employee-lastname");
-  let mn = empForm.querySelector("#employee-middlename");
-  let sf = empForm.querySelector("#employee-suffix");
-  let bd = empForm.querySelector("#employee-birthdate");
-  let age = empForm.querySelector("#employee-age");
-  let sex = empForm.querySelector("#employee-gender");
-  let em = empForm.querySelector("#employee-email");
-  let phone = empForm.querySelector("#employee-phone");
-  let strt = empForm.querySelector("#employee-street");
-  let brgy = empForm.querySelector("#employee-barangay");
-  let ct = empForm.querySelector("#employee-city");
-  let pv = empForm.querySelector("#employee-province");
-  let dpm = empForm.querySelector("#employee-department");
-  let jtt = empForm.querySelector("#employee-job-title");
-  let wkt = empForm.querySelector("#employee-working-type");
-  let hd = empForm.querySelector("#employee-hired-date");
+  // let pfp = empForm.querySelector("#employee-pfp");
 
   id.value = responseObject["employee_id"];
-  rfid.value = responseObject["rfid"];
-  fn.value = responseObject["first_name"];
-  ln.value = responseObject["last_name"];
-  mn.value = responseObject["middle_name"];
-  sf.value = responseObject["suffix"];
-  sex.value = responseObject["gender"];
-  age.value = responseObject["age"];
-  em.value = responseObject["email"];
-  phone.value = parseInt(responseObject["phone_no"]);
-  bd.value = responseObject["birthdate"];
-  jtt.value = responseObject["job_id"];
-  wkt.value = responseObject["working_type"];
-  hd.value = responseObject["hired_date"];
-  dpm.value = responseObject["department_id"];
+  empForm.querySelector("#employee-rfid").value = responseObject["rfid"];
+  empForm.querySelector("#employee-firstname").value = responseObject["first_name"];
+  empForm.querySelector("#employee-lastname").value = responseObject["last_name"];
+  empForm.querySelector("#employee-middlename").value = responseObject["middle_name"];
+  empForm.querySelector("#employee-suffix").value = responseObject["suffix"];
+  empForm.querySelector("#employee-gender").value = responseObject["gender"];
+  empForm.querySelector("#employee-age").value = responseObject["age"];
+  empForm.querySelector("#employee-email").value = responseObject["email"];
+  empForm.querySelector("#employee-phone").value = parseInt(responseObject["phone_no"]);
+  empForm.querySelector("#employee-birthdate").value = responseObject["birthdate"];
+  empForm.querySelector("#employee-job-title").value = responseObject["job_id"];
+  empForm.querySelector("#employee-working-type").value = responseObject["working_type"];
+  empForm.querySelector("#employee-hired-date").value = responseObject["hired_date"];
+  empForm.querySelector("#employee-department").value = responseObject["department_id"];
 
   if(responseObject["address"] != null){
-    strt.value = responseObject["address"]["street"];
-    brgy.value = responseObject["address"]["barangay"];
-    ct.value = responseObject["address"]["city"];
-    pv.value = responseObject["address"]["province"];
+    empForm.querySelector("#employee-street").value = responseObject["address"]["street"];
+    empForm.querySelector("#employee-barangay").value = responseObject["address"]["barangay"];
+    empForm.querySelector("#employee-city").value = responseObject["address"]["city"];
+    empForm.querySelector("#employee-province").value = responseObject["address"]["province"];
   }
 }
