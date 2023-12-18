@@ -6,11 +6,8 @@
     grid-template-areas:
     "dashboard-head"
     "dashboard-body";
-            /*"total_employee total_salary total_leaves total_absences chart"*/
-            /*"leaves_table leaves_table leaves_table leaves_table action_card";*/
     grid-gap: 20px;
     margin: 15px;
-    width: fit-content;
 }
 
 .dashboard-head{

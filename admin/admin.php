@@ -234,16 +234,13 @@
 <script>
 
     function importFile() {
-        const button = document.querySelector("#import-choose-file"),
-            filepath = document.querySelector("#file-path"),
-            input = document.querySelector("#import-input");
+        const filepath = document.querySelector("#path"),
+            input = document.querySelector("#importing-input");
 
-        button.onclick = () => {
-            input.click();
-        };
 
+        input.click();
         input.addEventListener("change", function (e) {
-            filepath.innerHTML = e.target.files[0].name;
+            filepath.setAttribute('value', e.target.files[0].name);
         });
 
     }

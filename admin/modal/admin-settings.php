@@ -19,7 +19,7 @@
                         </div>
 
                         <div class="data-action-container">
-                            <div class="data-action">
+                            <div class="data-action" onclick="openModal('.modal-import')">
                                 <img src="../../src/assets/icons/svg/import.svg" alt="" class="icon-xl">
                                 <span class="text-title txt-xxs">Import</span>
                             </div>
@@ -193,3 +193,4 @@
     </main>
 </section>
 <dialog class="modal modal-export"> <?php include_once 'exports.php' ?> </dialog>
+<dialog class="modal modal-import"> <?php include_once 'import.php' ?> </dialog>
