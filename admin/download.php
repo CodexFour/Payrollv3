@@ -95,6 +95,15 @@ if (isset($_POST['request'])) {
                 'departments' => $empDprtm
             )
         );
+    } elseif ($request === 'leave_types'){
+        $result = $con->query('SELECT * FROM payroll_db.leave_type');
+        $leaveTypes = array();
+        while($row = $result->fetch_assoc()){
+            $leaveTypes[$row['leave_type_id']] = $row;
+        }
+        echo json_encode(
+            $leaveTypes
+        );
 
     } elseif ($request === 'emp_info'){
         $employees = $con->query('SELECT * FROM employees WHERE employee_id = '.$_POST['emp_id']);
@@ -104,6 +113,12 @@ if (isset($_POST['request'])) {
         $empRow['address'] = $con->query('SELECT * FROM `address` WHERE employee_id ='.$_POST['emp_id'])->fetch_assoc();
         echo json_encode(
             $empRow
+        );
+    } elseif ($request === 'leave_type_info'){
+        $leaveType = $con->query('SELECT * FROM leave_type WHERE leave_type_id = '.$_POST['leave_type_id']);
+        $ltRow = $leaveType->fetch_assoc();
+        echo json_encode(
+            $ltRow
         );
     }
 }

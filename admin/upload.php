@@ -98,17 +98,27 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
             $stmt->bind_param('sssssisssissiiii', $fn, $ln, $mn, $sf, $gd, $age, $em, $phone, $bd, $jtt, $wt, $hd, $dpm, $status_, $isEmployed, $id);
             $stmt->execute();
 
-            $query2 = "UPDATE `address`
-            SET `street` = ?,
-                `barangay` = ?,
-                `city` = ?,
-                `province` = ?
-            WHERE `employee_id` = ?";
+            $addressExist = $con->query('SELECT * FROM `address` WHERE employee_id ='.$id);
+            if ($addressExist->num_rows > 0){
+                $query2 = "UPDATE `address`
+                SET `street` = ?,
+                    `barangay` = ?,
+                    `city` = ?,
+                    `province` = ?
+                WHERE `employee_id` = ?";
 
-            $stmt2 = $con->prepare($query2);
-            $stmt2->bind_param('ssssi',$strt,$brgy,$ct,$pv, $id);
-            $stmt2->execute();
-            $stmt2->close();
+                $stmt2 = $con->prepare($query2);
+                $stmt2->bind_param('ssssi',$strt,$brgy,$ct,$pv, $id);
+                $stmt2->execute();
+                $stmt2->close();
+            } else {
+                $query2 = "INSERT INTO address
+                VALUES (NULL,?,?,?,?,?)";
+                $stmt2 = $con->prepare($query2);
+                $stmt2->bind_param('issss',$id,$strt,$brgy,$ct,$pv);
+                $stmt2->execute();
+                $stmt2->close();
+            }
 
             $status = 2;
             $err = $stmt->errno > 0 ? $stmt->error : "";
@@ -123,6 +133,50 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
 
     if ($_POST['request'] === 'emp-delete') {
         $stmt = $con->prepare('DELETE FROM employees WHERE employee_id =' . $_POST['emp-id']);
+        $stmt->execute();
+
+        $status = 1;
+        $err = $stmt->errno > 0 ? $stmt->error : "";
+        $rowsAffected = $stmt->affected_rows;
+    } elseif ($_POST['request'] === 'leave-type'){
+        $id = isset($_POST['leave-type-id'])? $_POST['leave-type-id']:NULL;
+        $isActive = isset($_POST['leave-type-active'])? "1":"0";
+        if($id == null || empty($id)){
+            $stmt = $con->prepare(
+                'INSERT INTO `leave_type`
+                    (`leave_type_id`,
+                    `leave_name`,
+                    `duration`,
+                    `isActive`)
+                    VALUES (NULL, ?,?,?);');
+            $stmt->bind_param('sii',
+                        $_POST['leave-type-name'],
+                        $_POST['leave-type-duration'],
+                        $isActive);
+            $stmt->execute();
+            $status = 1;
+            $err = $stmt->errno > 0 ? $stmt->error : "";
+            $rowsAffected = $stmt->affected_rows;
+        } else {
+            $stmt = $con->prepare(
+                'UPDATE `leave_type`
+                 SET `leave_name` = ?,
+                     `duration` = ?,
+                     `isActive` = ?
+                 WHERE `leave_type_id` = ?');
+            $stmt->bind_param('siii',
+                        $_POST['leave-type-name'],
+                        $_POST['leave-type-duration'],
+                        $isActive,
+                        $id);
+            $stmt->execute();
+            $status = 2;
+            $err = $stmt->errno > 0 ? $stmt->error : "";
+            $rowsAffected = $stmt->affected_rows;
+        }
+        
+    } elseif ($_POST['request'] === 'leave-type-delete') {
+        $stmt = $con->prepare('DELETE FROM leave_type WHERE leave_type_id =' . $_POST['leave-type-id']);
         $stmt->execute();
 
         $status = 1;

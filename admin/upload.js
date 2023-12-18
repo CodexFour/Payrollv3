@@ -99,6 +99,62 @@ function deleteEmp(empId){
   request.send(`request=emp-delete&emp-id=${empId}`);
 }
 
-function leaveFormSubmit() {
-  let leaveForm = document.querySelector("#add-employee-form");
+function leaveTypeFormSubmit() {
+  let leaveTypeForm = document.querySelector("#add-leave-type-form");
+  var formData = new FormData(leaveTypeForm);
+  formData.append('request','leave-type');
+
+  const request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+    if (request.status == 200 && request.readyState == 4) {
+      let responseObject = null;
+      try {
+        console.log(request.responseText);
+        responseObject = JSON.parse(request.responseText);
+        if (responseObject.status === 1){
+          alert('Leave type successfully added');
+          closeModal('.modal-add-leave-type');
+          clearLeaveTypeField();
+          fetchLeaveType();
+        } else if(responseObject.status === 2){
+          alert('Leave type successfully edited');
+          closeModal('.modal-add-leave-type');
+          clearLeaveTypeField();
+          fetchLeaveType();
+        }
+      } catch (err) {
+        console.error("Parse failed");
+      }
+    }
+  };
+  request.open("POST", "upload.php", true);
+  request.send(formData);
+}
+
+function delLeaveType(id){
+  const request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+    if (request.status == 200 && request.readyState == 4) {
+      let responseObject = null;
+      try {
+        console.log(request.responseText);
+        responseObject = JSON.parse(request.responseText);
+        if (responseObject.status > 0) {
+          if (responseObject.status === 0) {
+            alert("An error has occured\n\n"+responseObject.error);
+          }
+          if (responseObject.status === 1) {
+            alert("Leave type has been deleted");
+            closeModal(".modal-add-leave-type");
+          }
+          fetchLeaveType();
+        }
+      } catch (err) {
+        console.error("Parse failed");
+      }
+    }
+  };
+  request.open("POST", "upload.php");
+  request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  request.send(`request=leave-type-delete&leave-type-id=${id}`);
 }

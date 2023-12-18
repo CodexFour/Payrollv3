@@ -1,7 +1,7 @@
 <!--<link rel="stylesheet" href="../../../../admin.css">-->
 
 <section class="modal-content card">
-    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-add-leave-type')">
+    <button class="btn btn-iconic btn-close btn-transparent" onclick="closeModal('.modal-add-leave-type'); clearLeaveTypeField()">
     </button>
     <header class="modal-header leave-type-header-container">
         <div class="card-name">
@@ -11,14 +11,18 @@
 
     </header>
     <main class="modal-body">
-        <form action="">
+        <form id="add-leave-type-form" onsubmit="return false">
             <div class="leave-type-form">
                 <div class="leave-status-type">
                     <label class="toggle-switch control fields-group">
-                        <input type="checkbox">
+                        <input type="checkbox" name="leave-type-active" id="leave-type-active">
                         <span class="txt-teen text-bold">Active?</span>
                     </label>
                 </div>
+                <!-- FOR FLAG PURPOSES -->
+                <input type="text" name="leave-type-id" style="display: none;" id="leave-type-id">
+                <!-- /////////////////// -->
+                
                 <!--               TODO: GET THE VALUE OF AN DEPARTMENT NAME-->
                 <label for="leave-type-name" class="fields-group">
                     <span class="text-title txt-xxs form-required">Leave Type Name</span>
@@ -43,7 +47,7 @@
                            id="leave-type-duration"
                            name="leave-type-duration"
                            placeholder="Days"
-                           type="text"/>
+                           type="number"/>
                     <!--NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                         TODO: SET THE DISPLAY INTO FLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
                             WARNING, ERROR-->
@@ -51,7 +55,7 @@
                 </label>
             </div>
 
-            <button type="submit" class="btn text-bold txt-xxs btn-save" id="add-leave-type">SAVE</button>
+            <button class="btn text-bold txt-xxs btn-save" id="add-leave-type" onclick="leaveTypeFormSubmit()">SAVE</button>
         </form>
     </main>
 </section>

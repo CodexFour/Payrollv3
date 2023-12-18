@@ -50,7 +50,7 @@
                     <span class="text-subtitle txt-xxs">Efficient Management of Employee Leaves</span>
                 </div>
                 <div class="card-actions">
-                    <button class="btn text-bold txt-xxs btn-settings" onclick="openModal('.modal-settings')"></button>
+                    <button class="btn text-bold txt-xxs btn-settings" onclick="openModal('.modal-settings'); fetchLeaveType()"></button>
                     <label for="searching_employee">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee"

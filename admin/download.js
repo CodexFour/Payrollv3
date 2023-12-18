@@ -189,3 +189,61 @@ function applyEmployeeModal(responseObject) {
     empForm.querySelector("#employee-province").value = responseObject["address"]["province"];
   }
 }
+function fetchLeaveType(){
+  const request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+    if (request.status == 200 && request.readyState == 4) {
+      try {
+        responseObject = JSON.parse(request.responseText);
+        console.log(responseObject);
+        let row = ""
+        for (const key in responseObject) {
+          const leaveType = responseObject[key];
+          row += `<tr> <td class="text-regular txt-xxs">${leaveType['leave_name']}</td> `;
+          row += `<td class="text-regular txt-xxs">${leaveType['duration']==null? "":(leaveType['duration']>0?leaveType['duration']:"")}</td>`;
+          row += `<td><span class="text-regular txt-xxs status ${leaveType['isActive']==='1'? 'active':'inactive'}"></span></td>`;
+          row += `<td><div class="action-container"><div class="action">`;
+          row += `    <div class="action-icon edit-icon" onclick="fetchLeaveTypeData(${leaveType['leave_type_id']})">`
+          row += `      <img src="../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs"> </div>`;
+          row += `    <div class="action-icon delete-icon" onclick="delLeaveType(${leaveType['leave_type_id']})">`;
+          row += `      <img src="../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs"> </div>`;
+          row += `</div> </div> </td> </tr>`;
+        }
+        document.querySelector('#leave-type-table').innerHTML = row;
+      } catch (err) {
+        console.error("Parse failed");
+      }
+    }
+  };
+  const requestPage = `request=leave_types`;
+  request.open("POST", "download.php");
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send(requestPage);
+}
+function fetchLeaveTypeData(id){
+  const request = new XMLHttpRequest();
+  request.onreadystatechange = () => {
+    if (request.status == 200 && request.readyState == 4) {
+      try {
+        console.log(request.responseText);
+        responseObject = JSON.parse(request.responseText);
+        console.log(responseObject);
+        applyLeaveTypeData(responseObject);
+      } catch (err) {
+        console.error("Parse failed");
+      }
+    }
+  };
+  const requestPage = `request=leave_type_info&leave_type_id=${id}`;
+  request.open("POST", "download.php");
+  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  request.send(requestPage);
+}
+function applyLeaveTypeData(responseObject){
+  let leaveTypeForm = document.querySelector("#add-leave-type-form");
+  leaveTypeForm.querySelector('#leave-type-id').value = responseObject['leave_type_id'];
+  leaveTypeForm.querySelector('#leave-type-active').checked = responseObject['isActive'] === "1"? true: false;
+  leaveTypeForm.querySelector('#leave-type-name').value = responseObject['leave_name'];
+  leaveTypeForm.querySelector('#leave-type-duration').value = responseObject['duration'];
+  openModal('.modal-add-leave-type');
+}

@@ -396,6 +396,13 @@
         empView.querySelector("#view-employee-job-title").innerHTML = "----"
         empView.querySelector("#view-employee-hired-date").innerHTML = "--- -- ----"
     }
+    function clearLeaveTypeField(){
+        let leaveTypeForm = document.querySelector("#add-leave-type-form");
+        leaveTypeForm.querySelector('#leave-type-id').value = "";
+        leaveTypeForm.querySelector('#leave-type-active').checked = true;
+        leaveTypeForm.querySelector('#leave-type-name').value = "";
+        leaveTypeForm.querySelector('#leave-type-duration').value = "";
+    }
 
     // For format date purposes
     function formatTextDate(inputDate) {

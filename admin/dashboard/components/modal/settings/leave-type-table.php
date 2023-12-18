@@ -8,7 +8,7 @@
         <th class="text-bold txt-xxs primary-color">ACTIONS</th>
     </tr>
     </thead>
-    <tbody class="table-body">
+    <tbody class="table-body" id="leave-type-table">
     <tr>
         <td class="text-regular txt-xxs">Paternity Leave</td>
         <td class="text-regular txt-xxs">90</td>
