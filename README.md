@@ -1,1 +1,2 @@
-# Merry x-mas
+# Good luck sa defense
+# Jusko 
