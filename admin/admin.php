@@ -1,3 +1,16 @@
+<?php
+include_once '../validateLogin.php';
+$isAdmin = $con->query(
+    "SELECT employees.employee_id 
+    FROM payroll_db.privilege 
+    JOIN employees 
+    ON privilege.employee_id = employees.employee_id
+    WHERE privilege.employee_id = (SELECT employee_id FROM accounts WHERE username = '".$_SESSION['username']."')");
+if ($isAdmin->num_rows < 1){
+    header("Location: ../employeeUi/dashboard.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

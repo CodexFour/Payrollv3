@@ -99,6 +99,7 @@ function handleResponse(responseObject) {
           } else {
             location.href = "employeeUi/dashboard.php";
           }
+          // location.href = "validateLogin.php";
         }
       }
     }
