@@ -36,10 +36,10 @@ function createNotifications() {
         const toast = document.createElement("li")
         toast.className = `toast ${id}`
         toast.innerHTML = `<div class="column">
-                         <img src='../../src/assets/icons/svg/${icon}.svg' alt="" class="icon-s"/>
+                         <img src='../src/assets/icons/svg/${icon}.svg' alt="" class="icon-s"/>
                          <span class="text-regular txt-xxs">${text}</span>
                       </div>
-                      <img src="../../src/assets/icons/svg/close.svg" alt='' class="icon-s toast-close" onclick="removeToast(this.parentElement)"/>`
+                      <img src="../src/assets/icons/svg/close.svg" alt='' class="icon-s toast-close" onclick="removeToast(this.parentElement)"/>`
         notifications.appendChild(toast)
         toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer)
     }
