@@ -19,7 +19,7 @@
         <h3 class="txt-lite">SETTING</h3>
     </section>
     <section id="options">
-        <div class="uni-card" onclick="showPassForm(true)">
+        <div class="uni-card" onclick="showPassForm(true,'#change-pass-modal')">
             <p class="font-b">Change Password</p>
             <p class="font-b font-s txt-lite">Update your security</p>
         </div>
@@ -30,11 +30,11 @@
             </div>
             <input type="checkbox">
         </div>
-        <div class="uni-card">
+        <div class="uni-card" onclick="showPassForm(true,'#privacy-policy')">
             <p class="font-b">Privacy Policiy</p>
             <p class="font-b font-s txt-lite">Instantly alert</p>
         </div>
-        <div class="uni-card">
+        <div class="uni-card" onclick="showPassForm(true,'#terms-of-services')">
             <p class="font-b">Terms of Servicces</p>
             <p class="font-b font-s txt-lite">Instantly alert</p>
         </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </section>
-    <dialog id="change-pass-modal" class="uni-card">
+    <dialog id="change-pass-modal" class="uni-card modal">
         <form onsubmit="return false" id="change-pass-form">
             <h3> CHANGE PASSWORD</h3>
             <div class="setting-inputs f-height flex space-e">
@@ -73,16 +73,32 @@
             </div>
             <div class="action-button flex flex-row gap1 right" style="align-items:end;">
                 <button>SAVE</button>
-                <button class="button-gray" onclick="showPassForm(false)">CANCEL</button>
+                <button class="button-gray" onclick="showPassForm(false,'#change-pass-modal')">CANCEL</button>
             </div>
         </form>
     </dialog>
+    <dialog id="privacy-policy" class="uni-card modal">
+        <div class="flex center flex-row space-b">
+            <h2>Privacy Policy</h2>
+            <button class="button-gray" onclick="showPassForm(false,'#privacy-policy')"><img src="assets/close.svg" alt=""></button>
+        </div>
+        <br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione aut minima error distinctio quod amet voluptas sit, numquam eligendi explicabo vel exercitationem necessitatibus molestiae quaerat. Aliquid veniam nemo quod quibusdam.</p>
+    </dialog>
+    <dialog id="terms-of-services" class="uni-card modal">
+        <div class="flex center flex-row space-b">
+            <h2>Terms of Services</h2>
+            <button class="button-gray" onclick="showPassForm(false,'#terms-of-services')"><img src="assets/close.svg" alt=""></button>
+        </div>
+        <br>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione aut minima error distinctio quod amet voluptas sit, numquam eligendi explicabo vel exercitationem necessitatibus molestiae quaerat. Aliquid veniam nemo quod quibusdam.</p>
+    </dialog>
     <script>
-        function showPassForm(bol) {
+        function showPassForm(bol, query) {
             if (bol) {
-                document.querySelector('#change-pass-modal').showModal();
+                document.querySelector(query).showModal();
             } else {
-                document.querySelector('#change-pass-modal').close();
+                document.querySelector(query).close();
             }
         }
     </script>
