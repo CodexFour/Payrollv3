@@ -180,6 +180,8 @@ if ($isAdmin->num_rows < 1){
                 <img src="../src/assets/img/img.png" alt="image" class="icon-l icon-round icon-cover"/>
             </div>
             <div id="admin-setting" class="collapse-menu">
+                <span class="txt-xxs text-bold group-settings" onclick="openModal('.modal-admin-activity-logs')">
+                    <img src="../src/assets/icons/svg/activity-log.svg" alt="" class="icon-xs">Activity Log</span>
                 <span class="txt-xxs text-bold group-settings" onclick="openModal('.modal-account-settings')">
                     <img src="../src/assets/icons/svg/account-setting.svg" alt="" class="icon-xs">Account Setting</span>
                 <span class="txt-xxs text-bold group-settings" onclick="openModal('.modal-admin-settings')">
@@ -233,7 +235,7 @@ if ($isAdmin->num_rows < 1){
 
 <dialog class="modal modal-account-settings"> <?php include_once 'modal/account-settings.php' ?> </dialog>
 <dialog class="modal modal-admin-settings"> <?php include_once 'modal/admin-settings.php' ?> </dialog>
-<!--<dialog class="modal modal-admin-settings"> --><?php //include_once 'modal/notification.php' ?><!-- </dialog>-->
+<dialog class="modal modal-admin-activity-logs"> <?php include_once 'modal/activity-logs.php' ?> </dialog>
 <script src="../src/js/charts.js"></script>
 <script src="../src/js/HTTPRequest.js"></script>
 <script src="../src/js/calendar.js"></script>
