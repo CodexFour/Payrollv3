@@ -223,7 +223,7 @@ function fetchLeaveType(){
 function fetchLeaveTypeData(id){
   const request = new XMLHttpRequest();
   request.onreadystatechange = () => {
-    if (request.status == 200 && request.readyState == 4) {
+    if (request.status === 200 && request.readyState === 4) {
       try {
         console.log(request.responseText);
         responseObject = JSON.parse(request.responseText);
