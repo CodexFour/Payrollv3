@@ -1,5 +1,6 @@
 <?php 
 include_once '../validateLogin.php';
+$con = connect('');
 header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); ?>
 
@@ -11,7 +12,11 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); ?>
     <div class="nav-right flex center space-e flex-row gap1">
         <!-- <img id="nav-bell" src="" alt=""> -->
         <!-- <p class="font-b font-white">Employee</p> -->
-        <img src="assets/account.svg" id="nav-switch">
+        <?php
+        if(isAdmin()){
+            echo '<img src="assets/account.svg" id="nav-switch" onclick="location.href = \'../admin/admin.php\'">';
+        }
+        ?>
         <img src="assets/bell.svg" id="nav-bell">
         <img id="nav-pfp" src="" alt="" />
     </div>

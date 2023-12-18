@@ -1,12 +1,6 @@
 <?php
 include_once '../validateLogin.php';
-$isAdmin = $con->query(
-    "SELECT employees.employee_id 
-    FROM payroll_db.privilege 
-    JOIN employees 
-    ON privilege.employee_id = employees.employee_id
-    WHERE privilege.employee_id = (SELECT employee_id FROM accounts WHERE username = '".$_SESSION['username']."')");
-if ($isAdmin->num_rows < 1){
+if (!isAdmin()){
     header("Location: ../employeeUi/dashboard.php");
     die();
 }
@@ -31,7 +25,7 @@ if ($isAdmin->num_rows < 1){
 
             <!--            TODO: when it clicks, change the icon into employee-ui.svg-->
             <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
-                 onclick="toggle('.open-notification')"/>
+                 onclick="location.href = '../employeeUi/dashboard.php'"/>
 
 
             <div class="notification-badge" onclick="openNotification()">
