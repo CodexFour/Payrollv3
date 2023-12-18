@@ -13,7 +13,7 @@
 
     <main class="modal-body">
         <strong class="text-bold txt-xxs text-center">LEAVE APPLICATION FORM</strong>
-        <form id="leave-form">
+        <form id="add-leave-form" onsubmit="return false">
             <div class="column-2">
                 <div>
                     <label for="leave-employee-name" class="fields-group">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn text-bold txt-xxs btn-save" id="add-leave">SAVE</button>
+            <button class="btn text-bold txt-xxs btn-save" id="add-leave" onclick="leaveFormSubmit()">SAVE</button>
         </form>
     </main>
 

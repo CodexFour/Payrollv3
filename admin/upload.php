@@ -182,6 +182,38 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
         $status = 1;
         $err = $stmt->errno > 0 ? $stmt->error : "";
         $rowsAffected = $stmt->affected_rows;
+
+    } elseif ($_POST['request'] === 'add-leave'){
+        // $stmt = $con->prepare(
+        //     'INSERT INTO `leave`
+        //     (`leave_id`,
+        //     `employee_id`,
+        //     `start_date`,
+        //     `end_date`,
+        //     `comment`,
+        //     `status`,
+        //     `leave_type_id`)
+        //     VALUES
+        //     (NULL,
+        //     ?,
+        //     ?,
+        //     ?,
+        //     ?,
+        //     ?,
+        //     ?);
+        //     ');
+        // $stmt->bind_param('issssi',
+        //             $_POST['employee_id'],
+        //             $_POST['start-date'],
+        //             $_POST['comment'],
+        //             $_POST['end-date'],
+        //             $_POST['status'],
+        //             $_POST['leave_type_id']);
+        // $stmt->execute();
+        $status = $_POST;
+        // $status = 1;
+        // $err = $stmt->errno > 0 ? $stmt->error : "";
+        // $rowsAffected = $stmt->affected_rows;
     }
 }
 
