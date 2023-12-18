@@ -16,16 +16,13 @@
 
         <!-- this is my changes start -->
         <?php
-        include_once('../src/phpFunctions/connection.php');
-       
-        $con = connect('..src/crt/curl-ca-bundle.crt');
         $user = $_SESSION['username'];
         $query = "SELECT employees.first_name, employees.last_name FROM employees JOIN accounts ON employees.employee_id = accounts.employee_id WHERE accounts.username='$user'";
         $result = mysqli_query($con, $query);
         $row = mysqli_fetch_assoc($result);
-        echo "<h1>" . $row['first_name'] ." ". $row['last_name'] . "</h1>";
+        echo "<h1>" . $row['first_name'] . " " . $row['last_name'] . "</h1>";
         ?>
-         <!-- this is my changes end -->
+        <!-- this is my changes end -->
 
     </section>
     <section id="hero">
@@ -82,15 +79,29 @@
         </div>
     </section>
     <dialog id="change-pass-modal" class="uni-card modal">
-        <form onsubmit="return false" id="change-pass-form">
+        <form action="change-p.php" method="post" onsubmit="return true" id="change-pass-form">
             <h3> CHANGE PASSWORD</h3>
             <div class="setting-inputs f-height flex space-e">
+                <?php if (isset($_GET['error'])) { ?>
+                    <p class="error">
+                        <?php echo $_GET['error']; ?>
+                    </p>
+                <?php } ?>
+
+                <?php if (isset($_GET['success'])) { ?>
+                    <p class="success">
+                        <?php echo $_GET['success']; ?>
+                    </p>
+                <?php } ?>
+
                 <label for="chp-old-pass" class="font-s">CURRENT PASSWORD</label>
-                <input type="text" id="chp-old-pass" style="margin-bottom: 20px;">
+                <input type="text" name="op" id="chp-old-pass" style="margin-bottom: 20px;">
+
                 <label for="chp-new-pass" class="font-s">NEW PASSWORD</label>
-                <input type="text" id="chp-new-pass">
+                <input type="text" name="np" id="chp-new-pass">
+
                 <label for="chp-re-pass" class="font-s">RE-ENTER PASSWORD</label>
-                <input type="text" id="chp-re-pass">
+                <input type="text" name="c_np" id="chp-re-pass">
             </div>
             <div class="action-button flex flex-row gap1 right" style="align-items:end;">
                 <button>SAVE</button>

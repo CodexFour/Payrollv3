@@ -16,9 +16,6 @@
 
     <!-- this is my changes start -->
     <?php
-    include_once('../src/phpFunctions/connection.php');
-    
-    $con = connect( '..src/crt/curl-ca-bundle.crt');
     $user = $_SESSION['username'];
     $query = "SELECT employees.first_name FROM employees JOIN accounts ON employees.employee_id = accounts.employee_id WHERE accounts.username='$user'";
     $result = mysqli_query($con, $query);
