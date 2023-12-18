@@ -11,22 +11,24 @@
 <body id="setting">
     <?php include_once 'components/navbar.php' ?>
     <?php include_once 'components/sidebar.php' ?>
+    <section class="flex center p1 gap1" id="pfp">
+        <img src="assets/attendance.svg" alt="profile" id="setting-pfp">
+        <h1>Nizam Datumanong</h1>
+    </section>
     <section id="hero">
-        <h1>SETTING</h1>
-        <p class="font-b txt-lite">Manage your preference</p>
+        <h3 class="txt-lite">SETTING</h3>
     </section>
     <section id="options">
-        <div class="uni-card">
-            <p class="font-b">Profile</p>
-            <p class="font-b font-s txt-lite">Manage your information</p>
-        </div>
-        <div class="uni-card">
+        <div class="uni-card" onclick="showPassForm(true)">
             <p class="font-b">Change Password</p>
             <p class="font-b font-s txt-lite">Update your security</p>
         </div>
-        <div class="uni-card">
-            <p class="font-b">Push Notification</p>
-            <p class="font-b font-s txt-lite">Stay alert</p>
+        <div class="uni-card flex center flex-row space-b">
+            <div>
+                <p class="font-b">Push Notification</p>
+                <p class="font-b font-s txt-lite">Stay alert</p>
+            </div>
+            <input type="checkbox">
         </div>
         <div class="uni-card">
             <p class="font-b">Privacy Policiy</p>
@@ -58,6 +60,32 @@
             </div>
         </div>
     </section>
+    <dialog id="change-pass-modal" class="uni-card">
+        <form onsubmit="return false" id="change-pass-form">
+            <h3> CHANGE PASSWORD</h3>
+            <div class="setting-inputs f-height flex space-e">
+                <label for="chp-old-pass" class="font-s">CURRENT PASSWORD</label>
+                <input type="text" id="chp-old-pass" style="margin-bottom: 20px;">
+                <label for="chp-new-pass" class="font-s">NEW PASSWORD</label>
+                <input type="text" id="chp-new-pass">
+                <label for="chp-re-pass" class="font-s">RE-ENTER PASSWORD</label>
+                <input type="text" id="chp-re-pass">
+            </div>
+            <div class="action-button flex flex-row gap1 right" style="align-items:end;">
+                <button>SAVE</button>
+                <button class="button-gray" onclick="showPassForm(false)">CANCEL</button>
+            </div>
+        </form>
+    </dialog>
+    <script>
+        function showPassForm(bol) {
+            if (bol) {
+                document.querySelector('#change-pass-modal').showModal();
+            } else {
+                document.querySelector('#change-pass-modal').close();
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -121,7 +121,7 @@ p {
 .f-width {
   width: 100%;
 }
-.f-heigth {
+.f-height {
   height: 100%;
 }
 input {
@@ -147,6 +147,10 @@ button {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+}
+.button-gray{
+  background-color: transparent;
+  color: var(--accent);
 }
 button:hover {
   filter: brightness(70%);
