@@ -9,7 +9,7 @@
         </div>
     </header>
     <main class="modal-body">
-        <form action="" class="import-form">
+        <form action="" class="import-form" onsubmit="return false">
             <div class="import">
                 <label for="path" class="fields-group">
                     <span class="text-title txt-xxs">File Path</span>

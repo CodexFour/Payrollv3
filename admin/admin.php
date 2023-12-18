@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Admin Hub — Simplifying Payroll Control and Oversight</title>
@@ -227,6 +226,7 @@
 <script src="../src/js/calendar.js"></script>
 <script src="../lib/code/highcharts.js"></script>
 <script src="../src/js/modal.js"></script>
+<script src="../src/js/toast-notification.js"></script>
 <script src="../lib/code/modules/variable-pie.js"></script>
 <script src="download.js"></script>
 <script src="upload.js"></script>
@@ -240,6 +240,7 @@
 
         input.click();
         input.addEventListener("change", function (e) {
+            e.stopImmediatePropagation()
             filepath.setAttribute('value', e.target.files[0].name);
         });
 
