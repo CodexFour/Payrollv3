@@ -1,2 +1,2 @@
-# Good lick sa defense
+# Good luck sa defense
 # Jusko 
