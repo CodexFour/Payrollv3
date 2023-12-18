@@ -13,7 +13,7 @@
   <?php include_once 'components/sidebar.php' ?>
   <section id="hero">
     <h2 style="grid-area: h2">SALARY</h2>
-    <p style="grid-area: p" class="font-b txt-lite">Semi-monthly salary</p>
+    <p style="grid-area: p" class="font-b txt-lite">November 15, 2023</p>
     <button style="grid-area: b">DOWNLOAD</button>
   </section>
   <section id="main">
