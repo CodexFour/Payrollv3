@@ -84,20 +84,9 @@
         </div>
     </section>
     <dialog id="change-pass-modal" class="uni-card modal">
-        <form action="change-p.php" method="post" onsubmit="return true" id="change-pass-form">
+        <form  onsubmit="return false" id="change-pass-form">
             <h3> CHANGE PASSWORD</h3>
             <div class="setting-inputs f-height flex space-e">
-                <?php
-                if (isset($_SESSION['success'])) {
-                    echo "<script>alert('" . $_SESSION['success'] . "')</script>";
-                    unset($_SESSION['success']);
-                }
-                if (isset($_SESSION['error'])) {
-                    echo "<script>alert('" . $_SESSION['error'] . "')</script>";
-                    unset($_SESSION['error']);
-                }
-                ?>
-                
                 <label for="chp-old-pass" class="font-s">CURRENT PASSWORD</label>
                 <input type="text" name="op" id="chp-old-pass" style="margin-bottom: 20px;">
 
@@ -108,8 +97,8 @@
                 <input type="text" name="c_np" id="chp-re-pass">
             </div>
             <div class="action-button flex flex-row gap1 right" style="align-items:end;">
-                <button>SAVE</button>
-                <button class="button-gray" formmethod="dialog">CANCEL</button>
+                <button onclick="changePassword()">SAVE</button>
+                <button class="button-gray" onclick="showPassForm(false,'#change-pass-modal')">CANCEL</button>
             </div>
         </form>
     </dialog>
@@ -161,14 +150,34 @@
             perferendis rerum.</p>
     </dialog>
     <script>
-        <?php 
-        ?>
         function showPassForm(bol, query) {
             if (bol) {
                 document.querySelector(query).showModal();
             } else {
                 document.querySelector(query).close();
             }
+        }
+        function changePassword() {
+            var op = document.getElementById('chp-old-pass').value;
+            var np = document.getElementById('chp-new-pass').value;
+            var c_np = document.getElementById('chp-re-pass').value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'change-p.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.success) {
+                        alert(response.success);
+                        showPassForm(false,'#change-pass-modal');
+                    } else {
+                        alert(response.error);
+                    }
+                }
+            };
+            var data = 'op=' + op + '&np=' + np + '&c_np=' + c_np;
+            xhr.send(data);
         }
     </script>
 </body>
