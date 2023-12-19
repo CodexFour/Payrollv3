@@ -23,6 +23,11 @@
         echo "<h1>" . $row['first_name'] . " " . $row['last_name'] . "</h1>";
         ?>
         <!-- this is my changes end -->
+        <div style="width: 80%;">
+            <p class="txt-lite">SET <span class="font-b txt-lite">FACULTY</span></p>
+            <p class="txt-lite">nd@gmail.com</p>
+            <p class="txt-lite">+6391234</p>
+        </div>
 
     </section>
     <section id="hero">
