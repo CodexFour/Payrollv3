@@ -120,5 +120,11 @@ if (isset($_POST['request'])) {
         echo json_encode(
             $ltRow
         );
+    } elseif ($request === 'get-admin-nav'){
+        $result = $con->query('SELECT * FROM employees WHERE employee_id = '.$_POST['admin-id']);
+        $admin = $result->fetch_assoc();
+        echo json_encode(
+            $admin
+        );
     }
 }
