@@ -1,3 +1,10 @@
+<?php
+include_once '../validateLogin.php';
+if (!isAdmin()){
+    header("Location: ../employeeUi/dashboard.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +25,7 @@
 
             <!--            TODO: when it clicks, change the icon into employee-ui.svg-->
             <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
-                 onclick="toggle('.open-notification')"/>
+                 onclick="location.href = '../employeeUi/dashboard.php'"/>
 
 
             <div class="notification-badge" onclick="openNotification()">

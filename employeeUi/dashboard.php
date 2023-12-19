@@ -13,7 +13,18 @@
   <?php include_once 'components/sidebar.php' ?>
   <section id="hero">
     <h2>DASHBOARD</h2>
-    <p class="font-b txt-lite">Welcome, [Nizam]</p>
+
+    <!-- this is my changes start -->
+    <?php
+    $user = $_SESSION['username'];
+    $query = "SELECT employees.first_name FROM employees JOIN accounts ON employees.employee_id = accounts.employee_id WHERE accounts.username='$user'";
+    $result = mysqli_query($con, $query);
+    $row = mysqli_fetch_assoc($result);
+    echo "<p class='font-b txt-lite'>Welcome, " . $row['first_name'] . "</p>";
+    ?>
+    <!-- this is my changes end -->
+
+
     <div class="flex center flex-row left gap1">
       <img src="assets/attendance.svg" alt="" class="date-today-icon" />
       <p class="font-b" id="date-today">NOV 12, 2023</p>
@@ -94,12 +105,12 @@
       let now = new Date();
       let seconds = now.getSeconds() + now.getMilliseconds() / 1000; // Include milliseconds for smoother animation
       ss.style.strokeDashoffset = 570 - (570 * seconds) / limit;
-      sdot.style.transform = `rotateZ(${seconds * (360/limit) + 90}deg)`;
+      sdot.style.transform = `rotateZ(${seconds * (360 / limit) + 90}deg)`;
 
       requestAnimationFrame(updateClock);
 
       let s1 = new Date().getSeconds();
-      if (s1%2 === 0) {
+      if (s1 % 2 === 0) {
         document.documentElement.style.setProperty('--timer-bg', 'rgb(255, 187, 62)');
       } else {
         document.documentElement.style.setProperty('--timer-bg', '#dbdbdb');

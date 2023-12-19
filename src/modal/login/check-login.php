@@ -57,13 +57,16 @@ if (!empty($password)) {
             $username = mysqli_fetch_assoc($result)['username'];
         }
         // Pass the verified user account to the session
-        $_SESSION['user'] = $username;
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
         if($remember === 'true'){
-            setcookie('username',$username,time() + (60*60*24)*30,"/"); // 30 days
-            setcookie('password',$password,time() + (60*60*24)*30,"/"); // 30 days
+            setcookie('username',$username,time() + (60*60*24*7),"/"); // 7 days
+            setcookie('password',$password,time() + (60*60*24*7),"/"); // 7 days
         } else {
-            setcookie('username','', time() - 7000000,"/"); // remove 30 days
-            setcookie('password','', time() - 7000000,"/");
+            // setcookie('username',$username,time() + (60*60*24*1),"/"); // 1 day
+            // setcookie('password',$password,time() + (60*60*24*1),"/"); // 1 day
+            setcookie('username','', time() - 7000000,"/"); // remove cookie if exist
+            setcookie('password','', time() - 7000000,"/"); // remove cookie if exist
         }
         $isAdmin = ($con->query(
             "SELECT employees.employee_id 

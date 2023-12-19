@@ -22,7 +22,7 @@
                 <img src="assets/setting.svg" alt="">SETTING</img>
             </li>
         </a>
-        <a href="sign-out.php">
+        <a href="../src/phpFunctions/logout.php">
             <li id="log-out">
                 <img src="assets/setting.svg" alt="">SIGN OUT</img>
             </li>
