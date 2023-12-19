@@ -157,27 +157,26 @@
                 document.querySelector(query).close();
             }
         }
-        function changePassword() {
+        async function changePassword() {
             var op = document.getElementById('chp-old-pass').value;
             var np = document.getElementById('chp-new-pass').value;
             var c_np = document.getElementById('chp-re-pass').value;
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'change-p.php', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    if (response.success) {
-                        alert(response.success);
+            var data = 'op=' + op + '&np=' + np + '&c_np=' + c_np;
+            const result = await ajaxRequest('change-p.php',data);
+            try{
+                if(result.response){
+                    const responseObject = result.responseObject;
+                    if (responseObject.success) {
+                        alert(responseObject.success);
                         showPassForm(false,'#change-pass-modal');
                     } else {
-                        alert(response.error);
+                        alert(responseObject.error);
                     }
                 }
-            };
-            var data = 'op=' + op + '&np=' + np + '&c_np=' + c_np;
-            xhr.send(data);
+            } catch (err){
+                console.log(err);
+            }
+
         }
     </script>
 </body>

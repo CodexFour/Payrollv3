@@ -1,24 +1,17 @@
-function requestData(currentPage) {
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.status == 200 && request.readyState == 4) {
-      let responseObject = null;
-      try {
-        responseObject = JSON.parse(request.responseText);
-        if (currentPage === "dashboard") {
-          handleDashboard(responseObject);
-        } else if (currentPage === "employee") {
-          handleEmployee(responseObject);
-        }
-      } catch (err) {
-        console.error("Parse failed");
+async function requestData(currentPage) {
+  try {
+    const result = await ajaxRequest("download.php", `request=${currentPage}`);
+    if (result.response) {
+      const responseObject = result.responseObject;
+      if (currentPage === "dashboard") {
+        handleDashboard(responseObject);
+      } else if (currentPage === "employee") {
+        handleEmployee(responseObject);
       }
     }
-  };
-  const requestPage = `request=${currentPage}`;
-  request.open("POST", "download.php", true);
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send(requestPage);
+  } catch (err) {
+    console.error("Request failed:", err);
+  }
 }
 
 // APPLY DASHBOARD DATAS
@@ -83,33 +76,26 @@ function handleEmployee(responseObject) {
   }
   document.getElementById("emp_emp_tbl").innerHTML = rows;
 }
-
-function fetchEmployeeData(empid) {
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.status == 200 && request.readyState == 4) {
-      try {
-        responseObject = JSON.parse(request.responseText);
-        console.log(responseObject);
-        applyEmployeeView(responseObject);
-        document.querySelector("#employee-edit-btn").onclick = () => {
-          changeToEditTitle(true);
-          openModal(".modal-employee");
-          applyEmployeeModal(responseObject);
-        };
-        document.querySelector("#employee-delete-btn").onclick = () => {
-          deleteEmp(empid);
-        };
-      } catch (err) {
-        console.error("Parse failed");
-      }
+async function fetchEmployeeData(empid) {
+  try {
+    const result = await ajaxRequest("download.php", `request=emp_info&emp_id=${empid}`);
+    if (result.response) {
+      const responseObject = result.responseObject;
+      applyEmployeeView(responseObject);
+      document.querySelector("#employee-edit-btn").onclick = () => {
+        changeToEditTitle(true);
+        openModal(".modal-employee");
+        applyEmployeeModal(responseObject);
+      };
+      document.querySelector("#employee-delete-btn").onclick = () => {
+        deleteEmp(empid);
+      };
     }
-  };
-  const requestPage = `request=emp_info&emp_id=${empid}`;
-  request.open("POST", "download.php");
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send(requestPage);
+  } catch (err) {
+    console.error("Request failed:", err);
+  }
 }
+
 function applyEmployeeView(responseObject) {
   document.getElementsByClassName("tabs")[0].click();
   let empView = document.querySelector("#view-employee-modal");
@@ -190,14 +176,12 @@ function applyEmployeeModal(responseObject) {
     empForm.querySelector("#employee-province").value = responseObject["address"]["province"];
   }
 }
-function fetchLeaveType(){
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.status == 200 && request.readyState == 4) {
-      try {
-        responseObject = JSON.parse(request.responseText);
-        console.log(responseObject);
-        let row = ""
+async function fetchLeaveType() {
+  try {
+    const result = await ajaxRequest("download.php", `request=leave_types`);
+    if (result.response) {
+      const responseObject = result.responseObject;
+      let row = ""
         for (const key in responseObject) {
           const leaveType = responseObject[key];
           row += `<tr> <td class="text-regular txt-xxs">${leaveType['leave_name']}</td> `;
@@ -211,34 +195,21 @@ function fetchLeaveType(){
           row += `</div> </div> </td> </tr>`;
         }
         document.querySelector('#leave-type-table').innerHTML = row;
-      } catch (err) {
-        console.error("Parse failed");
-      }
     }
-  };
-  const requestPage = `request=leave_types`;
-  request.open("POST", "download.php");
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send(requestPage);
+  } catch (err) {
+    console.error("Request failed:", err);
+  }
 }
-function fetchLeaveTypeData(id){
-  const request = new XMLHttpRequest();
-  request.onreadystatechange = () => {
-    if (request.status === 200 && request.readyState === 4) {
-      try {
-        console.log(request.responseText);
-        responseObject = JSON.parse(request.responseText);
-        console.log(responseObject);
-        applyLeaveTypeData(responseObject);
-      } catch (err) {
-        console.error("Parse failed");
-      }
+async function fetchLeaveTypeData(id) {
+  try {
+    const result = await ajaxRequest("download.php", `request=leave_type_info&leave_type_id=${id}`);
+    if (result.response) {
+      const responseObject = result.responseObject;
+      applyLeaveTypeData(responseObject);
     }
-  };
-  const requestPage = `request=leave_type_info&leave_type_id=${id}`;
-  request.open("POST", "download.php");
-  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  request.send(requestPage);
+  } catch (err) {
+    console.error("Request failed:", err);
+  }
 }
 function applyLeaveTypeData(responseObject){
   let leaveTypeForm = document.querySelector("#add-leave-type-form");

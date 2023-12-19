@@ -3,7 +3,7 @@ include_once '../validateLogin.php';
 $con = connect('');
 header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); ?>
-
+<script src="data.js"></script>
 <link rel="stylesheet" href="CSS/navbar.css" />
 <nav class="flex center flex-row space-b">
     <div class="nav-left flex center flex-row">

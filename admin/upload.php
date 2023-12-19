@@ -12,7 +12,12 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
     // Retrieve data from the form
     // $fileBlob = file_get_contents($_FILES['fileBlob']['tmp_name']);
     $id = isset($_POST['employee_id']) ? $_POST['employee_id'] : NULL;
-    $rfid = isset($_POST['employee-rfid']) ? $_POST['employee-rfid'] : "";
+    $rfid = isset($_POST['employee-rfid']) ? 
+                    ($_POST['employee-rfid']!=""? 
+                        ($_POST['employee-rfid']!=0? $_POST['employee-rfid']
+                        :NULL) // Null if its '0'
+                    :NULL) // Null if empty string
+                :NULL; // Null if not set
     $fn = isset($_POST['employee-firstname']) ? $_POST['employee-firstname'] : "";
     $ln = isset($_POST['employee-lastname']) ? $_POST['employee-lastname'] : "";
     $mn = isset($_POST['employee-middlename']) ? $_POST['employee-middlename'] : "";
