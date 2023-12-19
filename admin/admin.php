@@ -169,7 +169,7 @@ if (!isAdmin()){
             <div class="nav-employee-info" onclick="adminSetting()">
                 <div class="nav-employee-details">
                     <span class="text-title txt-xs primary-color" id="nav-admin-name">John Doe</span> <!--TODO: Change name-->
-                    <span class="text-regular txt-xxs primary-color">Admin</span> <!--TODO: Change role-->
+                    <span class="text-regular txt-xxs primary-color" id="nav-admin-job">Admin</span> <!--TODO: Change role-->
                 </div>
                 <!--TODO: Change image base on the image in the database-->
                 <img src="../src/assets/img/img.png" alt="image" class="icon-l icon-round icon-cover"/>
@@ -249,6 +249,7 @@ if (!isAdmin()){
         if (result.response){
             ro = result.responseObject;
             document.querySelector('#nav-admin-name').innerHTML = `${ro.first_name} ${ro.last_name}`;
+            document.querySelector('#nav-admin-job').innerHTML = ro.job_title;
         }
     }
     updateNav();
