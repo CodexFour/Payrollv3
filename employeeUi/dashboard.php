@@ -17,7 +17,7 @@
     <!-- this is my changes start -->
     <?php
     $user = $_SESSION['username'];
-    $query = "SELECT employees.first_name FROM employees JOIN accounts ON employees.employee_id = accounts.employee_id WHERE accounts.username='$user'";
+    $query = "SELECT employees.first_name, employees.last_name FROM employees WHERE employee_id =".getEmployeeID();
     $result = mysqli_query($con, $query);
     $row = mysqli_fetch_assoc($result);
     echo "<p class='font-b txt-lite'>Welcome, " . $row['first_name'] . "</p>";
