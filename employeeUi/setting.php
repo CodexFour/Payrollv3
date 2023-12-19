@@ -162,7 +162,7 @@
             var np = document.getElementById('chp-new-pass').value;
             var c_np = document.getElementById('chp-re-pass').value;
             var data = 'op=' + op + '&np=' + np + '&c_np=' + c_np;
-            const result = await ajaxRequest('change-p.php',data);
+            const result = await ajaxRequest('phpFunctions/change-p.php',data);
             try{
                 if(result.response){
                     const responseObject = result.responseObject;
