@@ -82,14 +82,17 @@
         <form action="change-p.php" method="post" onsubmit="return true" id="change-pass-form">
             <h3> CHANGE PASSWORD</h3>
             <div class="setting-inputs f-height flex space-e">
-                <?php if (isset($_GET['error'])) { ?>
-                    <script>alert('<?php echo $_GET['error']; ?>')</script>
-                <?php }?>
-
-                <?php if (isset($_GET['success'])) { ?>
-                    <script>alert('<?php echo $_GET['success']; ?>')</script>
-                <?php }?>
-
+                <?php
+                if (isset($_SESSION['success'])) {
+                    echo "<script>alert('" . $_SESSION['success'] . "')</script>";
+                    unset($_SESSION['success']);
+                }
+                if (isset($_SESSION['error'])) {
+                    echo "<script>alert('" . $_SESSION['error'] . "')</script>";
+                    unset($_SESSION['error']);
+                }
+                ?>
+                
                 <label for="chp-old-pass" class="font-s">CURRENT PASSWORD</label>
                 <input type="text" name="op" id="chp-old-pass" style="margin-bottom: 20px;">
 
@@ -153,6 +156,8 @@
             perferendis rerum.</p>
     </dialog>
     <script>
+        <?php 
+        ?>
         function showPassForm(bol, query) {
             if (bol) {
                 document.querySelector(query).showModal();
