@@ -173,10 +173,11 @@
 .employee-id-card{
     padding: 3px 10px;
     border-radius: 5px;
-    width: 100px;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 5px;
 
 }
 
@@ -184,8 +185,37 @@
     margin: auto 0;
 }
 
-/*.id-color:before{*/
-/*    content: '';*/
-/*    background: transparent url("../../src/assets/icons/svg/employee-id.svg") no-repeat;*/
-/*    background-size: 24px 24px;*/
-/*}*/
+.schedule-form{
+    width: 400px;
+}
+
+.schedule-container{
+    align-self: center;
+    width: 410px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.schedule-fields{
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    width: fit-content;
+    /*margin-bottom: 5px;*/
+
+    /*margin-top: 5px;*/
+}
+
+.schedule-field{
+    height: 30px;
+    width: 120px;
+}
+
+.btn-schedule{
+    align-self: flex-end;
+}
+

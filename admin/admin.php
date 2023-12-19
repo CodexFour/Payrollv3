@@ -221,6 +221,7 @@
 </main>
 
 <dialog class="modal modal-account-settings"> <?php include_once 'modal/account-settings.php' ?> </dialog>
+<dialog class="modal modal-pop-up"> <?php include_once 'modal/pop-up/confirmation-pop-up.php' ?> </dialog>
 <dialog class="modal modal-admin-settings"> <?php include_once 'modal/admin-settings.php' ?> </dialog>
 <dialog class="modal modal-admin-activity-logs"> <?php include_once 'modal/activity-logs.php' ?> </dialog>
 <script src="../src/js/charts.js"></script>
@@ -234,6 +235,22 @@
 <script src="upload.js"></script>
 
 <script>
+
+    function openTab(evt, tabName) {
+        var i, tabcontent, tabs;
+
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        tabs = document.getElementsByClassName("tabs");
+        for (i = 0; i < tabs.length; i++) {
+            tabs[i].className = tabs[i].className.replace(" activeTab", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " activeTab";
+    }
 
     function importFile() {
         const filepath = document.querySelector("#path"),
@@ -274,6 +291,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         fetchDashboard();
+
         // attendance_timesheet_chart();
         // calendar();
     });

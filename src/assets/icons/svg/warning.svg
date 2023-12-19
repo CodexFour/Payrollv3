@@ -1,16 +1,4 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 0 50 50" xml:space="preserve" width="16px" height="16px" fill="#000000">
-
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <g id="SVGRepo_iconCarrier"> <circle style="fill:#FFBB33;" cx="25" cy="25" r="25"/>
-        <line style="fill:none;stroke:#f0f0f0;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;" x1="25" y1="10" x2="25" y2="32"/>
-        <circle style="fill:none;stroke:#f0f0f0;stroke-width:2;" cx="25" cy="38" r="1"/>
-    </g>
-
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+     height="512" x="0" y="0" viewBox="0 0 450 450" style="enable-background:new 0 0 512 512" xml:space="preserve"
+     class=""><g><g fill-rule="evenodd" clip-rule="evenodd"><path fill="#ffc048" d="M214.8 70.55 42.58 368.85c-4.65 8.05 1.16 18.12 10.46 18.12h344.45c9.3 0 15.11-10.06 10.46-18.12L235.72 70.55c-4.65-8.05-16.27-8.05-20.92 0z" opacity="1" data-original="#fe646f" class=""></path><g
+        fill="#e6e9ed"><path d="M225.26 296.18c-3 0-5.57-2.56-6.09-6.08l-15.34-103.5c-1.93-13.03 6.49-24.98 17.6-24.98h7.65c11.12 0 19.54 11.95 17.6 24.98l-15.34 103.5c-.51 3.52-3.08 6.08-6.08 6.08zM239.3 335.12c0-7.73-6.31-14.04-14.04-14.04s-14.04 6.31-14.04 14.04 6.31 14.04 14.04 14.04 14.04-6.31 14.04-14.04z" fill="#e6e9ed" opacity="1" data-original="#e6e9ed"></path></g></g></g></svg>

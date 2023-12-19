@@ -8,7 +8,7 @@
     "employee-profile ."
     "employee-rfid  employee-id"
     "firstname lastname"
-    "middlename suffix"
+    "middlename suffix-degree"
     "birthdate gender-age"
     "email phone"
      "address-information address-information"
@@ -95,7 +95,9 @@
 /*.middle-name_suffix{*/
 /*    grid-area: middle-name_suffix;*/
 /*}*/
-
+.suffix-degree{
+    grid-area: suffix-degree;
+}
 .gender-age{
     grid-area: gender-age;
 }
@@ -160,6 +162,71 @@
     font-style:italic;
     margin-top:3px;
 }
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: var(--border-color);
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 16px;
+    transition: 0.3s;
+}
+.tab button:hover {
+    background-color: var(--color_hover);
+}
+
+.tab button.activeTab {
+    background-color: #ccc;
+    color: var(--tertiary)!important;
+}
+
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: none;
+}
+
+.advance-tab{
+    width: 300px;
+    height: 270px;
+    overflow-y: auto;
+}
+
+.advance-tab-card{
+    width: 270px
+}
+
+.advance-header{
+    display: flex;
+    justify-content: space-between;
+}
+.advance-btn{
+    margin-right: 10px;
+}
+
+.schedule-date{
+    /*padding: 5px 10px;*/
+}
+
+.schedule-time{
+    padding: 6px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+
+}
+
 
 
 

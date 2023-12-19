@@ -13,6 +13,7 @@
 @import "../src/css/constants/status.css";
 @import "../src/css/constants/toast-notification.css";
 @import "dashboard/dashboard.css";
+@import "modal/pop-up/pop-up.css";
 @import "employee/employee.css";
 @import "salary/salary.css";
 @import "attendance/attendance.css";

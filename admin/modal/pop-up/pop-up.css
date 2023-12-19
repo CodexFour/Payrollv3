@@ -1,0 +1,41 @@
+.pop-up{
+   padding: 10px;
+
+}
+
+.pop-up-information{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+}
+
+.pop-up-actions{
+   /*margin-top:30px;*/
+   width: 100%;
+   /*outline: 1px solid black;*/
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.cancel{
+   background-color: var(--status-inactive);
+}
+
+.delete{
+   background-color: var(--error);
+}
+
+.delete:before{
+   content: "Delete";
+   color: var(--tertiary)
+}
+
+.confirm{
+   background-color: var(--success);
+}
+
+.confirm:before{
+   content: "Confirm";
+   color: var(--tertiary)
+}

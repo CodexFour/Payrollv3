@@ -75,7 +75,7 @@
                     <p class="text-regular txt-teen">Payroll Run: <span class="text-bold txt-teen" id="db_curr_pr_date">--/--/----</span>
                         <span class="text-bold txt-teen">-</span> <span class="text-bold txt-teen db_next_pr_date">--/--/----</span></p>
                     <button class="btn btn-deploy btn-name txt-xxs"
-                        onclick="showToast('error', 'Creating employee error')">
+                        onclick="showToast('success', 'Payslip Deployed Successfully')">
                         DEPLOY
                         PAYROLLS
                     </button>
