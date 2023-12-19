@@ -83,16 +83,12 @@
             <h3> CHANGE PASSWORD</h3>
             <div class="setting-inputs f-height flex space-e">
                 <?php if (isset($_GET['error'])) { ?>
-                    <p class="error">
-                        <?php echo $_GET['error']; ?>
-                    </p>
-                <?php } ?>
+                    <script>alert('<?php echo $_GET['error']; ?>')</script>
+                <?php }?>
 
                 <?php if (isset($_GET['success'])) { ?>
-                    <p class="success">
-                        <?php echo $_GET['success']; ?>
-                    </p>
-                <?php } ?>
+                    <script>alert('<?php echo $_GET['success']; ?>')</script>
+                <?php }?>
 
                 <label for="chp-old-pass" class="font-s">CURRENT PASSWORD</label>
                 <input type="text" name="op" id="chp-old-pass" style="margin-bottom: 20px;">
@@ -105,7 +101,7 @@
             </div>
             <div class="action-button flex flex-row gap1 right" style="align-items:end;">
                 <button>SAVE</button>
-                <button class="button-gray" onclick="showPassForm(false,'#change-pass-modal')">CANCEL</button>
+                <button class="button-gray" formmethod="dialog">CANCEL</button>
             </div>
         </form>
     </dialog>
