@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="rfid.css">
     <script src="../lib/http_code.jquery.com_jquery-3.4.1.js"></script>
 </head>
-<body>
+<body class="rfid-body">
 <section class="modal-content card rfid">
     <header class="modal-header modal-header-department">
         <div class="card-name">
