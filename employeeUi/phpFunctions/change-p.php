@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../src/phpFunctions/connection.php';
+include '../../src/phpFunctions/connection.php';
 $con = connect('');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
