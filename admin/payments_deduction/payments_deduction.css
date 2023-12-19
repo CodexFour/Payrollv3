@@ -16,6 +16,31 @@
     gap: 20px;
 }
 
+#payments_deduction_chart{
+    height: 190px;
+}
+/*.total-deduction{*/
+/*    grid-area: total_deduction;*/
+/*}*/
+
+/*.mandatory_deduction{*/
+/*    grid-area: mandatory_deduction;*/
+/*}*/
+
+/*.non_mandatory_deduction{*/
+/*    grid-area: non_mandatory;*/
+/*}*/
+
+/*.employee_earnings {*/
+/*    grid-area: earnings;*/
+/*}*/
+
+.deduction_chart{
+    grid-area: deduction_chart;
+    width: 100%;
+    height: fit-content;
+}
+
 .payment-content-body {
     grid-area: payment-content-body;
     display: grid;

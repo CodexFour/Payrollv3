@@ -168,8 +168,10 @@ if (!isAdmin()) {
 
             <div class="nav-employee-info" onclick="adminSetting()">
                 <div class="nav-employee-details">
-                    <span class="text-title txt-xs primary-color" id="nav-admin-name">John Doe</span> <!--TODO: Change name-->
-                    <span class="text-regular txt-xxs primary-color" id="nav-admin-job">Admin</span> <!--TODO: Change role-->
+                    <span class="text-title txt-xs primary-color" id="nav-admin-name">John Doe</span>
+                    <!--TODO: Change name-->
+                    <span class="text-regular txt-xxs primary-color" id="nav-admin-job">Admin</span>
+                    <!--TODO: Change role-->
                 </div>
                 <!--TODO: Change image base on the image in the database-->
                 <img src="../src/assets/img/img.png" alt="image" class="icon-l icon-round icon-cover"/>
@@ -245,14 +247,15 @@ if (!isAdmin()) {
 
 <script>
 
-    async function updateNav(){
-        const result = await ajaxRequest('download.php','request=get-admin-nav&admin-id='+<?php echo getEmployeeID()?>);
-        if (result.response){
+    async function updateNav() {
+        const result = await ajaxRequest('download.php', 'request=get-admin-nav&admin-id=' +<?php echo getEmployeeID()?>);
+        if (result.response) {
             ro = result.responseObject;
             document.querySelector('#nav-admin-name').innerHTML = `${ro.first_name} ${ro.last_name}`;
             document.querySelector('#nav-admin-job').innerHTML = ro.job_title;
         }
     }
+
     updateNav();
 
     function openTab(evt, tabName) {
@@ -341,6 +344,7 @@ if (!isAdmin()) {
                 calendar();
             } else if (tab_selector.innerHTML === 'PAYMENTS &amp; DEDUCTIONS') {
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
+                payments_chart();
                 let names = ['John Rey', 'Nizam', 'Samuel'];
                 autocomplete(document.getElementById("search-employee"), names);
             } else if (tab_selector.innerHTML === 'SUMMARY') {
@@ -462,6 +466,7 @@ if (!isAdmin()) {
 
         return result;
     }
+
     function autocomplete(inp, arr) {
         let currentFocus;
         inp.addEventListener("input", function (e) {

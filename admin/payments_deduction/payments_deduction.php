@@ -1,6 +1,6 @@
 <article id="payments" class="payments-deduction-content-container">
     <div class="payment-content-head">
-        <div class="card" id="total-deduction">
+        <div class="card total-deduction">
             <div class="card-content">
                 <div>
                     <h2 class="text-title txt-xxs">TOTAL DEDUCTION</h2>
@@ -8,15 +8,15 @@
                     <p class="text-subtitle txt-xxs">OCT. 30, 2023</p></div>
             </div>
         </div>
-        <div class="card" id="total-deduction">
-            <div class="card-content">
+        <div class="card">
+            <div class="card-content mandatory_deduction">
                 <div>
                     <h2 class="text-title txt-xxs">MANDATORY DEDUCTION</h2>
                     <strong class="text-bold txt-m">40K</strong>
                     <p class="text-subtitle txt-xxs">OCT. 30, 2023</p></div>
             </div>
         </div>
-        <div class="card" id="total-deduction">
+        <div class="card non_mandatory_deduction">
             <div class="card-content">
                 <div>
                     <h2 class="text-title txt-xxs">NON MANDATORY DEDUCTION</h2>
@@ -24,7 +24,7 @@
                     <p class="text-subtitle txt-xxs">OCT. 30, 2023</p></div>
             </div>
         </div>
-        <div class="card" id="total-deduction">
+        <div class="card employee_earnings">
             <div class="card-content">
                 <div>
                     <h2 class="text-title txt-xxs">EMPLOYEE EARNINGS</h2>
@@ -32,11 +32,8 @@
                     <p class="text-subtitle txt-xxs">OCT. 30, 2023</p></div>
             </div>
         </div>
-
         <div class="chart card" id="chart">
-            <div class="card-content">
-                <div id="payments_deduction_chart">
-                </div>
+            <div id="payments_deduction_chart">
             </div>
         </div>
 
@@ -54,7 +51,8 @@
                                id="searching_employee_earnings"
                                placeholder="Search Earnings"/>
                     </label>
-                    <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-earnings')">ADD</button>
+                    <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-earnings')">ADD
+                    </button>
                 </div>
             </div>
             <div class="payments_deduction_table-container">
@@ -73,7 +71,8 @@
                                id="searching_deductions"
                                placeholder="Search Deductions"/>
                     </label>
-                    <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-deduction')">ADD</button>
+                    <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-deduction')">ADD
+                    </button>
                 </div>
             </div>
             <div class="payments_deduction_table-container">
