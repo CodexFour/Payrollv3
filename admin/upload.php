@@ -37,7 +37,8 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
     try {
         if ($id === NULL || empty($id)) { // Insert an employee
             $query = "INSERT INTO `payroll_db`.`employees`
-            (`first_name`,
+            (`rfid`,
+            `first_name`,
             `last_name`,
             `middle_name`,
             `suffix`,
@@ -53,10 +54,10 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
             `status_`,
             `isEmployed`)
             VALUES
-            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+            (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
             $stmt1 = $con->prepare($query);
 
-            $stmt1->bind_param('sssssisssissiii', $fn, $ln, $mn, $sf, $gd, $age, $em, $phone, $bd, $jtt, $wt, $hd, $dpm, $status_, $isEmployed);
+            $stmt1->bind_param('isssssisssissiii', $rfid, $fn, $ln, $mn, $sf, $gd, $age, $em, $phone, $bd, $jtt, $wt, $hd, $dpm, $status_, $isEmployed);
 
 
             $stmt1->execute();
@@ -77,7 +78,8 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
         } else { // UPDATE EMPLOYEE
 
             $query = "UPDATE `employees`
-            SET `first_name` = ?,
+            SET `rfid` = ?,
+                `first_name` = ?,
                 `last_name` = ?,
                 `middle_name` = ?,
                 `suffix` = ?,
@@ -95,7 +97,7 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
             WHERE `employee_id` = ?";
 
             $stmt = $con->prepare($query);
-            $stmt->bind_param('sssssisssissiiii', $fn, $ln, $mn, $sf, $gd, $age, $em, $phone, $bd, $jtt, $wt, $hd, $dpm, $status_, $isEmployed, $id);
+            $stmt->bind_param('isssssisssissiiii', $rfid, $fn, $ln, $mn, $sf, $gd, $age, $em, $phone, $bd, $jtt, $wt, $hd, $dpm, $status_, $isEmployed, $id);
             $stmt->execute();
 
             $addressExist = $con->query('SELECT * FROM `address` WHERE employee_id ='.$id);
