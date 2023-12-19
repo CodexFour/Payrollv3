@@ -43,5 +43,5 @@ function getEmployeeID(){
     $empId = $con->query(
     "SELECT employee_id FROM accounts 
     WHERE username = '".$_SESSION['username']."'");
-    return $empId->fetch_assoc();
+    return $empId->fetch_assoc()['employee_id'];
 }
