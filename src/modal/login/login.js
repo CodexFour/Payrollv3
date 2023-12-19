@@ -95,7 +95,11 @@ function handleResponse(responseObject) {
           // move on to next page
           // location.href = "admin/admin.php";
           if(responseObject.isAdmin){
-            location.href = "admin/admin.php";
+            if(window.innerWidth < 762){
+              location.href = "employeeUi/dashboard.php";
+            } else {
+              location.href = "admin/admin.php";
+            }
           } else {
             location.href = "employeeUi/dashboard.php";
           }
