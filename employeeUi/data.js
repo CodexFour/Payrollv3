@@ -1,24 +1,26 @@
-function requestAllData(){
+function ajaxRequest(phpLink, data) {
     const request = new XMLHttpRequest();
-    request.onreadystatechange = () => {
-        if (this.readyState == 4 && this.status == 200){
-            console.log(request.responseText)
-            let responseObject = null;
+    request.open("POST", phpLink);
+    if (typeof data === "string") {request.setRequestHeader("Content-type", "application/x-www-form-urlencoded")}
+    request.send(data);
+    return new Promise((resolve, reject) => {
+        request.onreadystatechange = () => {
+        if (request.status == 200 && request.readyState == 4) {
             try {
-                responseObject = JSON.parse(request.responseText)
+            console.log(request.responseText);
+            let jsonObj = JSON.parse(request.responseText);
+            resolve({
+                response: true,
+                responseObject: jsonObj,
+            });
             } catch (err) {
-                console.error("Parse failed");
-            }
-
-            if (responseObject) {
-                handleData(responseObject);
+            console.error("Parse failed");
+            reject({
+                response: false,
+                error: "Parse failed",
+            });
             }
         }
-    };
-    xhr.open("GET", "data.php", true);
-    xhr.send();
-}
-function handleData(responseObject){
-    console.log(responseObject);
-    document.querySelector('#total_employee .card-content strong').innerHTML = responseObject.empCount;
+        };
+    });
 }
