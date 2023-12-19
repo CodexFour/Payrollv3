@@ -39,7 +39,7 @@
                         <span class="txt-teen text-bold">Apply to all</span>
                     </label>
                     <label for="specify">
-                        <input type="checkbox" id="specify" name="specify">
+                        <input type="checkbox" id="specify" name="specify" onclick="openModal('.modal-specify')">
                         <span class="txt-teen text-bold">Specify</span>
                     </label>
                 </div>

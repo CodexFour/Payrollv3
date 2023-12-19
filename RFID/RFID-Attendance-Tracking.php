@@ -35,7 +35,7 @@
                     </div>
                 </section>
                 <img src="../src/assets/icons/svg/rfid-scanner.svg" alt="" class="icon-xl">
-                <span class="txt-xxs text-bold" id="employee-name">John Rey</span>
+                <span class="txt-xxs text-bold" id="employee-name">--- --- --- ---</span>
                 <input type="text" autofocus id="scanning-rfid" style="opacity: 0;">
             </div>
         </div>
@@ -118,7 +118,7 @@
                         }
                         setTimeout(() => {
                             input.target.value = ''; // Clear the input after 5 seconds
-                            name.textContent = '';
+                            name.textContent = '--- --- --- ---';
                         }, 2000);
                     })
                     .catch(err => {
