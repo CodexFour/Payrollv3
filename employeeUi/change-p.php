@@ -34,8 +34,11 @@ session_start();
                 
                 $sql_2 = "UPDATE accounts SET password='$np' WHERE username='$user'";
                 if(mysqli_query($con, $sql_2)){
+                    $_SESSION['password'] = $np;
+                    if(isset($_COOKIE['password'])){
+                        setcookie('password', $np, time() + (60 * 60 * 24 * 7), "/"); // 7 days
+                    }
                     header("Location: setting.php?success=Your password has been changed successfully");
-                    
                 }else {
                     header("Location: setting.php?error=Error changing password");
                     
