@@ -111,6 +111,7 @@ function fetchEmployeeData(empid) {
   request.send(requestPage);
 }
 function applyEmployeeView(responseObject) {
+  document.getElementsByClassName("tabs")[0].click();
   let empView = document.querySelector("#view-employee-modal");
   let pfp = empView.querySelector("#view-employee-pfp");
   // let em = empView.querySelector("#view-employee-email");
