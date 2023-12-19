@@ -19,12 +19,36 @@
   <section id="main">
     <div class="uni-card" style="grid-area: gsc">
       <p class="font-b font-s">GROSS SALARY</p>
-      <h1 class="font-b">8,000</h1>
+      <!-- added -->
+      <?php
+      $user = $_SESSION['username'];
+      $query = "SELECT payroll.gross_total_amount FROM payroll WHERE payroll.employee_id =" . getEmployeeID();
+      $result = mysqli_query($con, $query);
+      $row = mysqli_fetch_assoc($result);
+      if (empty($row['gross_total_amount'])) {
+        echo "<h1 class='font-b'>" . 0 . "</h1>";
+        exit();
+      }
+      echo "<h1 class='font-b'>" . $row['gross_total_amount'] . "</h1>";
+      ?>
+      <!-- added -->
       <p class="font-b txt-lite">PHP</p>
     </div>
     <div class="uni-card" style="grid-area: tdc">
       <p class="font-b font-s">TOTAL DEDUCTION</p>
-      <h1 class="font-b">8,000</h1>
+           <!-- added -->
+           <?php
+      $user = $_SESSION['username'];
+      $query = "SELECT payroll.deduction_total_amount FROM payroll WHERE payroll.employee_id =" . getEmployeeID();
+      $result = mysqli_query($con, $query);
+      $row = mysqli_fetch_assoc($result);
+      if (empty($row['deduction_total_amount'])) {
+        echo "<h1 class='font-b'>" . 0 . "</h1>";
+        exit();
+      }
+      echo "<h1 class='font-b'>" . $row['deduction_total_amount'] . "</h1>";
+      ?>
+      <!-- added -->
       <p class="font-b txt-lite">PHP</p>
     </div>
     <div class="uni-card" style="grid-area: sbc">
@@ -71,7 +95,20 @@
     </div>
     <div class="uni-card flex center flex-row space-b" style="grid-area: nsc">
       <p class="font-b">NET SALARY:</p>
-      <h1 class="font-b"><span class="font-m txt-lite">PHP </span>8,000</h1>
+      <!-- added -->
+      <?php
+      $user = $_SESSION['username'];
+      $query = "SELECT payroll.net_salary FROM payroll WHERE payroll.employee_id =" . getEmployeeID();
+      $result = mysqli_query($con, $query);
+      $row = mysqli_fetch_assoc($result);
+      if (empty($row['net_salary'])) {
+        echo "<h1 class='font-b'>" . 0 . "</h1>";
+        exit();
+      }
+      
+      echo "<h1 class='font-b'><span class='font-m txt-lite'>PHP </span>". $row['net_salary'] . "</h1>";
+      ?>
+      <!-- added -->
     </div>
   </section>
   <section id="graph">

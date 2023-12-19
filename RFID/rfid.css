@@ -1,0 +1,47 @@
+@import "../admin/admin.css";
+.rfid{
+    width: 500px;
+    height: 465px;
+}
+.rfid-scanner-logo{
+    width: 150px;
+    height: 150px;
+}
+
+
+.rfid-scanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 10px 110px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.clock-container {
+    background-color: var(--secondary);
+    padding: 10px 20px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.clock {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timer{
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+#point {
+    padding: 0 10px;
+}
+
+

@@ -12,6 +12,7 @@ if (!isAdmin()){
     <title>Admin Hub — Simplifying Payroll Control and Oversight</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="shortcut icon" href="../src/assets/icons/logo.png" type="image/png">
+
 </head>
 
 <body>
