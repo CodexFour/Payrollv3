@@ -35,7 +35,13 @@ function isAdmin(){
     FROM payroll_db.privilege 
     JOIN employees 
     ON privilege.employee_id = employees.employee_id
-    WHERE privilege.employee_id = (SELECT employee_id FROM accounts 
-    WHERE username = '".$_SESSION['username']."')");
+    WHERE privilege.employee_id = ".getEmployeeID());
     return $isAdmin->num_rows > 0? true:false;
+}
+function getEmployeeID(){
+    $con = connect('');
+    $empId = $con->query(
+    "SELECT employee_id FROM accounts 
+    WHERE username = '".$_SESSION['username']."'");
+    return $empId->fetch_assoc();
 }
