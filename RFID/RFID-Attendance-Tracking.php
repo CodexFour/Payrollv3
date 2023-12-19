@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="rfid.css">
     <script src="../lib/http_code.jquery.com_jquery-3.4.1.js"></script>
 </head>
-<body>
+<body class="rfid-body">
 <section class="modal-content card rfid">
     <header class="modal-header modal-header-department">
         <div class="card-name">
@@ -35,7 +35,7 @@
                     </div>
                 </section>
                 <img src="../src/assets/icons/svg/rfid-scanner.svg" alt="" class="icon-xl">
-                <span class="txt-xxs text-bold" id="employee-name">John Rey</span>
+                <span class="txt-xxs text-bold" id="employee-name">--- --- --- ---</span>
                 <input type="text" autofocus id="scanning-rfid" style="opacity: 0;">
             </div>
         </div>
@@ -118,7 +118,7 @@
                         }
                         setTimeout(() => {
                             input.target.value = ''; // Clear the input after 5 seconds
-                            name.textContent = '';
+                            name.textContent = '--- --- --- ---';
                         }, 2000);
                     })
                     .catch(err => {

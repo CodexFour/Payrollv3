@@ -1,6 +1,6 @@
 <?php
 include_once '../validateLogin.php';
-if (!isAdmin()){
+if (!isAdmin()) {
     header("Location: ../employeeUi/dashboard.php");
     die();
 }
@@ -232,6 +232,7 @@ if (!isAdmin()){
 <dialog class="modal modal-pop-up"> <?php include_once 'modal/pop-up/confirmation-pop-up.php' ?> </dialog>
 <dialog class="modal modal-admin-settings"> <?php include_once 'modal/admin-settings.php' ?> </dialog>
 <dialog class="modal modal-admin-activity-logs"> <?php include_once 'modal/activity-logs.php' ?> </dialog>
+<dialog class="modal modal-specify"> <?php include_once 'payments_deduction/components/modal/specify-employee.php' ?> </dialog>
 <script src="../src/js/charts.js"></script>
 <script src="../src/js/HTTPRequest.js"></script>
 <script src="../src/js/calendar.js"></script>
@@ -340,9 +341,11 @@ if (!isAdmin()){
                 calendar();
             } else if (tab_selector.innerHTML === 'PAYMENTS &amp; DEDUCTIONS') {
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
+                let names = ['John Rey', 'Nizam', 'Samuel'];
+                autocomplete(document.getElementById("search-employee"), names);
             } else if (tab_selector.innerHTML === 'SUMMARY') {
                 await fetch('.admin-content', 'summary/summary.php');
-                requestData('summary');
+                await requestData('summary');
                 const tableBody = document.querySelector('.table-body');
                 const summaryFirstChildren = document.querySelectorAll('.summary-table-row tr > :first-child');
                 const summaryNthChildren = document.querySelectorAll('.summary-table-row tr > :nth-child(2)');
@@ -408,14 +411,15 @@ if (!isAdmin()){
     function clearEmployeeField() {
         let inputs = document.querySelectorAll('#add-employee-form input');
         let selects = document.querySelectorAll('#add-employee-form select');
-        inputs.forEach((i) =>{
+        inputs.forEach((i) => {
             i.value = null;
         })
-        selects.forEach((s) =>{
+        selects.forEach((s) => {
             s.value = "";
         });
     }
-    function clearEmployeeView(){
+
+    function clearEmployeeView() {
         let empView = document.querySelector("#view-employee-modal");
         empView.querySelector("#view-employee_id").innerHTML = "----"
         empView.querySelector("#view-employee-name").innerHTML = "---- ---- ----"
@@ -432,7 +436,8 @@ if (!isAdmin()){
         empView.querySelector("#view-employee-job-title").innerHTML = "----"
         empView.querySelector("#view-employee-hired-date").innerHTML = "--- -- ----"
     }
-    function clearLeaveTypeField(){
+
+    function clearLeaveTypeField() {
         let leaveTypeForm = document.querySelector("#add-leave-type-form");
         leaveTypeForm.querySelector('#leave-type-id').value = "";
         leaveTypeForm.querySelector('#leave-type-active').checked = true;
@@ -442,20 +447,92 @@ if (!isAdmin()){
 
     // For format date purposes
     function formatTextDate(inputDate) {
-    const dateParts = inputDate.split('-');
-    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const dateParts = inputDate.split('-');
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    const formattedDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
+        const formattedDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
 
-    const monthName = monthNames[formattedDate.getMonth()];
+        const monthName = monthNames[formattedDate.getMonth()];
 
-    const day = formattedDate.getDate();
-    const year = formattedDate.getFullYear();
+        const day = formattedDate.getDate();
+        const year = formattedDate.getFullYear();
 
-    // Concatenate the formatted date
-    const result = `${monthName} ${day} ${year}`;
+        // Concatenate the formatted date
+        const result = `${monthName} ${day} ${year}`;
 
-    return result;
+        return result;
+    }
+    function autocomplete(inp, arr) {
+        let currentFocus;
+        inp.addEventListener("input", function (e) {
+            let a, b, i, val = this.value;
+            closeAllLists();
+            if (!val) {
+                return false;
+            }
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].substr(0, val.length).toUpperCase() === val.toUpperCase()) {
+                    b = document.createElement("DIV");
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    b.addEventListener("click", function (e) {
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        inp.addEventListener("keydown", function (e) {
+            let x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode === 40) {
+                currentFocus++;
+                addActive(x);
+            } else if (e.keyCode === 38) {
+                currentFocus--;
+                addActive(x);
+            } else if (e.keyCode === 13) {
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+
+        function addActive(x) {
+            if (!x) return false;
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+
+        function removeActive(x) {
+            for (let i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+
+        function closeAllLists(elmnt) {
+            let x = document.getElementsByClassName("autocomplete-items");
+            for (let i = 0; i < x.length; i++) {
+                if (elmnt !== x[i] && elmnt !== inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
     }
 
 </script>
