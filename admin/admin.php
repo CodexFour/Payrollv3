@@ -486,6 +486,26 @@ if (!isAdmin()) {
         });
     }
 
+    function filterTable(inputID, tableID, colNumber) {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById(inputID);
+            filter = input.value.toUpperCase();
+            table = document.getElementById(tableID); // Replace with the actual ID of your table
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[colNumber]; // Replace with the column index you want to search
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
 </script>
 </body>
 

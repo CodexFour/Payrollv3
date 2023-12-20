@@ -49,7 +49,8 @@
                     <label for="searching_employee_earnings">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee_earnings"
-                               placeholder="Search Earnings"/>
+                               placeholder="Search Earnings"
+                               onkeyup="filterTable('searching_employee_earnings', 'pd-earning-table',0)"/>
                     </label>
                     <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-earnings')">ADD
                     </button>
@@ -69,7 +70,8 @@
                     <label for="searching_deductions">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_deductions"
-                               placeholder="Search Deductions"/>
+                               placeholder="Search Deductions"
+                               onkeyup="filterTable('searching_deductions', 'pd-deduction-table',0)"/>
                     </label>
                     <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-deduction')">ADD
                     </button>

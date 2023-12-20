@@ -99,7 +99,8 @@
                     <label for="searching_employee">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee"
-                               placeholder="Search Employee"/>
+                               placeholder="Search Employee"
+                               onkeyup="filterTable('searching_employee', 'salary-salary-table',1)"/>
                     </label>
                 </div>
                 <button class="btn text-bold txt-xxs" onclick="openModal('.modal-export')">EXPORT</button>

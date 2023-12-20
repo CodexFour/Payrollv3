@@ -24,14 +24,15 @@
                     <label for="searching_employee">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee"
-                               placeholder="Search Employee"/>
+                               placeholder="Search Employee"
+                               onkeydown="filterTable('searching_employee', 'employee-employee-table',1)"/>
                     </label>
-                    <label for="filter_department">
+                    <!-- <label for="filter_department">
                         <select class="checkbox-fields text-title txt-xxs" id="filter_department">
                             <option class="text-subtitle" value="" disabled selected>Department</option>
                             <option class="text-subtitle" value="">Department</option>
                         </select>
-                    </label>
+                    </label> -->
                 </div>
                 <button class="btn text-bold txt-xxs employee-add" onclick="openModal('.modal-employee')">ADD</button>
             </div>

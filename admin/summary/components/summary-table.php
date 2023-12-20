@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../admin.css">
 
 
-<table class="summary-table">
+<table class="summary-table" id="summary-summary-table">
     <thead class="table-head">
     <tr>
         <th class="text-bold txt-xxs primary-color  asis asis-col1" rowspan="2">No.</th>
@@ -91,127 +91,35 @@
     </tr>
     </thead>
     <tbody class="table-body summary-table-row">
+    <?php
+    include_once '../../src/phpFunctions/connection.php';
+    $con = connect('');
+    $result = $con->query('SELECT first_name, last_name, gross_total_amount, deduction_total_amount, net_salary FROM employees JOIN payroll ON employees.employee_id = payroll.employee_id;');
+    while ($row = $result->fetch_assoc()) {
+    ?>
     <tr class="table-row">
         <td class="table-content-default row-asis1">
             <img
-                    src="../../../src/assets/img/img.png"
+                    src="../src/assets/img/img.png"
                     alt="image"
                     class="icon-m icon-soft-edge"
             />
         </td>
-        <td class="text-regular txt-xxs row-asis2">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
+        <td class="text-regular txt-xxs row-asis2"><?php echo $row['first_name'].' '.$row['last_name']?></td>
+        <td class="text-regular txt-xxs">-----</td>
+        <td class="text-regular txt-xxs">-----</td>
+        <td class="text-regular txt-xxs">-----</td>
+        <td class="text-regular txt-xxs"><?php echo $row['gross_total_amount']?></td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
         <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
+        <td class="text-regular txt-xxs"><?php echo $row['deduction_total_amount']?></td>
+        <td class="text-regular txt-xxs"><?php echo $row['net_salary']?></td>
     </tr>
-    <tr class="table-row">
-        <td class="table-content-default row-asis1">
-            <img
-                    src="../../../src/assets/img/img.png"
-                    alt="image"
-                    class="icon-m icon-soft-edge"
-            />
-        </td>
-        <td class="text-regular txt-xxs row-asis2">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-    </tr>
-    <tr class="table-row">
-        <td class="table-content-default row-asis1">
-            <img
-                    src="../../../src/assets/img/img.png"
-                    alt="image"
-                    class="icon-m icon-soft-edge"
-            />
-        </td>
-        <td class="text-regular txt-xxs row-asis2">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-    </tr>
-    <tr class="table-row">
-        <td class="table-content-default row-asis1">
-            <img
-                    src="../../../src/assets/img/img.png"
-                    alt="image"
-                    class="icon-m icon-soft-edge"
-            />
-        </td>
-        <td class="text-regular txt-xxs row-asis2">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-    </tr>
-    <tr class="table-row">
-        <td class="table-content-default row-asis1">
-            <img
-                    src="../../../src/assets/img/img.png"
-                    alt="image"
-                    class="icon-m icon-soft-edge"
-            />
-        </td>
-        <td class="text-regular txt-xxs row-asis2">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-    </tr>
-    <tr class="table-row">
-        <td class="table-content-default row-asis1">
-            <img
-                    src="../../../src/assets/img/img.png"
-                    alt="image"
-                    class="icon-m icon-soft-edge"
-            />
-        </td>
-        <td class="text-regular txt-xxs row-asis2">John Doe</td>
-        <td class="text-regular txt-xxs">10-20-2023</td>
-        <td class="text-regular txt-xxs">10-30-2023</td>
-        <td class="text-regular txt-xxs">10</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-        <td class="text-regular txt-xxs">-</td>
-    </tr>
-
+    <?php
+    }
+    ?>
 
     </tbody>
 </table>

@@ -54,7 +54,8 @@
                     <label for="searching_employee">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee"
-                               placeholder="Search Employee"/>
+                               placeholder="Search Employee"
+                               onkeyup="filterTable('searching_employee', 'leave-table',1)"/>
                     </label>
                     <!--                        onclick="openModal('.modal-leave')-->
                     <button class="btn text-bold txt-xxs" onclick="openModal('.modal-leave')">ADD</button>

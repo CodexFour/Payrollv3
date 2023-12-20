@@ -1,4 +1,4 @@
-<table>
+<table id="pd-earning-table">
     <thead class="table-head">
     <tr class="table-column">
         <th class="text-bold txt-xxs primary-color">NAME</th>

@@ -1,4 +1,4 @@
-<table>
+<table id="leave-table">
     <thead class="table-head">
     <tr class="table-column">
         <th>

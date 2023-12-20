@@ -1,4 +1,4 @@
-<table>
+<table id="employee-employee-table">
     <thead class="table-head">
     <tr class="table-column">
         <th>
