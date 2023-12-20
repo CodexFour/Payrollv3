@@ -3,9 +3,13 @@
 
 function connect($sslcrt){
 
-    $dbhost = 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com';
-    $dbuname = 'Wg5U9sLofQp61Gx.root';
-    $dbpword = 'KZnvdBjZZa61xwhI';
+    // $dbhost = 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com';
+    // $dbuname = 'Wg5U9sLofQp61Gx.root';
+    // $dbpword = 'KZnvdBjZZa61xwhI';
+    // $dbname = 'payroll_db';
+    $dbhost = 'localhost:3307';
+    $dbuname = 'root';
+    $dbpword = 'password';
     $dbname = 'payroll_db';
     $db = mysqli_init();
     mysqli_options ($db, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);

@@ -26,7 +26,7 @@
                         <span class="txt-teen text-subtitle ">SET</span>
                     </div>
                     <div class="action-icon">
-                        <img src="../../../../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
+                        <img src="../../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
                     </div>
                 </div>
 
