@@ -16,7 +16,7 @@
         <form autocomplete="off" id="add-leave-form" onsubmit="return false">
             <div class="column-2">
                 <div>
-                    <label for="leave-employee-name" class="fields-group">
+                    <label for="leave-employee-name" class="autocomplete fields-group">
                         <span class="text-title txt-xxs form-required">Employee Name</span>
                         <input class="fields text-regular txt-xxs"
                                id="leave-employee-name"

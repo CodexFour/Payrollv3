@@ -277,10 +277,21 @@ if (!isAdmin()) {
                 // const result  = await ajaxRequest('download.php','request=emp-names')
                 // let names = result.responseObject;
                 // autocomplete(document.getElementById("leave-employee-name"), names);
+                // const result  = await ajaxRequest('download.php','request=emp-names')
+                // let names = result.responseObject;
+                // console.log("Hi " + names);
+                // autocomplete(document.getElementById("searching_employee"), names);
+                // const result  = await ajaxRequest('download.php','request=emp-names')
+                // let names = result.responseObject;
+                // console.log(names);
+                // autocomplete(document.getElementById("searching_employee"), names);
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
                 await fetch('.admin-content', 'employee/employee.php');
                 department_chart();
                 requestData('employee');
+                const result  = await ajaxRequest('download.php','request=emp-names')
+                let names = result.responseObject;
+                autocomplete(document.getElementById("searching_employee"), names);
             } else if (tab_selector.innerHTML === 'SALARY') {
                 await fetch('.admin-content', 'salary/salary.php');
                 salary_chart();
@@ -328,6 +339,9 @@ if (!isAdmin()) {
         await fetch('.admin-content', 'dashboard/dashboard.php');
         requestData('dashboard');
         dashboard_chart();
+        const result  = await ajaxRequest('download.php','request=emp-names')
+        let names = result.responseObject;
+        autocomplete(document.getElementById("leave-employee-name"), names);
     }
 
     async function fetch(classes, filepath) {
