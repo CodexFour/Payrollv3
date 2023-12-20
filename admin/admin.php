@@ -274,6 +274,9 @@ if (!isAdmin()) {
             console.log(tab_selector.innerHTML);
             if (tab_selector.innerHTML === 'DASHBOARD') {
                 await fetchDashboard();
+                // const result  = await ajaxRequest('download.php','request=emp-names')
+                // let names = result.responseObject;
+                // autocomplete(document.getElementById("leave-employee-name"), names);
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
                 await fetch('.admin-content', 'employee/employee.php');
                 department_chart();
@@ -288,7 +291,8 @@ if (!isAdmin()) {
             } else if (tab_selector.innerHTML === 'PAYMENTS &amp; DEDUCTIONS') {
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
                 payments_chart();
-                let names = ['John Rey', 'Nizam', 'Samuel'];
+                const result  = await ajaxRequest('download.php','request=emp-names')
+                let names = result.responseObject;
                 autocomplete(document.getElementById("search-employee"), names);
             } else if (tab_selector.innerHTML === 'SUMMARY') {
                 await fetch('.admin-content', 'summary/summary.php');

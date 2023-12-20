@@ -13,7 +13,7 @@
 
     <main class="modal-body">
         <strong class="text-bold txt-xxs text-center">LEAVE APPLICATION FORM</strong>
-        <form id="add-leave-form" onsubmit="return false">
+        <form autocomplete="off" id="add-leave-form" onsubmit="return false">
             <div class="column-2">
                 <div>
                     <label for="leave-employee-name" class="fields-group">

@@ -126,5 +126,14 @@ if (isset($_POST['request'])) {
         echo json_encode(
             $admin
         );
+    } elseif ($request === 'emp-names'){
+        $result = $con->query('SELECT first_name, last_name FROM employees');
+        $empnames = array();
+        while ($row = $result->fetch_assoc()){
+            $empnames[] = $row['first_name']." ".$row['last_name'];
+        }
+        echo json_encode(
+            $empnames
+        );
     }
 }
