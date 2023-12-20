@@ -47,8 +47,11 @@ if (!isAdmin()) {
                     <div class="notification-section">
                         <strong class="text-title txt-xs">Today</strong>
                         <ul class="notification-content read">
+                            <?php
+                            for($i=0; $i<3; $i++){ // REPEAT
+                            ?>
                             <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
+                                <img src="../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
                             </li>
                             <li class="notification-content-body">
                                 <span class="text-title txt-xxs">Jane Oxford</span>
@@ -59,13 +62,19 @@ if (!isAdmin()) {
                                 <span class="text-regular txt-teen">1hr Ago</span>
                             </li>
                             <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+                                <img src="../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
 
                             </li>
+                            <?php
+                            }
+                            ?>
                         </ul>
                     </div>
                     <div class="notification-section">
                         <strong class="text-title txt-xs">Yesterday</strong>
+                        <?php
+                        for($i=0; $i<10; $i++){
+                        ?>
                         <ul class="notification-content">
                             <li class="notification-content-pic">
                                 <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
@@ -82,86 +91,9 @@ if (!isAdmin()) {
 
                             </li>
                         </ul>
-                        <ul class="notification-content">
-                            <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">4:30pm</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
-
-                            </li>
-                        </ul>
-                        <ul class="notification-content">
-                            <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">4:30pm</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
-
-                            </li>
-                        </ul>
-                        <ul class="notification-content">
-                            <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">4:30pm</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
-
-                            </li>
-                        </ul>
-                        <ul class="notification-content">
-                            <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">4:30pm</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
-
-                            </li>
-                        </ul>
-                        <ul class="notification-content">
-                            <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">4:30pm</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
-
-                            </li>
-                        </ul>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </main>
             </section>

@@ -20,10 +20,10 @@
             <div class="action-container">
                 <div class="action">
                     <div class="action-icon edit-icon">
-                        <img src="../../../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs">
+                        <img src="../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs">
                     </div>
                     <div class="action-icon delete-icon" onclick="openModal('.modal-pop-up')">
-                        <img src="../../../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
+                        <img src="../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
                     </div>
                 </div>
             </div>
