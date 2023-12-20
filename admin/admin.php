@@ -46,52 +46,56 @@ if (!isAdmin()) {
                 <main class="notification-body">
                     <div class="notification-section">
                         <strong class="text-title txt-xs">Today</strong>
-                        <ul class="notification-content read">
-                            <?php
-                            for($i=0; $i<3; $i++){ // REPEAT
-                            ?>
-                            <li class="notification-content-pic">
-                                <img src="../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                                <!--                    <span class="btn btn-transparent text-regular txt-teen highlight margin-left">Clear All</span>-->
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">1hr Ago</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
 
-                            </li>
-                            <?php
-                            }
+                        <?php
+                        for ($i = 0; $i < 3; $i++) { // REPEAT
                             ?>
-                        </ul>
+                            <ul class="notification-content read">
+                                <li class="notification-content-pic">
+                                    <img src="../src/assets/img/profile.jpg" alt=""
+                                         class="icon-l icon-round icon-cover">
+                                </li>
+                                <li class="notification-content-body">
+                                    <span class="text-title txt-xxs">Jane Oxford</span>
+                                    <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                                    <!--                    <span class="btn btn-transparent text-regular txt-teen highlight margin-left">Clear All</span>-->
+                                </li>
+                                <li class="notification-content-time">
+                                    <span class="text-regular txt-teen">1hr Ago</span>
+                                </li>
+                                <li class="notification-content-action">
+                                    <img src="../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+
+                                </li>
+
+                            </ul>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <div class="notification-section">
                         <strong class="text-title txt-xs">Yesterday</strong>
                         <?php
-                        for($i=0; $i<10; $i++){
-                        ?>
-                        <ul class="notification-content">
-                            <li class="notification-content-pic">
-                                <img src="../../src/assets/img/profile.jpg" alt="" class="icon-l icon-round icon-cover">
-                            </li>
-                            <li class="notification-content-body">
-                                <span class="text-title txt-xxs">Jane Oxford</span>
-                                <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
-                            </li>
-                            <li class="notification-content-time">
-                                <span class="text-regular txt-teen">4:30pm</span>
-                            </li>
-                            <li class="notification-content-action">
-                                <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+                        for ($i = 0; $i < 10; $i++) {
+                            ?>
+                            <ul class="notification-content">
+                                <li class="notification-content-pic">
+                                    <img src="../../src/assets/img/profile.jpg" alt=""
+                                         class="icon-l icon-round icon-cover">
+                                </li>
+                                <li class="notification-content-body">
+                                    <span class="text-title txt-xxs">Jane Oxford</span>
+                                    <span class="text-regular txt-teen response-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi deserunt est explicabo illo iste labore modi possimus praesentium quibusdam quod saepe sequi tempora, temporibus, veniam voluptas. Esse pariatur provident voluptate?</span>
+                                </li>
+                                <li class="notification-content-time">
+                                    <span class="text-regular txt-teen">4:30pm</span>
+                                </li>
+                                <li class="notification-content-action">
+                                    <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
 
-                            </li>
-                        </ul>
-                        <?php
+                                </li>
+                            </ul>
+                            <?php
                         }
                         ?>
                     </div>
@@ -101,8 +105,10 @@ if (!isAdmin()) {
 
             <div class="nav-employee-info" onclick="adminSetting()">
                 <div class="nav-employee-details">
-                    <span class="text-title txt-xs primary-color" id="nav-admin-name">---- ----</span> <!--TODO: Change name-->
-                    <span class="text-regular txt-xxs primary-color" id="nav-admin-job">-----</span> <!--TODO: Change role-->
+                    <span class="text-title txt-xs primary-color" id="nav-admin-name">---- ----</span>
+                    <!--TODO: Change name-->
+                    <span class="text-regular txt-xxs primary-color" id="nav-admin-job">-----</span>
+                    <!--TODO: Change role-->
                 </div>
                 <!--TODO: Change image base on the image in the database-->
                 <img src="../src/assets/img/img.png" alt="image" class="icon-l icon-round icon-cover"/>
@@ -178,27 +184,28 @@ if (!isAdmin()) {
 
 <script>
 
-    function calcAge(){
+    function calcAge() {
         let bdate = new Date(document.querySelector('#employee-birthdate').value);
         let today = new Date();
         var age = today.getFullYear() - bdate.getFullYear();
-            var monthDiff = today.getMonth() - bdate.getMonth();
+        var monthDiff = today.getMonth() - bdate.getMonth();
 
-            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < bdate.getDate())) {
-                age--;
-            }
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < bdate.getDate())) {
+            age--;
+        }
 
-            document.getElementById('employee-age').value = age;
+        document.getElementById('employee-age').value = age;
     }
 
-    async function updateNav(){
-        const result = await ajaxRequest('download.php','request=get-admin-nav&admin-id='+<?php echo getEmployeeID()?>);
-        if (result.response){
+    async function updateNav() {
+        const result = await ajaxRequest('download.php', 'request=get-admin-nav&admin-id=' +<?php echo getEmployeeID()?>);
+        if (result.response) {
             ro = result.responseObject;
             document.querySelector('#nav-admin-name').innerHTML = `${ro.first_name} ${ro.last_name}`;
             document.querySelector('#nav-admin-job').innerHTML = ro.job_title;
         }
     }
+
     updateNav();
 
     function openTab(evt, tabName) {
@@ -289,7 +296,7 @@ if (!isAdmin()) {
                 await fetch('.admin-content', 'employee/employee.php');
                 department_chart();
                 requestData('employee');
-                const result  = await ajaxRequest('download.php','request=emp-names')
+                const result = await ajaxRequest('download.php', 'request=emp-names')
                 let names = result.responseObject;
                 autocomplete(document.getElementById("searching_employee"), names);
             } else if (tab_selector.innerHTML === 'SALARY') {
@@ -302,7 +309,7 @@ if (!isAdmin()) {
             } else if (tab_selector.innerHTML === 'PAYMENTS &amp; DEDUCTIONS') {
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
                 payments_chart();
-                const result  = await ajaxRequest('download.php','request=emp-names')
+                const result = await ajaxRequest('download.php', 'request=emp-names')
                 let names = result.responseObject;
                 autocomplete(document.getElementById("search-employee"), names);
             } else if (tab_selector.innerHTML === 'SUMMARY') {
@@ -339,7 +346,7 @@ if (!isAdmin()) {
         await fetch('.admin-content', 'dashboard/dashboard.php');
         requestData('dashboard');
         dashboard_chart();
-        const result  = await ajaxRequest('download.php','request=emp-names')
+        const result = await ajaxRequest('download.php', 'request=emp-names')
         let names = result.responseObject;
         autocomplete(document.getElementById("leave-employee-name"), names);
     }
@@ -427,6 +434,7 @@ if (!isAdmin()) {
 
         return result;
     }
+
     function autocomplete(inp, arr) {
         let currentFocus;
         inp.addEventListener("input", function (e) {
