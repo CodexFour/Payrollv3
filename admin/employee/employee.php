@@ -21,7 +21,7 @@
             </div>
             <div class="card-actions">
                 <div class="filter-fields">
-                    <label for="searching_employee">
+                    <label for="searching_employee" class="autocomplete">
                         <input class="fields search-icon text-title txt-xxs" type="text"
                                id="searching_employee"
                                placeholder="Search Employee"
