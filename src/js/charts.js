@@ -113,52 +113,52 @@ function department_chart() {
                 fontSize: '12px',
             }
         },
-            series: [{
-                minPointSize: 10,
-                innerSize: '20%',
-                zMin: 0,
-                zMax: 100,
-                name: 'countries',
-                borderRadius: 5,
-                data: [{
-                    name: 'SOE',
-                    y: 505992,
-                    z: 92
-                }, {
-                    name: 'SET',
-                    y: 551695,
-                    z: 75
-                }, {
-                    name: 'SHT',
-                    y: 312679,
-                    z: 83
-                }, {
-                    name: 'SOB',
-                    y: 78865,
-                    z: 55
-                }, {
-                    name: 'IBE',
-                    y: 301336,
-                    z: 20
-                }, {
-                    name: 'SOC',
-                    y: 41284,
-                    z: 42
-                }, {
-                    name: 'STAFF',
-                    y: 357114,
-                    z: 45
-                }],
-                colors: [
-                    '#4caefe',
-                    '#3dc3e8',
-                    '#2dd9db',
-                    '#1feeaf',
-                    '#0ff3a0',
-                    '#00e887',
-                    '#23e274'
-                ]
-            }]
+        series: [{
+            minPointSize: 10,
+            innerSize: '20%',
+            zMin: 0,
+            zMax: 100,
+            name: 'countries',
+            borderRadius: 5,
+            data: [{
+                name: 'SOE',
+                y: 505992,
+                z: 92
+            }, {
+                name: 'SET',
+                y: 551695,
+                z: 75
+            }, {
+                name: 'SHT',
+                y: 312679,
+                z: 83
+            }, {
+                name: 'SOB',
+                y: 78865,
+                z: 55
+            }, {
+                name: 'IBE',
+                y: 301336,
+                z: 20
+            }, {
+                name: 'SOC',
+                y: 41284,
+                z: 42
+            }, {
+                name: 'STAFF',
+                y: 357114,
+                z: 45
+            }],
+            colors: [
+                '#4caefe',
+                '#3dc3e8',
+                '#2dd9db',
+                '#1feeaf',
+                '#0ff3a0',
+                '#00e887',
+                '#23e274'
+            ]
+        }]
 
     });
 }
@@ -230,7 +230,6 @@ function salary_chart() {
             },
         ]
     });
-
 }
 
 function attendance_timesheet_chart() {
@@ -304,5 +303,134 @@ function attendance_timesheet_chart() {
         }]
     });
 }
+
+function payments_chart() {
+    // Highcharts.chart('payments_deduction_chart', {
+    //     chart: {
+    //         backgroundColor: 'transparent',
+    //         type: 'column',
+    //         style: {
+    //             fontFamily: 'Roboto Bold',
+    //             fontSize: '12px'
+    //         }
+    //     },
+    //     title: {
+    //         text: 'SALARY DISTRIBUTION',
+    //         align: 'center',
+    //     },
+    //     credits: {
+    //         style: {
+    //             display: 'none'
+    //         }
+    //     },
+    //     xAxis: {
+    //         categories: ['AUG', 'SEPT', 'OCT', 'NOV', 'DEC']
+    //     },
+    //     yAxis: {
+    //         title: {
+    //             text: "Semester's distribution",
+    //         },
+    //         min: 0,
+    //         max: 100,
+    //         tickInterval: 25,
+    //
+    //         labels: {
+    //             format: '{value}%',
+    //         }
+    //
+    //     },
+    //     tooltip: {
+    //         style: {
+    //             fontFamily: 'Roboto Regular',
+    //             fontSize: '12px',
+    //         }
+    //     },
+    //     plotOptions: {
+    //         column: {
+    //             pointPadding: 0.2,
+    //             borderWidth: 0
+    //         }
+    //     },
+    //     series: [
+    //         {
+    //             name: 'Total Deduction',
+    //             data: [10, 2, 50, 50, 20]
+    //         },
+    //         {
+    //             name: 'Mandatory Deduction',
+    //             data: [50, 25, 52, 78, 30]
+    //         }, {
+    //             name: 'Non Mandatory Deduction',
+    //             data: [50, 25, 52, 78, 30]
+    //         }, {
+    //             name: 'Employee Earnings',
+    //             data: [50, 25, 52, 78, 30]
+    //         }]
+    // });
+    Highcharts.chart('payments_deduction_chart', {
+        chart: {
+            type: 'line',
+            backgroundColor: 'transparent',
+            style: {
+                fontFamily: 'Roboto Bold',
+                fontSize: '12px'
+            }
+
+        },
+
+        title: {
+            style: {
+                display: 'none'
+            }
+        },
+        credits: {
+            style: {
+                display: 'none'
+            }
+        },
+
+        tooltip: {
+            style: {
+                fontFamily: 'Roboto Regular',
+                fontSize: '12px',
+            }
+        },
+
+        legend: {
+            itemDistance: 10
+        },
+
+        xAxis: {
+            categories: ['AUG', 'SEPT', 'OCT', 'NOV', 'DEC']
+        },
+
+        yAxis: {
+            title: {
+                text: null
+            },
+            gridLineColor: "#707070"
+        },
+        series: [{
+            name: 'Total Deduction',
+            data: [29.9, 71.5, 106.4, 100, 518.8],
+            color: '#80FFB6'
+        }, {
+            name: 'Mandatory Deduction',
+            data: [40, 200, 195, 500, 180],
+            color: 'rgba(7,112,118,0.78)'
+        }, {
+            name: 'Non Mandatory Deduction',
+            data: [144.0, 176.0, 135.6, 148.5, 216.4],
+            color: '#FF6969'
+        }, {
+            name: 'Employee Earnings',
+            data: [144.0, 176.0, 135.6, 148.5, 216.4],
+            color: '#FF6969'
+        }
+
+        ]
+    });
+}
+
 
 
