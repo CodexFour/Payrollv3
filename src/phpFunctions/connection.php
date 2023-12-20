@@ -7,9 +7,9 @@ function connect($sslcrt){
     // $dbuname = 'Wg5U9sLofQp61Gx.root';
     // $dbpword = 'KZnvdBjZZa61xwhI';
     // $dbname = 'payroll_db';
-    $dbhost = 'localhost:3306';
+    $dbhost = 'localhost:3307';
     $dbuname = 'root';
-    $dbpword = 'root';
+    $dbpword = 'password';
     $dbname = 'payroll_db';
     $db = mysqli_init();
     mysqli_options ($db, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, true);

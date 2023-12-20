@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../../admin.css">
 <section class="modal-content card">
     <main class="modal-body pop-up">
-        <img src="../../../src/assets/icons/svg/asking.svg" alt="" class="icon-xl">
+        <img src="../src/assets/icons/svg/asking.svg" alt="" class="icon-xl">
         <strong class="text-title txt-s">CONFIRM TO DELETE?</strong>
         <div class="pop-up-information">
             <span class="text-regular txt-xs text-center">Are you sure you want to delete?</span>

@@ -178,6 +178,19 @@ if (!isAdmin()) {
 
 <script>
 
+    function calcAge(){
+        let bdate = new Date(document.querySelector('#employee-birthdate').value);
+        let today = new Date();
+        var age = today.getFullYear() - bdate.getFullYear();
+            var monthDiff = today.getMonth() - bdate.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < bdate.getDate())) {
+                age--;
+            }
+
+            document.getElementById('employee-age').value = age;
+    }
+
     async function updateNav(){
         const result = await ajaxRequest('download.php','request=get-admin-nav&admin-id='+<?php echo getEmployeeID()?>);
         if (result.response){

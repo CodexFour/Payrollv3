@@ -170,7 +170,8 @@ $con = connect(''); ?>
                     <input class="fields employee-field-regular text-regular txt-xxs"
                            id="employee-birthdate"
                            name="employee-birthdate"
-                           type="date"/>
+                           type="date"
+                           onchange="calcAge()"/>
                     <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                                             TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
                                                 WARNING, ERROR-->
@@ -186,7 +187,7 @@ $con = connect(''); ?>
                                id="employee-age"
                                name="employee-age"
                                type="number"
-                               disabled/>
+                               onkeydown="return false" />
                         <!--                    NOTE: THIS IS A NOTIFICATION IF THERE IS SOMETHING WRONG TO THE INPUT
                                             TODO: SET THE DISPLAY INTO PLEX TO SHOW THE ERROR AND YOU CAN CHANCE THE TYPE OF AN ERROR:
                                                 WARNING, ERROR-->

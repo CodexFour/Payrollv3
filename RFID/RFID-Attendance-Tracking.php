@@ -120,13 +120,11 @@
                                     matchingEmployee['first_name'] + ' ' +
                                     matchingEmployee['middle_name'] + ' ' +
                                     matchingEmployee['suffix'];
-                            } else {
-                                name.textContent = 'Not Found';
-                            }
-
+                            } 
                         })
                         .catch(err => {
                             console.error(err);
+                            name.textContent = 'Not Found';
                         }).finally(() => {
                             setTimeout(() => {
                                 input.target.value = ''; // Clear the input after 5 seconds
