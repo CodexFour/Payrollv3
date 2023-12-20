@@ -31,7 +31,7 @@
     </div>
     <div class="clock flex center">
       <div class="time">
-        <div class="clock-dot"></div>
+        <div class="clock-dot" style="opacity: 0;"></div>
         <svg class="timer">
           <circle id="circle" cx="90" cy="90" r="90" />
         </svg>
@@ -46,7 +46,7 @@
       </div>
       <div class="clock-labels flex center gap1">
         <p class="font-b txt-lite">LOGIN HOURS</p>
-        <h1 class="font-b" id="nowtime">05:30:00</h1>
+        <h1 class="font-b" id="nowtime">--:--:--</h1>
       </div>
     </div>
   </section>
@@ -57,16 +57,16 @@
     </div>
     <div class="clock-grid">
       <div class="box child1 flex center">
-        <h1 class="font-l">07:30</h1>
+        <h1 class="font-l" id="time-in-am">--:--</h1>
       </div>
       <div class="box child2 flex center">
-        <h1 class="font-l">12:00</h1>
+        <h1 class="font-l" id="time-out-am">--:--</h1>
       </div>
       <div class="box child3 flex center">
-        <h1 class="font-l">01:00</h1>
+        <h1 class="font-l" id="time-in-pm">--:--</h1>
       </div>
       <div class="box child4 flex center">
-        <h1 class="font-l">05:00</h1>
+        <h1 class="font-l" id="time-out-pm">--:--</h1>
       </div>
       <div class="vl"></div>
       <div class="hl"></div>
@@ -97,21 +97,37 @@
   </section>
 
   <script>
+
     let ss = document.getElementById("circle");
     let sdot = document.querySelector(".clock-dot");
     let limit = 60 // Seconds
 
+    function liveClock() {
+      setInterval(() => {
+        let now = new Date();
+        document.querySelector('#nowtime').innerHTML = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
+      }); // Update every 1000 milliseconds (1 second)
+    }
+    liveClock();
+
+
+    let tick = false;
     function updateClock() {
+      document.querySelector('.clock-dot').style.opacity = "1";
       let now = new Date();
       let seconds = now.getSeconds() + now.getMilliseconds() / 1000; // Include milliseconds for smoother animation
       ss.style.strokeDashoffset = 570 - (570 * seconds) / limit;
       sdot.style.transform = `rotateZ(${seconds * (360 / limit) + 90}deg)`;
 
-      requestAnimationFrame(updateClock);
 
-      let s1 = new Date().getSeconds();
-      if (s1 % 2 === 0) {
-        document.documentElement.style.setProperty('--timer-bg', 'rgb(255, 187, 62)');
+      requestAnimationFrame(updateClock);
+      if (tick) {
+        let s1 = new Date().getSeconds();
+        if (s1 % 2 === 0) {
+          document.documentElement.style.setProperty('--timer-bg', 'rgb(255, 187, 62)');
+        } else {
+          document.documentElement.style.setProperty('--timer-bg', '#dbdbdb');
+        }
       } else {
         document.documentElement.style.setProperty('--timer-bg', '#dbdbdb');
       }
@@ -121,6 +137,34 @@
 
     // Initial call to start the continuous animation
     updateClock();
+
+
+    async function getAtt() {
+      const result = await ajaxRequest('phpFunctions/get-att.php', 'emp-id=<?php echo getEmployeeID()?>');
+        try {
+          if (result.response) {
+            const responseObject = result.responseObject;
+            console.log(responseObject)
+            if (responseObject != null){
+              tick = true;
+              if(responseObject.time_in != null){
+                const [hours, minutes] = responseObject.time_in.split(':');
+                document.querySelector('#time-in-pm').innerHTML = `${hours}:${minutes}`;
+                tick = true;
+              }
+              if(responseObject.time_out != null){
+                const [hours, minutes] = responseObject.time_out.split(':');
+                document.querySelector('#time-out-pm').innerHTML = `${hours}:${minutes}`;
+                tick = false;
+              }
+            }
+          }
+        } catch (err) {
+          console.log(err);
+        }
+    }
+    setInterval(()=>{getAtt();},1000)
+
   </script>
 </body>
 

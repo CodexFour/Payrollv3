@@ -24,7 +24,7 @@ if (!isAdmin()) {
         </div>
         <div class="nav-container-right">
             <img src="../src/assets/icons/svg/scanner.svg" alt="image" class="icon icon-m"
-                 onclick="location.href = '../RFID/RFID-Attendance-Tracking.php'"/>
+                 onclick="window.open('../RFID/RFID-Attendance-Tracking.php', '_blank');"/>
 
             <!--            TODO: when it clicks, change the icon into employee-ui.svg-->
             <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
