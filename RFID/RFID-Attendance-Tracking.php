@@ -30,7 +30,7 @@
                             <li id="point" class="text-title txt-s">:</li>
                             <li id="sec" class="text-title txt-s">03</li>
                         </ul>
-                        <div id="Date" class="text-subtitle txt-teen"></div>
+                        <div id="Date" class="text-subtitle txt-teen text-center"></div>
 
                     </div>
                 </section>

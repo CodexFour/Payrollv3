@@ -23,11 +23,12 @@ if (!isAdmin()) {
             <h1 class="text-title txt-s primary-color" id="nav-title">DASHBOARD</h1>
         </div>
         <div class="nav-container-right">
+            <img src="../src/assets/icons/svg/scanner.svg" alt="image" class="icon icon-m"
+                 onclick="location.href = '../RFID/RFID-Attendance-Tracking.php'"/>
 
             <!--            TODO: when it clicks, change the icon into employee-ui.svg-->
             <img src="../src/assets/icons/svg/admin.svg" alt="image" class="icon icon-m"
                  onclick="location.href = '../employeeUi/dashboard.php'"/>
-
 
             <div class="notification-badge" onclick="openNotification()">
                 <img src="../src/assets/icons/notification.svg" alt="image" class="icon icon-m"/>
@@ -341,6 +342,7 @@ if (!isAdmin()) {
                 calendar();
             } else if (tab_selector.innerHTML === 'PAYMENTS &amp; DEDUCTIONS') {
                 await fetch('.admin-content', 'payments_deduction/payments_deduction.php');
+                payments_chart();
                 let names = ['John Rey', 'Nizam', 'Samuel'];
                 autocomplete(document.getElementById("search-employee"), names);
             } else if (tab_selector.innerHTML === 'SUMMARY') {

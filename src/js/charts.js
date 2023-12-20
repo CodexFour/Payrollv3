@@ -305,68 +305,6 @@ function attendance_timesheet_chart() {
 }
 
 function payments_chart() {
-    // Highcharts.chart('payments_deduction_chart', {
-    //     chart: {
-    //         backgroundColor: 'transparent',
-    //         type: 'column',
-    //         style: {
-    //             fontFamily: 'Roboto Bold',
-    //             fontSize: '12px'
-    //         }
-    //     },
-    //     title: {
-    //         text: 'SALARY DISTRIBUTION',
-    //         align: 'center',
-    //     },
-    //     credits: {
-    //         style: {
-    //             display: 'none'
-    //         }
-    //     },
-    //     xAxis: {
-    //         categories: ['AUG', 'SEPT', 'OCT', 'NOV', 'DEC']
-    //     },
-    //     yAxis: {
-    //         title: {
-    //             text: "Semester's distribution",
-    //         },
-    //         min: 0,
-    //         max: 100,
-    //         tickInterval: 25,
-    //
-    //         labels: {
-    //             format: '{value}%',
-    //         }
-    //
-    //     },
-    //     tooltip: {
-    //         style: {
-    //             fontFamily: 'Roboto Regular',
-    //             fontSize: '12px',
-    //         }
-    //     },
-    //     plotOptions: {
-    //         column: {
-    //             pointPadding: 0.2,
-    //             borderWidth: 0
-    //         }
-    //     },
-    //     series: [
-    //         {
-    //             name: 'Total Deduction',
-    //             data: [10, 2, 50, 50, 20]
-    //         },
-    //         {
-    //             name: 'Mandatory Deduction',
-    //             data: [50, 25, 52, 78, 30]
-    //         }, {
-    //             name: 'Non Mandatory Deduction',
-    //             data: [50, 25, 52, 78, 30]
-    //         }, {
-    //             name: 'Employee Earnings',
-    //             data: [50, 25, 52, 78, 30]
-    //         }]
-    // });
     Highcharts.chart('payments_deduction_chart', {
         chart: {
             type: 'line',
