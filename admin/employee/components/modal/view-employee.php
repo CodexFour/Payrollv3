@@ -13,7 +13,7 @@
                     <div class="action-icon edit-icon" id="employee-edit-btn">
                         <img src="../src/assets/icons/svg/edit.svg" alt="" class="icon-xxs">
                     </div>
-                    <div class="action-icon delete-icon" id="employee-delete-btn">
+                    <div class="action-icon delete-icon" id="employee-delete-btn" onclick="openModal('.modal-pop-up')">
                         <img src="../src/assets/icons/svg/deleterow.svg" alt="" class="icon-xxs">
                     </div>
                 </div>
@@ -159,4 +159,5 @@
 
 <dialog class="modal modal-add-schedule"><?php include_once 'settings/add-schedule.php'?></dialog>
 <dialog class="modal modal-add-loan"><?php include_once 'settings/add-loan.php'?></dialog>
+<!--<dialog class="modal modal-confirm">--><?php //include_once '../../../modal/pop-up/confirmation-pop-up.php'?><!--</dialog>-->
 

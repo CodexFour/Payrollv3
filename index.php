@@ -389,7 +389,7 @@
 <dialog class="modal modal-login"> <?php include_once 'src/modal/login/login.php' ?> </dialog>
 
 
-<script src="main.js"></script>
+<!--<script src="main.js"></script>-->
 <script src="src/js/controller/LoginController.js"></script>
 <script src="src/js/modal.js"></script>
 <script src="src/js/HTTPRequest.js"></script>

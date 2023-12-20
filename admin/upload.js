@@ -104,6 +104,7 @@ async function deleteEmp(empId) {
           alert("Employee has been deleted");
           closeModal(".modal-employee");
           closeModal(".modal-view-employee");
+          closeModal(".modal-pop-up");
           clearEmployeeField();
           clearEmployeeView();
         }

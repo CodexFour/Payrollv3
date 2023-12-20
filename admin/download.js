@@ -87,9 +87,12 @@ async function fetchEmployeeData(empid) {
         openModal(".modal-employee");
         applyEmployeeModal(responseObject);
       };
-      document.querySelector("#employee-delete-btn").onclick = () => {
+      document.querySelector("#confirm").onclick = () => {
         deleteEmp(empid);
-      };
+      }
+      // document.querySelector("#employee-delete-btn").onclick = () => {
+      //   deleteEmp(empid);
+      // };
     }
   } catch (err) {
     console.error("Request failed:", err);
