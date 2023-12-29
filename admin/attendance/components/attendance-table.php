@@ -8,7 +8,7 @@
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">NAME</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
@@ -16,18 +16,23 @@
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">DEPT</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
         <th>
-            <span class="text-bold txt-xxs primary-color">TIME IN</span>
+            <div class="head">
+                <span class="text-bold txt-xxs primary-color">TIME IN</span>
+                <svg class="primary-color sort-icon">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
+                </svg>
+            </div>
         </th>
         <th>
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">TIME OUT</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
@@ -35,7 +40,7 @@
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">SHIFT LENGTH</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
@@ -46,7 +51,7 @@
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">LATE</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
@@ -54,7 +59,7 @@
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">OVERTIME</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
@@ -62,7 +67,7 @@
             <div class="head">
                 <span class="text-bold txt-xxs primary-color">STATUS</span>
                 <svg class="primary-color sort-icon">
-                    <use href="../../../src/assets/icons/svg/sort.svg#sort">
+                    <use href="../src/assets/icons/svg/sort.svg#sort">
                 </svg>
             </div>
         </th>
@@ -73,7 +78,7 @@
     <tr>
         <td class="table-content-default">
             <img
-                    src="../../../src/assets/img/img.png"
+                    src="../src/assets/img/img.png"
                     alt="image"
                     class="icon-m icon-soft-edge"
             />

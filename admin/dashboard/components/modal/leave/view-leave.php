@@ -11,7 +11,7 @@
     <main class="modal-body">
         <div class="employee">
             <div class="employee-pic">
-                <img src="../../.././../../src/assets/img/profile.jpg" alt="image" class="icon-xxxl icon-employee">
+                <img src="../src/assets/img/profile.jpg" alt="image" class="icon-xxxl icon-employee">
                 <span class="age-badge text-bold txt-teen primary-color">28</span>
             </div>
             <div class="employee-info">
@@ -72,7 +72,7 @@
                             <strong class="text-title txt-xxs">COMMENT</strong>
                             <img
                                     id="leave_employee_comment_picture"
-                                    src="../../../../../src/assets/img/img.png"
+                                    src="../src/assets/img/img.png"
                                     alt="image"
                                     class="icon-s icon-round"
                             />

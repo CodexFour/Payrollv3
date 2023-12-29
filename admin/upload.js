@@ -178,7 +178,8 @@ async function leaveFormSubmit() {
           //
         }
         if (responseObject.status === 1) {
-          //
+          alert('Form Submited!');
+          closeModal('.modal-leave');
         }
       }
     }

@@ -27,9 +27,18 @@
                     </label>
                     <label for="leave-type" class="fields-group">
                         <span class="text-title txt-xxs form-required">Leave Type</span>
-                        <select class="fields text-title txt-xxs" id="leave-type">
+                        <select class="fields text-title txt-xxs" name="leave-type" id="leave-type">
                             <option class="text-subtitle" value="" disabled selected>Select Leave Type</option>
-                            <option class="text-subtitle" value="">Department</option>
+                            <?php
+                            include_once '../../src/phpFunctions/connection.php';
+                            $con = connect('');
+                            $result = $con->query('SELECT * FROM payroll_db.leave_type;');
+                            while ($row = $result->fetch_assoc()) {
+                            ?>
+                            <option class="text-subtitle" value="<?php echo $row['leave_type_id']?>"><?php echo $row['leave_name']?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </label>
                     <label for="leave-start-date" class="fields-group">
@@ -59,7 +68,7 @@
                         Attachment
                         <span class="card-file textarea-field form-fields">
                             <img class="icon-m file-icon"
-                                 src="../../../../../src/assets/icons/svg/clip.svg"
+                                 src="../src/assets/icons/svg/clip.svg"
                                  alt="">
 
                             <label class="file-input-container">

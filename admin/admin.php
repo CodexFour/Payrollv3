@@ -80,7 +80,7 @@ if (!isAdmin()) {
                             ?>
                             <ul class="notification-content">
                                 <li class="notification-content-pic">
-                                    <img src="../../src/assets/img/profile.jpg" alt=""
+                                    <img src="../src/assets/img/profile.jpg" alt=""
                                          class="icon-l icon-round icon-cover">
                                 </li>
                                 <li class="notification-content-body">
@@ -91,7 +91,7 @@ if (!isAdmin()) {
                                     <span class="text-regular txt-teen">4:30pm</span>
                                 </li>
                                 <li class="notification-content-action">
-                                    <img src="../../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
+                                    <img src="../src/assets/icons/svg/delete.svg" alt="" class="icon-xs">
 
                                 </li>
                             </ul>
@@ -281,24 +281,13 @@ if (!isAdmin()) {
             console.log(tab_selector.innerHTML);
             if (tab_selector.innerHTML === 'DASHBOARD') {
                 await fetchDashboard();
-                // const result  = await ajaxRequest('download.php','request=emp-names')
-                // let names = result.responseObject;
-                // autocomplete(document.getElementById("leave-employee-name"), names);
-                // const result  = await ajaxRequest('download.php','request=emp-names')
-                // let names = result.responseObject;
-                // console.log("Hi " + names);
-                // autocomplete(document.getElementById("searching_employee"), names);
-                // const result  = await ajaxRequest('download.php','request=emp-names')
-                // let names = result.responseObject;
-                // console.log(names);
-                // autocomplete(document.getElementById("searching_employee"), names);
             } else if (tab_selector.innerHTML === 'EMPLOYEE') {
                 await fetch('.admin-content', 'employee/employee.php');
                 department_chart();
                 requestData('employee');
                 const result = await ajaxRequest('download.php', 'request=emp-names')
                 let names = result.responseObject;
-                autocomplete(document.getElementById("searching_employee"), names);
+                B(document.getElementById("searching_employee"), names);
             } else if (tab_selector.innerHTML === 'SALARY') {
                 await fetch('.admin-content', 'salary/salary.php');
                 salary_chart();

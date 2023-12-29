@@ -25,7 +25,7 @@ header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); ?>
     // For format date purposes
     function formatTextDate(inputDate) {
         const dateParts = inputDate.split('-');
-        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const monthNames = ['Jan', 'Feb', 'March', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
         const formattedDate = new Date(dateParts[0], dateParts[1] - 1, dateParts[2]);
 

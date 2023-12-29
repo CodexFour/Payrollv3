@@ -9,13 +9,19 @@
     </tr>
     </thead>
     <tbody class="table-body">
+    <?php
+    include_once '../../src/phpFunctions/connection.php';
+    $con = connect('');
+    $result = $con->query('SELECT * FROM payroll_db.deduction;');
+    while ($row = $result->fetch_assoc()) {
+    ?>
     <tr>
-        <td class="text-regular txt-xxs">John Doe</td>
-        <td class="text-regular txt-xxs">10</td>
+        <td class="text-regular txt-xxs"><?php echo $row['deduction_name']?></td>
+        <td class="text-regular txt-xxs"><?php echo $row['calculation']?></td>
         <td>
             <span class="text-regular txt-xxs status active"></span>
         </td>
-        <td class="text-regular txt-xxs">Mandatory</td>
+        <td class="text-regular txt-xxs"><?php echo $row['type']=='M'? 'Mandatory':'Non-mandatory' ?></td>
         <td>
             <div class="action-container">
                 <div class="action">
@@ -29,6 +35,9 @@
             </div>
         </td>
     </tr>
+    <?php
+    }
+    ?>
 
     </tbody>
 </table>

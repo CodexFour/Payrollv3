@@ -91,12 +91,20 @@
       <p class="txt-lite font-b font-s">Scheduled payroll date</p>
       <div class="flex center space-e">
         <img class="next-payroll-icon" src="assets/payroll_date.svg" alt="" />
-        <p class="font-m font-b">Oct 30, 2023</p>
+        <p class="font-m font-b" id="nxt-pr-date">Oct 30, 2023</p>
       </div>
     </div>
   </section>
 
   <script>
+
+    async function fetchDatas(){
+      const data = await ajaxRequest('phpFunctions/get-dashb.php','request=dashboard');
+      if(data.response){
+        document.querySelector('#nxt-pr-date').innerHTML = formatTextDate(data.responseObject.nxt_pr_date);
+      }
+    }
+    fetchDatas();
 
     let ss = document.getElementById("circle");
     let sdot = document.querySelector(".clock-dot");
@@ -140,7 +148,7 @@
 
 
     async function getAtt() {
-      const result = await ajaxRequest('phpFunctions/get-att.php', 'emp-id=<?php echo getEmployeeID()?>');
+      const result = await ajaxRequest('phpFunctions/get-dashb.php', 'request=attd&emp-id=<?php echo getEmployeeID()?>');
         try {
           if (result.response) {
             const responseObject = result.responseObject;

@@ -191,36 +191,35 @@ if (!isset($_POST['request'])) { // It means we are uploading a form data
         $rowsAffected = $stmt->affected_rows;
 
     } elseif ($_POST['request'] === 'add-leave'){
-        // $stmt = $con->prepare(
-        //     'INSERT INTO `leave`
-        //     (`leave_id`,
-        //     `employee_id`,
-        //     `start_date`,
-        //     `end_date`,
-        //     `comment`,
-        //     `status`,
-        //     `leave_type_id`)
-        //     VALUES
-        //     (NULL,
-        //     ?,
-        //     ?,
-        //     ?,
-        //     ?,
-        //     ?,
-        //     ?);
-        //     ');
-        // $stmt->bind_param('issssi',
-        //             $_POST['employee_id'],
-        //             $_POST['start-date'],
-        //             $_POST['comment'],
-        //             $_POST['end-date'],
-        //             $_POST['status'],
-        //             $_POST['leave_type_id']);
-        // $stmt->execute();
-        $status = $_POST;
-        // $status = 1;
-        // $err = $stmt->errno > 0 ? $stmt->error : "";
-        // $rowsAffected = $stmt->affected_rows;
+        $result = $con->query('SELECT employee_id AS "id" FROM payroll_db.employees;');
+        $stmt = $con->prepare(
+            'INSERT INTO `leave`
+            (`leave_id`,
+            `employee_id`,
+            `start_date`,
+            `end_date`,
+            `comment`,
+            `status`,
+            `leave_type_id`)
+            VALUES
+            (NULL,
+            ?,
+            ?,
+            ?,
+            ?,
+            "APPROVED",
+            ?);
+            ');
+        $stmt->bind_param('isssi',
+                    $result->fetch_assoc()['id'],
+                    $_POST['leave-start-date'],
+                    $_POST['leave-end-date'],
+                    $_POST['comment'],
+                    $_POST['leave-type']);
+        $stmt->execute();
+        $status = $result->fetch_assoc();
+        $err = $stmt->errno > 0 ? $stmt->error : "";
+        $rowsAffected = $stmt->affected_rows;
     }
 }
 
